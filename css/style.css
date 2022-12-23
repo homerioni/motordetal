@@ -3093,6 +3093,12 @@ body {
 .validator__list-item:hover {
   color: #014A93;
 }
+.validator__list-item.disabled {
+  cursor: default;
+}
+.validator__list-item.disabled:hover {
+  color: #171717;
+}
 .validator__btn {
   margin-top: 0.8rem;
 }
