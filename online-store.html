@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="another website">
+    <title>Страница</title>
+
+    <link rel="stylesheet" href="font/stylesheet.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<header class="header">
+    <nav class="header__content mobile">
+        <a href="" class="header__logo">
+            <img src="img/logo.svg" alt="">
+        </a>
+        <a href="" class="header__tel-mob">
+            <img src="img/header-tel.svg" alt="">
+        </a>
+        <button type="button" class="header__burger-btn">
+            <span></span>
+        </button>
+    </nav>
+    <nav class="header__content desktop">
+        <a href="" class="header__logo desktop">
+            <img src="img/logo.svg" alt="">
+        </a>
+        <div class="header__separator"></div>
+        <ul class="header__menu">
+            <li class="header__menu-item">
+                <button type="button" class="header__menu-item-name">
+                    <span>Продукция</span>
+                    <svg class="mobile" width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.3125 1.375L9.5 9.1875L1.6875 1.375" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <ul class="header__menu-list">
+                    <li class="header__list-item">
+                        <a href="">Каталог продукции</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Информационные материалы</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Проверка подлинности</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Видеообзоры</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Техническая документация</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Отзывы</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__menu-item">
+                <button type="button" class="header__menu-item-name">
+                    <span>Производство</span>
+                    <svg class="mobile" width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.3125 1.375L9.5 9.1875L1.6875 1.375" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <ul class="header__menu-list">
+                    <li class="header__list-item">
+                        <a href="">Разработка и инжиринг</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Система управлением качеством</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Роботизация производственных площадок</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Производственная система «Мотордеталь»</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__menu-item">
+                <a href="" class="header__menu-item-name">Интернет-магазин</a>
+            </li>
+            <li class="header__menu-item">
+                <button type="button" class="header__menu-item-name">
+                    <span>Компания</span>
+                    <svg class="mobile" width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.3125 1.375L9.5 9.1875L1.6875 1.375" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <ul class="header__menu-list">
+                    <li class="header__list-item">
+                        <a href="">История ТМ «Мотордеталь»</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Медиацентр</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Экологическая программа</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Экскурсия на «Мотордеталь» </a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Социальная ответственность</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Корпоратиная жизнь</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Компания сегодня «Миссия» </a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Карьера</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__menu-item">
+                <a href="" class="header__menu-item-name">Новости</a>
+            </li>
+            <li class="header__menu-item">
+                <a href="" class="header__menu-item-name">Контакты</a>
+            </li>
+        </ul>
+        <div class="header__separator"></div>
+        <a href="" class="header__tel">+7 (4942) 62-83-00</a>
+        <div class="header__separator"></div>
+        <div class="header__lang-box">
+            <button type="button" class="header__lang-btn">
+                <span>RU</span>
+                <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7812 1.22462L6.02812 5.78989C5.73645 6.07004 5.26355 6.07004 4.97188 5.78989L0.218756 1.22462C-0.0729188 0.944468 -0.0729188 0.490259 0.218756 0.210111C0.510431 -0.070037 0.98333 -0.070037 1.27501 0.210111L5.5 4.26813L9.72499 0.210111C10.0167 -0.070037 10.4896 -0.070037 10.7812 0.210111C11.0729 0.490259 11.0729 0.944468 10.7812 1.22462Z" fill="white"/>
+                </svg>
+            </button>
+            <ul class="header__lang-list">
+                <li class="active">
+                    <span>RU</span>
+                </li>
+                <li>
+                    <a href="">EN</a>
+                </li>
+            </ul>
+        </div>
+        <p class="header__address mobile">
+            Россия, г. Кострома, ул. Московская, 105.
+        </p>
+        <a href="" class="header__social mobile">
+            <img src="img/vk-icon.svg" alt="">
+            <span>ВКонтакте</span>
+        </a>
+    </nav>
+</header>
+
+<main>
+    <nav class="breadcrumbs breadcrumbs--absolute container">
+        <a href="" class="breadcrumbs__item">Главная</a>
+        <span class="breadcrumbs__item active">Новости</span>
+    </nav>
+    <section class="intro-b">
+        <div class="intro-b__bg">
+            <img src="img/main-intro-bg2.webp" alt="">
+            <span></span>
+        </div>
+        <div class="intro-b__container container">
+            <p class="intro-b__title">Интернет магазин</p>
+            <div class="intro-b__buttons">
+                <a href="" class="intro-b__btn button">
+                    <span>Розничные заказы</span>
+                </a>
+                <a href="" class="intro-b__btn button">
+                    <span>Оптовые заказы </span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="store">
+        <div class="store__container container">
+            <div class="store__content">
+                <article class="store__content-box">
+                    <p class="store__title">
+                        Уважаемые клиенты!
+                    </p>
+                    <p>
+                        Информируем Вас о том, что продажа продукции «МОТОРДЕТАЛЬ» розничным клиентам (физическим лицам) теперь осуществляется на сайте <a href="">expert.market.</a>
+                    </p>
+                </article>
+                <div class="store__banner store__content-box">
+                    <div class="store__banner-text-block">
+                        <div class="store__banner-logo">
+                            <img src="img/store-logo.svg" alt="">
+                        </div>
+                        <p class="store__banner-text">
+                            Официальный представитель
+                            <br>«Костромского завода автокомпонентов» (АО «КЗА»), выпускающего продукцию под торговой маркой «МОТОРДЕТАЛЬ».
+                        </p>
+                        <a href="" class="button">
+                            <span>Перейти на сайт</span>
+                        </a>
+                    </div>
+                    <div class="store__banner-bg">
+                        <img src="img/store-bg.webp" alt="">
+                    </div>
+                </div>
+                <article class="store__content-box">
+                    <p class="store__title">
+                        О компании
+                    </p>
+                    <p>
+                        «ЭКСПЕРТ» (ООО «Альфа») – федеральная компания, осуществляющая поставки комплектующих, запчастей и технических жидкостей для коммерческого автотранспорта и спецтехники.
+                        <br>
+                        <br>Мы работаем по долгосрочным договорам с широким пулом производителей узлов и агрегатов.
+                        <br>
+                        <br><span class="black">Наша компания является официальным представителем «Костромского завода автокомпонентов» (АО «КЗА»), выпускающего продукцию под торговой маркой «МОТОРДЕТАЛЬ».</span>
+                        <br>
+                        <br>Ежемесячно «ЭКСПЕРТ» уверенно и эффективно закрывает потребности нескольких тысяч клиентов за счет сбалансированной ассортиментной матрицы, экспертного качества, оптимальных цен, условий и сервиса.
+                    </p>
+                </article>
+                <article class="store__content-box">
+                    <p class="store__title">
+                        Клиентам
+                    </p>
+                    <p>
+                        Продуктовая матрица компании сформирована на основе многолетнего опыта работы наших специалистов в сфере машиностроения и поставки автокомпонентов.
+                        <br>
+                        <br><span class="black">На всех этапах сотрудничества вы получите информационное сопровождение о технических характеристиках деталей и их применяемости.</span>
+                        <br>
+                        <br>Мы предлагаем услуги аудита вашей товарной линейки и управления складскими запасами, даем профессиональные рекомендации и разделяем с ними финансовые риски. Это новое предложение на рынке автокомпонентов, которое позволяет оптимизировать и развивать бизнес компаний, находящихся на «первой линии» взаимодействия с конечными потребителями.
+                    </p>
+                </article>
+            </div>
+            <div class="store__sidebar">
+                <aside class="store__doc">
+                    <div class="store__doc-img-box">
+                        <img src="img/store-doc-img.webp" alt="">
+                    </div>
+                    <div class="store__doc-buttons">
+                        <button type="button" class="store__doc-btn">
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.501 2.875C16.6684 2.875 20.9674 6.59333 21.8692 11.5C20.9684 16.4067 16.6684 20.125 11.501 20.125C6.33369 20.125 2.0346 16.4067 1.13281 11.5C2.03365 6.59333 6.33369 2.875 11.501 2.875ZM11.501 18.2083C13.4555 18.2079 15.352 17.544 16.88 16.3254C18.408 15.1067 19.4771 13.4054 19.9123 11.5C19.4755 9.59608 18.4058 7.89667 16.8779 6.67961C15.35 5.46255 13.4544 4.79984 11.501 4.79984C9.54765 4.79984 7.65206 5.46255 6.12417 6.67961C4.59629 7.89667 3.52651 9.59608 3.08973 11.5C3.5249 13.4054 4.594 15.1067 6.12203 16.3254C7.65007 17.544 9.54653 18.2079 11.501 18.2083ZM11.501 15.8125C10.3573 15.8125 9.26037 15.3581 8.45162 14.5494C7.64287 13.7406 7.18852 12.6437 7.18852 11.5C7.18852 10.3563 7.64287 9.25935 8.45162 8.4506C9.26037 7.64185 10.3573 7.1875 11.501 7.1875C12.6448 7.1875 13.7417 7.64185 14.5504 8.4506C15.3592 9.25935 15.8135 10.3563 15.8135 11.5C15.8135 12.6437 15.3592 13.7406 14.5504 14.5494C13.7417 15.3581 12.6448 15.8125 11.501 15.8125ZM11.501 13.8958C12.1364 13.8958 12.7458 13.6434 13.1951 13.1941C13.6444 12.7448 13.8969 12.1354 13.8969 11.5C13.8969 10.8646 13.6444 10.2552 13.1951 9.80589C12.7458 9.35658 12.1364 9.10417 11.501 9.10417C10.8656 9.10417 10.2562 9.35658 9.80691 9.80589C9.35761 10.2552 9.10519 10.8646 9.10519 11.5C9.10519 12.1354 9.35761 12.7448 9.80691 13.1941C10.2562 13.6434 10.8656 13.8958 11.501 13.8958Z" fill="#014A93"/>
+                            </svg>
+                            <span>Посмотреть</span>
+                        </button>
+                        <a href="" class="store__doc-btn">
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.875 18.2087H20.125V20.1253H2.875V18.2087ZM12.4583 12.6235L18.2764 6.80449L19.6315 8.15958L11.5 16.292L3.36854 8.16053L4.72362 6.80449L10.5417 12.6216V1.91699H12.4583V12.6235Z" fill="#014A93"/>
+                            </svg>
+                            <span>Скачать</span>
+                        </a>
+                    </div>
+                </aside>
+                <aside class="store__orders">
+                    <div class="store__order">
+                        <p class="store__order-title">
+                            Розничные заказы
+                        </p>
+                        <p class="store__order-text">
+                            продажа продукции розничным клиентам (физическим лицам)  осуществляется на&nbsp;сайте <a href="">expert.market.</a>
+                        </p>
+                        <a href="" class="store__order-btn button">
+                            <span>Розничные заказы</span>
+                        </a>
+                    </div>
+                    <div class="store__order">
+                        <p class="store__order-title">
+                            Оптовые заказы
+                        </p>
+                        <p class="store__order-text">
+                            продажа продукции юридическим лицам осуществляется на&nbsp;сайте <a href="">b2c.expert.market.</a>
+                        </p>
+                        <a href="" class="store__order-btn button">
+                            <span>Оптовые заказы</span>
+                        </a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__bg">
+        <svg class="desktop" width="1920" height="500" viewBox="0 0 1920 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 427L1704 292.5L1921 0V885.5H0V427Z" fill="#014A93"/>
+        </svg>
+        <svg class="desktop" width="246" height="334" viewBox="0 0 246 334" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M248 0V334H0L248 0Z" fill="#D62214"/>
+        </svg>
+        <svg class="mobile" width="375" height="200" viewBox="0 0 375 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M418 95V-57L307.289 91.9204L0 127.865V139V916V1443H375V916V139V95H418Z" fill="#014A93"/>
+        </svg>
+        <svg class="mobile" width="70" height="105" viewBox="0 0 70 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M113 0L113 152H0L113 0Z" fill="#D62214"/>
+        </svg>
+    </div>
+    <div class="footer__content-top">
+        <div class="container footer__container">
+            <div class="footer__box">
+                <a href="" class="footer__logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <a href="" class="footer__tel">
+                    8 (4942) 628-300
+                </a>
+                <p class="footer__address">
+                    Россия, г. Кострома,
+                    <br>ул. Московская, 105.
+                </p>
+                <a href="" class="footer__social">
+                    <img src="img/vk-icon.svg" alt="">
+                    <span>ВКонтакте</span>
+                </a>
+            </div>
+            <div class="footer__box">
+                <h3 class="footer__box-title">Продукция</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="">Каталог продукции</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Информационные материалы</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Техническая документация</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Проверка подлинности</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Видеообзоры</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Отзывы</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__box">
+                <h3 class="footer__box-title">Производство</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="">Разработка и инжиниринг</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Производственная система «мотордеталь»</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Роботизация производствееных площадок</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Система управления качеством</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Экологическая программа</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Экскурсия на «мотордеталь»</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__box">
+                <h3 class="footer__box-title">Компания</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="">История</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Компания сегодня (миссия)</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Корпоративная жизнь</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Социальная ответственность</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Медиацентр</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Карьера</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__content-bottom">
+        <div class="container footer__container">
+            <p class=" footer__box">© 2022 Мотордеталь</p>
+            <a href="" class="footer__link-bottom footer__box">Политика конфиденциальности</a>
+            <a href="" class="footer__link-bottom footer__box">Обработка персональной информации</a>
+            <a href="" class="footer__request footer__box">
+                <img src="img/request-logo.svg" alt="">
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

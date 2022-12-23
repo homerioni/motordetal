@@ -6,8 +6,9 @@
   gap: 1rem;
   width: fit-content;
   min-width: 26rem;
-  padding: 1.5rem 3rem;
-  margin-right: 3.8rem;
+  height: 5.5rem;
+  padding: 0 3rem;
+  margin-right: 4.6rem;
   background-color: $red;
   font-weight: 700;
   font-size: 1.7rem;
@@ -33,7 +34,7 @@
   &:before {
     content: '';
     position: absolute;
-    right: -2rem;
+    right: -2.4rem;
     top: 0;
     z-index: -1;
     width: 6rem;
@@ -55,6 +56,17 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.6rem;
+
+  &--absolute {
+    position: absolute;
+    left: 24.5rem;
+    color: #84878C;
+
+    .breadcrumbs__item.active,
+    .breadcrumbs__item:hover {
+      color: white;
+    }
+  }
 
   &__item {
     position: relative;
@@ -177,6 +189,7 @@
   .button {
     gap: 2rem;
     min-width: 36rem;
+    height: 7.2rem;
     padding: 2rem 3.4rem;
     margin-right: 6.4rem;
     font-size: 2.4rem;
@@ -200,6 +213,10 @@
     margin-top: 4rem;
     margin-bottom: 4rem;
     gap: 3.2rem;
+
+    &--absolute {
+      left: 4rem;
+    }
 
     &__item {
       font-weight: 400;
