@@ -1,0 +1,284 @@
+.validator {
+  &__title {
+    font-family: $mont;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 6.5rem;
+  }
+
+  &__separator {
+    width: 100%;
+    height: 1px;
+    margin: 3.6rem 0 5.2rem 0;
+    background-color: #D4D4D8;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 4.4rem;
+    column-gap: 3.4rem;
+    width: 69.8rem;
+  }
+
+  &__form-box {
+    flex: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.4rem;
+
+    &--flex-50 {
+      flex: 45%;
+    }
+  }
+
+  &__box-name {
+    flex: 100%;
+    font-weight: 500;
+    font-size: 1.7rem;
+  }
+
+  &__label {
+    position: relative;
+    height: 7rem;
+    padding: 0 2.4rem;
+    border: 1px solid #D4D4D8;
+
+    &.select-label {
+      padding-right: 4rem;
+    }
+
+    &--flex-100 {
+      flex: 100%;
+    }
+
+    &--flex-50 {
+      flex: 45%;
+      max-width: 33.2rem;
+    }
+
+    &--flex-80 {
+      flex: 60%;
+      max-width: 21rem;
+    }
+
+    &--flex-20 {
+      flex: 20%;
+      max-width: 8.8rem;
+      padding: 0 1.7rem;
+
+      &.select-label {
+        padding-right: 3rem;
+      }
+
+      .validator__label-arrow {
+        right: 1.7rem;
+      }
+    }
+
+    &:hover {
+      background-color: rgba(50, 50, 50, 0.03);
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    font-weight: 500;
+    font-size: 1.7rem;
+
+    &::placeholder {
+      color: $grayDark;
+    }
+  }
+
+  &__label-arrow {
+    position: absolute;
+    right: 2.4rem;
+    top: 50%;
+    width: 1.1rem;
+    height: 0.6rem;
+    transform: translateY(-50%);
+
+    path {
+      fill: $grayDark;
+    }
+  }
+
+  &__list-box {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 0.4rem);
+    z-index: 1;
+    width: 100%;
+    max-height: 30.4rem;
+    padding: 2.4rem;
+    background-color: $grayLight;
+
+    &--money {
+      padding: 1.2rem;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    width: 100%;
+    overflow: auto;
+  }
+
+  &__list-item {
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+
+    label {
+      cursor: pointer;
+    }
+
+    &.active {
+      color: $blue;
+    }
+
+    input {
+      display: none;
+    }
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &__btn {
+    margin-top: 0.8rem;
+  }
+
+  &__img-box {
+    width: 69.6rem;
+    height: 46.2rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .validator {
+    &__title {
+      line-height: 6rem;
+    }
+
+    &__separator {
+      width: calc(100% + 8rem);
+      margin: 5rem -4rem 4rem -4rem;
+    }
+
+    &__content {
+      flex-direction: column;
+      gap: 14rem;
+    }
+
+    &__form {
+      order: 2;
+      gap: 4rem;
+      width: 100%;
+    }
+
+    &__form-box {
+      flex: 100%;
+      gap: 2rem;
+
+      &--flex-50 {
+        flex: 100%;
+      }
+    }
+
+    &__box-name {
+      font-size: 3rem;
+    }
+
+    &__label {
+      height: 11.6rem;
+      padding: 0 4rem;
+
+      &.select-label {
+        padding-right: 8rem;
+      }
+
+      &--flex-100 {
+      }
+
+      &--flex-50 {
+        flex: 100%;
+        max-width: none;
+      }
+
+      &--flex-80 {
+        flex: 50%;
+        max-width: 31.6rem;
+      }
+
+      &--flex-20 {
+        max-width: 16rem;
+        padding: 0 2.8rem;
+
+        &.select-label {
+          padding-right: 5rem;
+        }
+
+        .validator__label-arrow {
+          right: 2.6rem;
+        }
+
+        .validator__list {
+          gap: 0.8rem;
+        }
+      }
+    }
+
+    &__input {
+      font-size: 3rem;
+    }
+
+    &__label-arrow {
+      right: 4rem;
+      width: 2.2rem;
+      height: 1.2rem;
+    }
+
+    &__list-box {
+      top: calc(100% + 1rem);
+      max-height: 60rem;
+      padding: 4rem;
+    }
+
+    &__list {
+      gap: 0;
+    }
+
+    &__list-item {
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+
+    &__btn {
+      margin-top: 0;
+    }
+
+    &__img-box {
+      width: 100%;
+      height: 44.6rem;
+    }
+  }
+}

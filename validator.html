@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="another website">
+    <title>Страница</title>
+
+    <link rel="stylesheet" href="font/stylesheet.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<header class="header">
+    <nav class="header__content mobile">
+        <a href="" class="header__logo">
+            <img src="img/logo.svg" alt="">
+        </a>
+        <a href="" class="header__tel-mob">
+            <img src="img/header-tel.svg" alt="">
+        </a>
+        <button type="button" class="header__burger-btn">
+            <span></span>
+        </button>
+    </nav>
+    <nav class="header__content desktop">
+        <a href="" class="header__logo desktop">
+            <img src="img/logo.svg" alt="">
+        </a>
+        <div class="header__separator"></div>
+        <ul class="header__menu">
+            <li class="header__menu-item">
+                <button type="button" class="header__menu-item-name">
+                    <span>Продукция</span>
+                    <svg class="mobile" width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.3125 1.375L9.5 9.1875L1.6875 1.375" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <ul class="header__menu-list">
+                    <li class="header__list-item">
+                        <a href="">Каталог продукции</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Информационные материалы</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Проверка подлинности</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Видеообзоры</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Техническая документация</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Отзывы</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__menu-item">
+                <button type="button" class="header__menu-item-name">
+                    <span>Производство</span>
+                    <svg class="mobile" width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.3125 1.375L9.5 9.1875L1.6875 1.375" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <ul class="header__menu-list">
+                    <li class="header__list-item">
+                        <a href="">Разработка и инжиринг</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Система управлением качеством</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Роботизация производственных площадок</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Производственная система «Мотордеталь»</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__menu-item">
+                <a href="" class="header__menu-item-name">Интернет-магазин</a>
+            </li>
+            <li class="header__menu-item">
+                <button type="button" class="header__menu-item-name">
+                    <span>Компания</span>
+                    <svg class="mobile" width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.3125 1.375L9.5 9.1875L1.6875 1.375" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <ul class="header__menu-list">
+                    <li class="header__list-item">
+                        <a href="">История ТМ «Мотордеталь»</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Медиацентр</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Экологическая программа</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Экскурсия на «Мотордеталь» </a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Социальная ответственность</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Корпоратиная жизнь</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Компания сегодня «Миссия» </a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Карьера</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__menu-item">
+                <a href="" class="header__menu-item-name">Новости</a>
+            </li>
+            <li class="header__menu-item">
+                <a href="" class="header__menu-item-name">Контакты</a>
+            </li>
+        </ul>
+        <div class="header__separator"></div>
+        <a href="" class="header__tel">+7 (4942) 62-83-00</a>
+        <div class="header__separator"></div>
+        <div class="header__lang-box">
+            <button type="button" class="header__lang-btn">
+                <span>RU</span>
+                <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7812 1.22462L6.02812 5.78989C5.73645 6.07004 5.26355 6.07004 4.97188 5.78989L0.218756 1.22462C-0.0729188 0.944468 -0.0729188 0.490259 0.218756 0.210111C0.510431 -0.070037 0.98333 -0.070037 1.27501 0.210111L5.5 4.26813L9.72499 0.210111C10.0167 -0.070037 10.4896 -0.070037 10.7812 0.210111C11.0729 0.490259 11.0729 0.944468 10.7812 1.22462Z" fill="white"/>
+                </svg>
+            </button>
+            <ul class="header__lang-list">
+                <li class="active">
+                    <span>RU</span>
+                </li>
+                <li>
+                    <a href="">EN</a>
+                </li>
+            </ul>
+        </div>
+        <p class="header__address mobile">
+            Россия, г. Кострома, ул. Московская, 105.
+        </p>
+        <a href="" class="header__social mobile">
+            <img src="img/vk-icon.svg" alt="">
+            <span>ВКонтакте</span>
+        </a>
+    </nav>
+</header>
+
+<main>
+    <nav class="breadcrumbs container">
+        <a href="" class="breadcrumbs__item">Главная</a>
+        <span class="breadcrumbs__item active">Проверка подлинности</span>
+    </nav>
+    <section class="validator">
+        <div class="container">
+            <p class="validator__title">
+                Проверка подлинности продукции
+            </p>
+            <div class="validator__separator"></div>
+            <div class="validator__content">
+                <form class="validator__form">
+                    <div class="validator__form-box">
+                        <p class="validator__box-name">
+                            Код под защитным слоем*
+                        </p>
+                        <label class="validator__label validator__label--flex-100">
+                            <input placeholder="Введите код" type="text" class="validator__input">
+                        </label>
+                    </div>
+                    <div class="validator__form-box">
+                        <p class="validator__box-name">
+                            Ваши данные
+                        </p>
+                        <label class="validator__label validator__label--flex-50">
+                            <input placeholder="Имя" type="text" class="validator__input">
+                        </label>
+                        <label class="validator__label validator__label--flex-50">
+                            <input placeholder="Фамилия" type="text" class="validator__input">
+                        </label>
+                        <label class="validator__label validator__label--flex-50">
+                            <input placeholder="Телефон" type="tel" class="validator__input">
+                        </label>
+                        <label class="validator__label validator__label--flex-50">
+                            <input placeholder="E-mail" type="email" class="validator__input">
+                        </label>
+                    </div>
+                    <div class="validator__form-box">
+                        <p class="validator__box-name">
+                            Регион совершения покупки
+                        </p>
+                        <div class="validator__label validator__label--flex-50 select-label">
+                            <input placeholder="Страна не выбрана" type="text" class="validator__input" disabled>
+                            <svg class="validator__label-arrow" width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7812 1.22462L6.02812 5.78989C5.73645 6.07004 5.26355 6.07004 4.97188 5.78989L0.218756 1.22462C-0.0729188 0.944468 -0.0729188 0.490259 0.218756 0.210111C0.510431 -0.070037 0.98333 -0.070037 1.27501 0.210111L5.5 4.26813L9.72499 0.210111C10.0167 -0.070037 10.4896 -0.070037 10.7812 0.210111C11.0729 0.490259 11.0729 0.944468 10.7812 1.22462Z" fill="#494949"/>
+                            </svg>
+                            <div class="validator__list-box form-list">
+                                <ul class="validator__list scrollbar">
+                                    <li class="validator__list-item form-list-item disabled active">
+                                        <span>Страна не выбрана</span>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Австралия</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Австрия</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Азербайджан</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Албания</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Алжир</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Американское</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Самоа</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Ангилья</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Англия</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Ангола</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Страна не выбрана</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Австралия</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Австрия</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Азербайджан</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Албания</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Алжир</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Американское</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Самоа</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Ангилья</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Англия</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="country">
+                                            <span>Ангола</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="validator__label validator__label--flex-50 select-label">
+                            <input placeholder="Регион не выбран" type="text" class="validator__input" disabled>
+                            <svg class="validator__label-arrow" width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7812 1.22462L6.02812 5.78989C5.73645 6.07004 5.26355 6.07004 4.97188 5.78989L0.218756 1.22462C-0.0729188 0.944468 -0.0729188 0.490259 0.218756 0.210111C0.510431 -0.070037 0.98333 -0.070037 1.27501 0.210111L5.5 4.26813L9.72499 0.210111C10.0167 -0.070037 10.4896 -0.070037 10.7812 0.210111C11.0729 0.490259 11.0729 0.944468 10.7812 1.22462Z" fill="#494949"/>
+                            </svg>
+                            <div class="validator__list-box form-list">
+                                <ul class="validator__list scrollbar">
+                                    <li class="validator__list-item form-list-item disabled active">
+                                        <span>Регион не выбран</span>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="region">
+                                            <span>Австралия</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="region">
+                                            <span>Австрия</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="validator__label validator__label--flex-50 select-label">
+                            <input placeholder="Город не выбран" type="text" class="validator__input" disabled>
+                            <svg class="validator__label-arrow" width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7812 1.22462L6.02812 5.78989C5.73645 6.07004 5.26355 6.07004 4.97188 5.78989L0.218756 1.22462C-0.0729188 0.944468 -0.0729188 0.490259 0.218756 0.210111C0.510431 -0.070037 0.98333 -0.070037 1.27501 0.210111L5.5 4.26813L9.72499 0.210111C10.0167 -0.070037 10.4896 -0.070037 10.7812 0.210111C11.0729 0.490259 11.0729 0.944468 10.7812 1.22462Z" fill="#494949"/>
+                            </svg>
+                            <div class="validator__list-box form-list">
+                                <ul class="validator__list scrollbar">
+                                    <li class="validator__list-item form-list-item disabled active">
+                                        <span>Город не выбран</span>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="city">
+                                            <span>Австралия</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="city">
+                                            <span>Австрия</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="validator__form-box validator__form-box--flex-50">
+                        <p class="validator__box-name">
+                            Информация о покупке
+                        </p>
+                        <label class="validator__label validator__label--flex-100">
+                            <input placeholder="Магазин" type="text" class="validator__input">
+                        </label>
+                    </div>
+                    <div class="validator__form-box validator__form-box--flex-50">
+                        <p class="validator__box-name">
+                            Цена покупки
+                        </p>
+                        <label class="validator__label validator__label--flex-80">
+                            <input placeholder="Цена" type="text" class="validator__input">
+                        </label>
+                        <div class="validator__label validator__label--flex-20 select-label">
+                            <input value="РУБ" type="text" class="validator__input" disabled>
+                            <svg class="validator__label-arrow" width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7812 1.22462L6.02812 5.78989C5.73645 6.07004 5.26355 6.07004 4.97188 5.78989L0.218756 1.22462C-0.0729188 0.944468 -0.0729188 0.490259 0.218756 0.210111C0.510431 -0.070037 0.98333 -0.070037 1.27501 0.210111L5.5 4.26813L9.72499 0.210111C10.0167 -0.070037 10.4896 -0.070037 10.7812 0.210111C11.0729 0.490259 11.0729 0.944468 10.7812 1.22462Z" fill="#494949"/>
+                            </svg>
+                            <div class="validator__list-box form-list validator__list-box--money">
+                                <ul class="validator__list scrollbar">
+                                    <li class="validator__list-item form-list-item active">
+                                        <label>
+                                            <input type="radio" name="money" checked>
+                                            <span>РУБ</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="money">
+                                            <span>KZH</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="money">
+                                            <span>UAH</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="money">
+                                            <span>EUR</span>
+                                        </label>
+                                    </li>
+                                    <li class="validator__list-item form-list-item">
+                                        <label>
+                                            <input type="radio" name="money">
+                                            <span>USD</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="validator__btn button">
+                        <span>Проверить</span>
+                    </button>
+                </form>
+                <div class="validator__img-box">
+                    <img src="img/validator-img.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__bg">
+        <svg class="desktop" width="1920" height="500" viewBox="0 0 1920 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 427L1704 292.5L1921 0V885.5H0V427Z" fill="#014A93"/>
+        </svg>
+        <svg class="desktop" width="246" height="334" viewBox="0 0 246 334" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M248 0V334H0L248 0Z" fill="#D62214"/>
+        </svg>
+        <svg class="mobile" width="375" height="200" viewBox="0 0 375 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M418 95V-57L307.289 91.9204L0 127.865V139V916V1443H375V916V139V95H418Z" fill="#014A93"/>
+        </svg>
+        <svg class="mobile" width="70" height="105" viewBox="0 0 70 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M113 0L113 152H0L113 0Z" fill="#D62214"/>
+        </svg>
+    </div>
+    <div class="footer__content-top">
+        <div class="container footer__container">
+            <div class="footer__box">
+                <a href="" class="footer__logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <a href="" class="footer__tel">
+                    8 (4942) 628-300
+                </a>
+                <p class="footer__address">
+                    Россия, г. Кострома,
+                    <br>ул. Московская, 105.
+                </p>
+                <a href="" class="footer__social">
+                    <img src="img/vk-icon.svg" alt="">
+                    <span>ВКонтакте</span>
+                </a>
+            </div>
+            <div class="footer__box">
+                <h3 class="footer__box-title">Продукция</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="">Каталог продукции</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Информационные материалы</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Техническая документация</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Проверка подлинности</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Видеообзоры</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Отзывы</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__box">
+                <h3 class="footer__box-title">Производство</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="">Разработка и инжиниринг</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Производственная система «мотордеталь»</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Роботизация производствееных площадок</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Система управления качеством</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Экологическая программа</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Экскурсия на «мотордеталь»</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__box">
+                <h3 class="footer__box-title">Компания</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="">История</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Компания сегодня (миссия)</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Корпоративная жизнь</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Социальная ответственность</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Медиацентр</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Карьера</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__content-bottom">
+        <div class="container footer__container">
+            <p class=" footer__box">© 2022 Мотордеталь</p>
+            <a href="" class="footer__link-bottom footer__box">Политика конфиденциальности</a>
+            <a href="" class="footer__link-bottom footer__box">Обработка персональной информации</a>
+            <a href="" class="footer__request footer__box">
+                <img src="img/request-logo.svg" alt="">
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -185,6 +185,22 @@
   }
 }
 
+.scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 100rem;
+    background-color: white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 100rem;
+    background-color: $blue;
+  }
+}
+
 @media (max-width: 48em) {
   .button {
     gap: 2rem;
@@ -256,6 +272,12 @@
     }
 
     &__progressbar {
+    }
+  }
+
+  .scrollbar {
+    &::-webkit-scrollbar {
+      width: 0.8rem;
     }
   }
 }

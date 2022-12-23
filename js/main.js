@@ -36,5 +36,25 @@ $(document).ready(function () {
         }
     });
 
+    // Forms
+    $('.form-list').length ? $('.form-list').css('display', 'flex').hide() : false;
+    $('.select-label').click(function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active').find('.form-list').slideUp();
+        } else {
+            $('.select-label.active').removeClass('active').find('.form-list').slideUp();
+            $(this).addClass('active').find('.form-list').slideDown();
+        }
+    });
+    $('.validator__list-item').click(function (e) {
+        e.stopPropagation();
+    });
+    $('.form-list input').change(function () {
+        $(this).parents('.form-list').find('.form-list-item').removeClass('active');
+        $(this).parents('.form-list-item').addClass('active')
+            .parents('.select-label').children('input').attr('value', $(this).siblings('span').html());
+        $(this).parents('.form-list').slideUp();
+    });
+
 
 });

@@ -339,6 +339,18 @@ section {
   fill: white;
 }
 
+.scrollbar::-webkit-scrollbar {
+  width: 0.4rem;
+}
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 100rem;
+  background-color: white;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 100rem;
+  background-color: #014A93;
+}
+
 @media (max-width: 48em) {
   .button {
     gap: 2rem;
@@ -396,6 +408,9 @@ section {
   .slider-nav__arrow > svg {
     width: 3.6rem;
     height: 2.8rem;
+  }
+  .scrollbar::-webkit-scrollbar {
+    width: 0.8rem;
   }
 }
 .header__content {
@@ -2900,6 +2915,292 @@ body {
     margin-bottom: 4rem;
     font-size: 3rem;
     line-height: 4.5rem;
+  }
+}
+.validator__title {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 6.5rem;
+}
+.validator__separator {
+  width: 100%;
+  height: 1px;
+  margin: 3.6rem 0 5.2rem 0;
+  background-color: #D4D4D8;
+}
+.validator__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.validator__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 4.4rem;
+  -webkit-column-gap: 3.4rem;
+     -moz-column-gap: 3.4rem;
+          column-gap: 3.4rem;
+  width: 69.8rem;
+}
+.validator__form-box {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3.4rem;
+}
+.validator__form-box--flex-50 {
+  -webkit-box-flex: 45%;
+      -ms-flex: 45%;
+          flex: 45%;
+}
+.validator__box-name {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+.validator__label {
+  position: relative;
+  height: 7rem;
+  padding: 0 2.4rem;
+  border: 1px solid #D4D4D8;
+}
+.validator__label.select-label {
+  padding-right: 4rem;
+}
+.validator__label--flex-100 {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+}
+.validator__label--flex-50 {
+  -webkit-box-flex: 45%;
+      -ms-flex: 45%;
+          flex: 45%;
+  max-width: 33.2rem;
+}
+.validator__label--flex-80 {
+  -webkit-box-flex: 60%;
+      -ms-flex: 60%;
+          flex: 60%;
+  max-width: 21rem;
+}
+.validator__label--flex-20 {
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+  max-width: 8.8rem;
+  padding: 0 1.7rem;
+}
+.validator__label--flex-20.select-label {
+  padding-right: 3rem;
+}
+.validator__label--flex-20 .validator__label-arrow {
+  right: 1.7rem;
+}
+.validator__label:hover {
+  background-color: rgba(50, 50, 50, 0.03);
+}
+.validator__input {
+  width: 100%;
+  height: 100%;
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+.validator__input::-webkit-input-placeholder {
+  color: #494949;
+}
+.validator__input::-moz-placeholder {
+  color: #494949;
+}
+.validator__input:-ms-input-placeholder {
+  color: #494949;
+}
+.validator__input::-ms-input-placeholder {
+  color: #494949;
+}
+.validator__input::placeholder {
+  color: #494949;
+}
+.validator__label-arrow {
+  position: absolute;
+  right: 2.4rem;
+  top: 50%;
+  width: 1.1rem;
+  height: 0.6rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.validator__label-arrow path {
+  fill: #494949;
+}
+.validator__list-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.4rem);
+  z-index: 1;
+  width: 100%;
+  max-height: 30.4rem;
+  padding: 2.4rem;
+  background-color: #EBECF0;
+}
+.validator__list-box--money {
+  padding: 1.2rem;
+  text-align: center;
+}
+.validator__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+  overflow: auto;
+}
+.validator__list-item {
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+}
+.validator__list-item label {
+  cursor: pointer;
+}
+.validator__list-item.active {
+  color: #014A93;
+}
+.validator__list-item input {
+  display: none;
+}
+.validator__list-item:hover {
+  color: #014A93;
+}
+.validator__btn {
+  margin-top: 0.8rem;
+}
+.validator__img-box {
+  width: 69.6rem;
+  height: 46.2rem;
+}
+.validator__img-box > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (max-width: 48em) {
+  .validator__title {
+    line-height: 6rem;
+  }
+  .validator__separator {
+    width: calc(100% + 8rem);
+    margin: 5rem -4rem 4rem -4rem;
+  }
+  .validator__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 14rem;
+  }
+  .validator__form {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    gap: 4rem;
+    width: 100%;
+  }
+  .validator__form-box {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    gap: 2rem;
+  }
+  .validator__form-box--flex-50 {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+  .validator__box-name {
+    font-size: 3rem;
+  }
+  .validator__label {
+    height: 11.6rem;
+    padding: 0 4rem;
+  }
+  .validator__label.select-label {
+    padding-right: 8rem;
+  }
+  .validator__label--flex-50 {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    max-width: none;
+  }
+  .validator__label--flex-80 {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    max-width: 31.6rem;
+  }
+  .validator__label--flex-20 {
+    max-width: 16rem;
+    padding: 0 2.8rem;
+  }
+  .validator__label--flex-20.select-label {
+    padding-right: 5rem;
+  }
+  .validator__label--flex-20 .validator__label-arrow {
+    right: 2.6rem;
+  }
+  .validator__label--flex-20 .validator__list {
+    gap: 0.8rem;
+  }
+  .validator__input {
+    font-size: 3rem;
+  }
+  .validator__label-arrow {
+    right: 4rem;
+    width: 2.2rem;
+    height: 1.2rem;
+  }
+  .validator__list-box {
+    top: calc(100% + 1rem);
+    max-height: 60rem;
+    padding: 4rem;
+  }
+  .validator__list {
+    gap: 0;
+  }
+  .validator__list-item {
+    font-size: 3rem;
+    line-height: 3.6rem;
+  }
+  .validator__btn {
+    margin-top: 0;
+  }
+  .validator__img-box {
+    width: 100%;
+    height: 44.6rem;
   }
 }
 body.lock {
