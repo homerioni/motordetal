@@ -1,0 +1,179 @@
+.intro {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-bottom: 9rem;
+
+  &--main {
+    margin-bottom: -1rem;
+  }
+
+  &__bg-figure {
+    position: absolute;
+    right: 0;
+    bottom: 13rem;
+    z-index: 2;
+
+    > svg {
+      width: 21.6rem;
+      height: 29.2rem;
+
+      path {
+        fill: $red;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: -2rem;
+      top: 100%;
+      width: 200rem;
+      height: 30rem;
+      transform: rotate(-4.5deg) skew(-4.5deg) translateY(5.6rem);
+      background-color: white;
+    }
+  }
+
+  &__slider {
+  }
+
+  &__slide {
+    height: auto;
+    padding-top: 48.6rem;
+  }
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__slide-content {
+    position: relative;
+    z-index: 100;
+    height: 100%;
+    padding: 9rem 0 21rem 0;
+    background-color: rgba(23, 23, 23, 0.2);
+    backdrop-filter: blur(1rem);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title-block {
+    width: 78.4rem;
+  }
+
+  &__title {
+    margin-bottom: 5rem;
+    font-family: $mont;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 1.07;
+    color: white;
+  }
+
+  &__btn {
+  }
+
+  &__text-box {
+    width: 51rem;
+    padding-top: 11rem;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: white;
+  }
+
+  &__slider-nav {
+    position: absolute;
+    top: 59.5rem;
+    right: 24.5rem;
+    z-index: 1;
+    width: 51rem;
+
+    .slider-nav__nav-content {
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .intro {
+    margin-bottom: 16rem;
+
+    &--main {
+      margin-bottom: 0;
+    }
+
+    &__bg-figure {
+      right: -6rem;
+      bottom: 5rem;
+    }
+
+    &__slider {
+      z-index: 1;
+    }
+
+    &__slide {
+      padding-top: 56rem;
+    }
+
+    &__bg {
+    }
+
+    &__slide-content {
+      height: 100%;
+      padding: 4rem 4rem 30rem 4rem;
+      backdrop-filter: blur(2rem);
+    }
+
+    &__container {
+      display: block;
+      padding: 0;
+    }
+
+    &__title-block {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
+
+    &__title {
+      font-size: 4rem;
+      line-height: 1.2;
+    }
+
+    &__btn {
+    }
+
+    &__text-box {
+      width: 100%;
+      padding-top: 0;
+      font-size: 3rem;
+      line-height: 1.4;
+    }
+
+    &__slider-nav {
+      position: relative;
+      top: 0;
+      right: 0;
+      z-index: 5;
+      width: 100%;
+      padding: 0 4rem;
+      margin-top: -24rem;
+      margin-bottom: 10rem;
+    }
+  }
+}

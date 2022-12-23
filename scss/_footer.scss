@@ -1,0 +1,300 @@
+@import "param";
+
+body {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 44.3rem;
+
+  @media (max-width: 48em) {
+    padding-bottom: 260rem;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: $blue;
+
+  &__bg {
+    > svg:nth-child(odd) {
+      position: absolute;
+      top: -45rem;
+      left: 0;
+      z-index: -5;
+      width: 100%;
+      height: 50rem;
+    }
+
+    > svg:nth-child(even) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 24.8rem;
+      height: 33.4rem;
+    }
+  }
+
+  &__content-top {
+    padding-bottom: 6rem;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: white;
+  }
+
+  &__box {
+    &:nth-child(1) {
+      width: 26rem;
+    }
+
+    &:nth-child(2) {
+      width: 26rem;
+    }
+
+    &:nth-child(3) {
+      width: 36rem;
+    }
+
+    &:nth-child(4) {
+      width: 26rem;
+    }
+  }
+
+  &__logo {
+    display: block;
+    width: 25.9rem;
+    height: 5rem;
+    margin-bottom: 3.8rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__tel {
+    display: block;
+    margin-bottom: 3.8rem;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: white;
+
+    &:hover {
+      filter: brightness(.75);
+    }
+  }
+
+  &__address {
+    display: block;
+    margin-bottom: 3.8rem;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: white;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: white;
+
+    > img {
+      width: 2.4rem;
+      height: 2.4rem;
+      object-fit: contain;
+    }
+
+    > span {
+      transform: translateY(2px);
+    }
+
+    &:hover {
+      filter: brightness(.75);
+    }
+  }
+
+  &__box-title {
+    margin-bottom: 4rem;
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__list-item {
+    opacity: .6;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 1.4;
+    color: white;
+    transition: opacity .2s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__content-bottom {
+    padding: 3rem 0;
+    border-top: 1px solid #D4D4D833;
+
+    .footer__container {
+      align-items: center;
+    }
+  }
+
+  &__link-bottom {
+    opacity: .6;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 1.4;
+    color: white;
+    transition: opacity .2s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__request {
+    display: block;
+    width: 17.3rem;
+    height: 4rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: left;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .footer {
+    &__bg {
+      > svg:nth-child(odd) {
+        position: absolute;
+        top: -28rem;
+        left: 0;
+        z-index: -5;
+        width: 100%;
+        height: 40rem;
+      }
+
+      > svg:nth-child(even) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 14rem;
+        height: 30.4rem;
+      }
+    }
+
+    &__content-top {
+      padding-bottom: 6rem;
+    }
+
+    &__container {
+      flex-direction: column;
+      justify-content: normal;
+      gap: 6rem;
+      font-weight: 400;
+      font-size: 3rem;
+    }
+
+    &__box {
+      &:nth-child(n) {
+        width: 100%;
+      }
+    }
+
+    &__logo {
+      width: 33rem;
+      height: 6.4rem;
+      margin-bottom: 4rem;
+    }
+
+    &__tel {
+      margin-bottom: 4rem;
+      font-weight: 400;
+      font-size: 3rem;
+    }
+
+    &__address {
+      margin-bottom: 5rem;
+      font-size: 3rem;
+    }
+
+    &__social {
+      gap: 2rem;
+      font-size: 3rem;
+
+      > img {
+        width: 4.8rem;
+        height: 4.8rem;
+      }
+
+      > span {
+        transform: translateY(1px);
+      }
+    }
+
+    &__box-title {
+      margin-bottom: 4rem;
+      font-size: 3rem;
+    }
+
+    &__list {
+      gap: 2.4rem;
+    }
+
+    &__list-item {
+      font-weight: 400;
+      font-size: 3rem;
+    }
+
+    &__content-bottom {
+      padding: 6rem 0;
+
+      .footer__container {
+        gap: 5rem;
+
+        > *:not(.footer__request) {
+          opacity: .6;
+        }
+      }
+    }
+
+    &__link-bottom {
+      font-size: 3.4rem;
+    }
+
+    &__request {
+      width: 34.6rem;
+      height: 8rem;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.seo {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    width: 32.8rem;
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    color: $grayDark;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    width: 94.2rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 48em) {
+  .seo {
+    &__container {
+      display: block;
+    }
+
+    &__title {
+      width: 100%;
+      margin-bottom: 3rem;
+      font-size: 3rem;
+    }
+
+    &__text {
+      width: 100%;
+      font-size: 3rem;
+    }
+  }
+}

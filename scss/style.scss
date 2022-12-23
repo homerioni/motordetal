@@ -1,0 +1,32 @@
+@import "param";
+@import "set";
+@import "components";
+
+@import "header";
+@import "footer";
+@import "intro";
+@import "stat";
+@import "category-slider";
+@import "seo";
+@import "advantages";
+@import "about";
+@import "news";
+@import "news-page";
+
+
+
+body.lock {
+  overflow: hidden;
+}
+
+@media (min-width: 48.01em) {
+  .mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 48em) {
+  .desktop {
+    display: none;
+  }
+}

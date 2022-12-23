@@ -1,0 +1,144 @@
+.news-page {
+  &__title {
+    font-family: $mont;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 1.07;
+  }
+
+  &__separator {
+    width: 100%;
+    height: 1px;
+    margin: 3.6rem 0 5.2rem 0;
+    background-color: #D4D4D8;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.2rem;
+    margin-bottom: 3.2rem;
+
+    > li {
+      flex: 30%;
+    }
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: background-color .4s ease;
+
+    &:hover {
+      background-color: $grayLight;
+    }
+  }
+
+  &__img-box {
+    width: 100%;
+    height: 24.2rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__item-info-block {
+    padding: 2.8rem 2rem;
+  }
+
+  &__item-title {
+    padding-bottom: 2.8rem;
+    margin-bottom: 2.8rem;
+    border-bottom: 1px solid #D4D4D8;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__date {
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: $gray;
+  }
+
+  &__arrow {
+    flex: none;
+    width: 2rem;
+    height: 3.5rem;
+
+    path {
+      fill: $red;
+    }
+  }
+
+  &__btn {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 48em) {
+  .news-page {
+    &__title {
+      line-height: 1.2;
+    }
+
+    &__separator {
+      margin: 5rem 0;
+    }
+
+    &__content {
+      gap: 4rem;
+      margin-bottom: 4rem;
+
+      > li {
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &__item {
+      background-color: $grayLight;
+    }
+
+    &__img-box {
+      height: 36rem;
+    }
+
+    &__item-info-block {
+      padding: 4rem;
+    }
+
+    &__item-title {
+      padding-bottom: 4rem;
+      margin-bottom: 4rem;
+      font-size: 4rem;
+    }
+
+    &__footer {
+    }
+
+    &__date {
+      font-weight: 700;
+      font-size: 3rem;
+    }
+
+    &__arrow {
+      width: 3rem;
+      height: 5.2rem;
+    }
+
+    &__btn {
+    }
+  }
+}
