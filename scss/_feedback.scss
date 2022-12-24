@@ -1,0 +1,86 @@
+.feedback {
+  &__title {
+    margin-bottom: 3.6rem;
+    font-family: $mont;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 6.5rem;
+  }
+
+  &__contacts-box {
+    margin-bottom: 8.8rem;
+    background-color: $grayLight;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    column-gap: 12rem;
+    padding: 4.4rem 0;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+
+    > svg {
+      width: 3rem;
+      height: 3rem;
+
+      path {
+        stroke: $blue;
+      }
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__separator {
+    border-bottom: 1px solid #D4D4D8;
+  }
+
+  &__form {
+    margin-top: 5.2rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .feedback {
+    &__title {
+      margin-bottom: 5rem;
+      line-height: 6rem;
+    }
+
+    &__contacts-box {
+      margin-bottom: 16rem;
+    }
+
+    &__contacts {
+      flex-direction: column;
+      align-items: normal;
+      row-gap: 4rem;
+      padding: 5rem 4rem;
+    }
+
+    &__contact {
+      font-size: 3rem;
+
+      > svg {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+
+    &__separator {
+    }
+
+    &__form {
+      margin-top: 6rem;
+    }
+  }
+}
