@@ -18,8 +18,35 @@
 @import "validator";
 @import "corp";
 @import "photo-folder";
+@import "video";
 
 
+.fancybox-container {
+  backdrop-filter: blur(0.5rem);
+}
+
+.fancybox-bg {
+  background: rgba(1, 74, 147, 0.6);
+}
+
+.video-close {
+  right: -3rem;
+  top: 0;
+  width: 5rem;
+  height: 5rem;
+  transform: translateX(100%) translateY(-0.8rem);
+  opacity: 1;
+
+  > svg {
+    path {
+      fill: $red;
+    }
+  }
+
+  &:hover {
+    opacity: .7;
+  }
+}
 
 body.lock {
   overflow: hidden;
@@ -34,5 +61,17 @@ body.lock {
 @media (max-width: 48em) {
   .desktop {
     display: none;
+  }
+
+  .fancybox-slide {
+    padding: 4rem;
+  }
+
+  .video-close {
+    right: -1.6rem;
+    top: 0;
+    width: 7.2rem;
+    height: 7.2rem;
+    transform: translateX(0) translateY(-100%);
   }
 }

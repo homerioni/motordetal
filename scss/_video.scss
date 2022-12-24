@@ -1,0 +1,99 @@
+.video {
+  &__title {
+    margin-bottom: 3.6rem;
+    font-family: $mont;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 6.5rem;
+  }
+
+  &__separator {
+    width: 100%;
+    height: 1px;
+    background-color: #D4D4D8;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.2rem;
+    margin: 5.2rem 0;
+  }
+
+  &__item {
+    flex: 45%;
+    max-width: 69.9rem;
+    height: 39.4rem;
+
+    &:first-child {
+      flex: 100%;
+      max-width: 100%;
+      height: 80.6rem;
+      margin-bottom: 2.8rem;
+    }
+
+    > a {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+      }
+
+      > iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__slider-nav {
+    margin-top: 3.6rem;
+
+    .slider-nav__nav-content {
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .video {
+    &__title {
+      margin-bottom: 5rem;
+      line-height: 6rem;
+    }
+
+    &__separator {
+      width: calc(100% + 8rem);
+      margin: 0 -4rem;
+    }
+
+    &__content {
+      gap: 4rem;
+      margin: 4rem 0;
+    }
+
+    &__item {
+      flex: 100%;
+      max-width: none;
+      height: 38rem;
+
+      &:first-child {
+        height: 38rem;
+        margin-bottom: 8rem;
+      }
+    }
+
+    &__slider-nav {
+      margin-top: 4rem;
+    }
+  }
+}

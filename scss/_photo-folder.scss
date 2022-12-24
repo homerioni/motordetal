@@ -95,7 +95,8 @@
     }
 
     &__separator {
-      margin: 5rem 0 4rem 0;
+      width: calc(100% + 8rem);
+      margin: 5rem -4rem 4rem -4rem;
     }
 
     &__content {

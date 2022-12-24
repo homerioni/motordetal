@@ -56,5 +56,39 @@ $(document).ready(function () {
         $(this).parents('.form-list').slideUp();
     });
 
+    // Video
+    $('.video__item a').each(function () {
+        let getLink = $(this).attr('href')
+            .replace('.com/embed/', '.com/watch?v=')
+            .replace('.be/', '.com/watch?v=')
+            .split(".com/watch?v=")[1]
+            .split("&index")[0]
+            .replace('&', '?');
+        $(this).find('iframe').attr('src', 'https://www.youtube.com/embed/' + getLink);
+    });
+    $('[data-fancybox="video"]').fancybox({
+        arrows: false,
+        infobar: false,
+        toolbar: false,
+        smallBtn: true,
+        afterLoad: function(instance, current) {
+            if ($(window).width() <= 768) {
+                current.width  = rem(33.5);
+                current.height = rem(19);
+            } else {
+                current.width  = rem(67);
+                current.height = rem(80.6);
+            }
+        },
+        afterShow: function (inst, current) {
+            current.$smallBtn.addClass('video-close')
+                .html('<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                '<path d="M25.5 0H33L7.5 33H0L25.5 0Z" fill="#D62214"/>\n' +
+                '<path d="M7.5 0H0L25.5 33H33L7.5 0Z" fill="#D62214"/>\n' +
+                '</svg>\n');
+        },
+    });
+
+
 
 });
