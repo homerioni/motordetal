@@ -14,7 +14,7 @@
 <body>
 
 
-<header class="header header--blur">
+<header class="header">
     <nav class="header__content mobile">
         <a href="" class="header__logo">
             <img src="img/logo.svg" alt="">
@@ -156,162 +156,146 @@
 </header>
 
 <main>
-    <section class="intro">
-        <div class="intro__bg-figure">
-            <svg width="216" height="292" viewBox="0 0 216 292" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M216.5 0V275L0 292L216.5 0Z" fill="#D62214"/>
-            </svg>
-        </div>
-        <div class="intro__slider swiper">
-            <div class="swiper-wrapper">
-                <div class="intro__slide swiper-slide">
-                    <picture class="intro__bg">
-                        <img src="img/intro-img2.webp" alt="" class="desktop">
-                        <img src="img/intro-img2.webp" alt="" class="mobile">
-                    </picture>
-                    <div class="intro__slide-content">
-                        <div class="container intro__container">
-                            <div class="intro__title-block">
-                                <div class="intro__title">
-                                    Российский производитель мирового уровня
-                                </div>
-                                <button class="intro__btn button">
-                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15.5 8.50005L2.10581e-07 17L9.53674e-07 -6.77526e-07L15.5 8.50005Z" fill="white"/>
-                                    </svg>
-                                    <span>видео о нас</span>
-                                </button>
-                            </div>
-                            <p class="intro__text-box">
-                                Высокое качество продукции, инновации и современное производство! В условиях быстроменяющегося мира важно идти в ногу со временем, а иногда и опережать его, притом сохранять фирменный стиль и традиции полувековой истории
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="intro__slide swiper-slide">
-                    <picture class="intro__bg">
-                        <img src="img/main-intro-bg2.webp" alt="" class="desktop">
-                        <img src="img/main-intro-bg2.webp" alt="" class="mobile">
-                    </picture>
-                    <div class="intro__slide-content">
-                        <div class="container intro__container">
-                            <div class="intro__title-block">
-                                <div class="intro__title">
-                                    Одна строка
-                                </div>
-                                <button class="intro__btn button">
-                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15.5 8.50005L2.10581e-07 17L9.53674e-07 -6.77526e-07L15.5 8.50005Z" fill="white"/>
-                                    </svg>
-                                    <span>видео другое</span>
-                                </button>
-                            </div>
-                            <p class="intro__text-box">
-                                Высокое качество продукции, инновации и современное производство!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="intro__slider-nav slider-nav slider-nav--white">
-            <div class="slider-nav__nav-content">
-                <div class="slider-nav__number">01</div>
-                <div class="slider-nav__arrows">
-                    <button class="slider-nav__arrow prev">
-                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.00342 6.25098C0.589204 6.25098 0.253418 6.58676 0.253418 7.00098C0.253418 7.41519 0.589204 7.75098 1.00342 7.75098L15.348 7.75097L10.9487 12.1503C10.6558 12.4432 10.6558 12.9181 10.9487 13.211C11.2416 13.5039 11.7164 13.5039 12.0093 13.211L17.6742 7.546C17.7831 7.44306 17.8611 7.30785 17.893 7.15569C17.9436 6.91593 17.8757 6.65621 17.6895 6.47003L12.0093 0.789824C11.7164 0.496931 11.2416 0.496931 10.9487 0.789823C10.6558 1.08272 10.6558 1.55759 10.9487 1.85048L15.3492 6.25097L1.00342 6.25098Z" fill="#171717"/>
-                        </svg>
-                    </button>
-                    <button class="slider-nav__arrow next">
-                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.00342 6.25098C0.589204 6.25098 0.253418 6.58676 0.253418 7.00098C0.253418 7.41519 0.589204 7.75098 1.00342 7.75098L15.348 7.75097L10.9487 12.1503C10.6558 12.4432 10.6558 12.9181 10.9487 13.211C11.2416 13.5039 11.7164 13.5039 12.0093 13.211L17.6742 7.546C17.7831 7.44306 17.8611 7.30785 17.893 7.15569C17.9436 6.91593 17.8757 6.65621 17.6895 6.47003L12.0093 0.789824C11.7164 0.496931 11.2416 0.496931 10.9487 0.789823C10.6558 1.08272 10.6558 1.55759 10.9487 1.85048L15.3492 6.25097L1.00342 6.25098Z" fill="#171717"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="slider-nav__progressbar">
-                <span></span>
-            </div>
-        </div>
-    </section>
-    <section class="history">
+    <nav class="breadcrumbs container">
+        <a href="" class="breadcrumbs__item">Главная</a>
+        <a href="" class="breadcrumbs__item">Компания</a>
+        <a href="" class="breadcrumbs__item">Корпоративная жизнь</a>
+        <span class="breadcrumbs__item active">Фотоальбом «Корпоративная жизнь»</span>
+    </nav>
+    <section class="photo-folder">
         <div class="container">
-            <p class="history__title">
-                История компании
-            </p>
-            <ul class="history__content">
-                <li class="history__item">
-                    <p class="history__year">2021 г.</p>
-                    <div class="history__img-box">
-                        <img src="img/history-img1.webp" alt="">
-                    </div>
-                    <div class="history__text-block">
-                        <p class="history__item-title">
-                            Представлен новый дизайн упаковки компании
+            <a href="" class="back-link">
+                <svg width="19" height="35" viewBox="0 0 19 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 1L6.66667 17.5L18 34H12.7798L1 17.5L12.7798 1H18Z" fill="#D62214" stroke="#D62214"/>
+                </svg>
+                <span>вернуться назад</span>
+            </a>
+            <p class="photo-folder__title">Корпоративная жизнь</p>
+            <div class="photo-folder__separator"></div>
+            <ul class="photo-folder__content">
+                <li class="photo-folder__item">
+                    <a href="img/corp-img1.webp" data-fancybox="corp" data-caption="Выездные семинары">
+                        <div class="photo-folder__item-img-box">
+                            <img src="img/corp-img1.webp" alt="">
+                        </div>
+                        <p class="photo-folder__item-title">
+                            Выездные семинары
                         </p>
-                        <p class="history__text">
-                            «Мотордеталь» - это высокое качество продукции, инновации и современное производство! В условиях быстроменяющегося мира важно идти в ногу со временем, а иногда и опережать его!
-                            Притом сохранять фирменный стиль и традиции полувековой истории! Мы представили новый
-                            дизайн упаковки нашей продукции!
-                        </p>
-                    </div>
+                    </a>
                 </li>
-                <li class="history__item">
-                    <p class="history__year">2020 г.</p>
-                    <div class="history__img-box">
-                        <img src="img/history-img2.webp" alt="">
-                    </div>
-                    <div class="history__text-block">
-                        <p class="history__item-title">
-                            Расширение ассортимента продукции
+                <li class="photo-folder__item">
+                    <a href="img/corp-img2.webp" data-fancybox="corp" data-caption="Конкурсы профессионального мастерства">
+                        <div class="photo-folder__item-img-box">
+                            <img src="img/corp-img2.webp" alt="">
+                        </div>
+                        <p class="photo-folder__item-title">
+                            Конкурсы профессионального мастерства
                         </p>
-                        <p class="history__text">
-                            «Мотордеталь» - одно из немногих российских предприятий, предлагающих потребителю комплексное решение проблемы обеспечения
-                            ремонта отечественных автомобилей. Для этого ассортимент продукции начал активно пополняться новыми товарными группами.
-                            Компания «Мотордеталь» сотрудничает с крупнейшими производителями в России, оригинальные запасные части торговой марки
-                        </p>
-                    </div>
+                    </a>
                 </li>
-                <li class="history__item">
-                    <p class="history__year">2019 г.</p>
-                    <div class="history__img-box">
-                        <img src="img/history-img3.webp" alt="">
-                    </div>
-                    <div class="history__text-block">
-                        <p class="history__item-title">
-                            Награда Ford Q1 за стабильно высокое качество продукции
+                <li class="photo-folder__item">
+                    <a href="img/corp-img3.webp" data-fancybox="corp" data-caption="Научно-технические конференции">
+                        <div class="photo-folder__item-img-box">
+                            <img src="img/corp-img3.webp" alt="">
+                        </div>
+                        <p class="photo-folder__item-title">
+                            Научно-технические конференции
                         </p>
-                        <p class="history__text">
-                            18.07.2019 компания АО «КЗА» получила статус Рога О1 как приоритетный поставщик. Ford Q1 —
-                            система контроля качества для обеспечения единого стандарта производства автокомпонентов
-                            всех партнеров Ford. Для получения статуса поставщик должен соответствовать требованиям
-                            автопроизводителя к логистике, организации системы управления качеством и производственных
-                            процессов
-                        </p>
-                    </div>
+                    </a>
                 </li>
-                <li class="history__item">
-                    <p class="history__year">2018 г.</p>
-                    <div class="history__img-box">
-                        <img src="img/history-img4.webp" alt="">
-                    </div>
-                    <div class="history__text-block">
-                        <p class="history__item-title">
-                            Новый цех поршневых пальцев
+                <li class="photo-folder__item">
+                    <a href="img/corp-slide-img1.webp" data-fancybox="corp" data-caption="Корпоративные награды">
+                        <div class="photo-folder__item-img-box">
+                            <img src="img/corp-slide-img1.webp" alt="">
+                        </div>
+                        <p class="photo-folder__item-title">
+                            Корпоративные награды Корпоративные награды
                         </p>
-                        <p class="history__text">
-                            Для удовлетворения потребностей российских и зарубежных автопроизводителей и рынка
-                            запасных частей, нуждающихся в комплексных поставках всех компонентов
-                            цилиндропоршневой группы, специалистами «Мотордеталь» был реализован проект
-                            производства поршневых пальцев. В 2018 году была открыта новая площадка по производству
-                            поршневых пальцев. Производственные мощности позволяют выпускать в год до.
+                    </a>
+                </li>
+                <li class="photo-folder__item">
+                    <a href="img/corp-img1.webp" data-fancybox="corp" data-caption="Выездные семинары">
+                        <div class="photo-folder__item-img-box">
+                            <img src="img/corp-img1.webp" alt="">
+                        </div>
+                        <p class="photo-folder__item-title">
+                            Выездные семинары
                         </p>
-                    </div>
+                    </a>
+                </li>
+                <li class="photo-folder__item">
+                    <a href="img/corp-img2.webp" data-fancybox="corp" data-caption="Конкурсы профессионального мастерства">
+                        <div class="photo-folder__item-img-box">
+                            <img src="img/corp-img2.webp" alt="">
+                        </div>
+                        <p class="photo-folder__item-title">
+                            Конкурсы профессионального мастерства
+                        </p>
+                    </a>
+                </li>
+                <li class="photo-folder__item">
+                    <a href="img/corp-img3.webp" data-fancybox="corp" data-caption="Научно-технические конференции">
+                        <div class="photo-folder__item-img-box">
+                            <img src="img/corp-img3.webp" alt="">
+                        </div>
+                        <p class="photo-folder__item-title">
+                            Научно-технические конференции
+                        </p>
+                    </a>
+                </li>
+                <li class="photo-folder__item">
+                    <a href="img/corp-slide-img1.webp" data-fancybox="corp" data-caption="Корпоративные награды">
+                        <div class="photo-folder__item-img-box">
+                            <img src="img/corp-slide-img1.webp" alt="">
+                        </div>
+                        <p class="photo-folder__item-title">
+                            Корпоративные награды Корпоративные награды
+                        </p>
+                    </a>
+                </li>
+                <li class="photo-folder__item">
+                    <a href="img/corp-img1.webp" data-fancybox="corp" data-caption="Выездные семинары">
+                        <div class="photo-folder__item-img-box">
+                            <img src="img/corp-img1.webp" alt="">
+                        </div>
+                        <p class="photo-folder__item-title">
+                            Выездные семинары
+                        </p>
+                    </a>
+                </li>
+                <li class="photo-folder__item">
+                    <a href="img/corp-img2.webp" data-fancybox="corp" data-caption="Конкурсы профессионального мастерства">
+                        <div class="photo-folder__item-img-box">
+                            <img src="img/corp-img2.webp" alt="">
+                        </div>
+                        <p class="photo-folder__item-title">
+                            Конкурсы профессионального мастерства
+                        </p>
+                    </a>
+                </li>
+                <li class="photo-folder__item">
+                    <a href="img/corp-img3.webp" data-fancybox="corp" data-caption="Научно-технические конференции">
+                        <div class="photo-folder__item-img-box">
+                            <img src="img/corp-img3.webp" alt="">
+                        </div>
+                        <p class="photo-folder__item-title">
+                            Научно-технические конференции
+                        </p>
+                    </a>
+                </li>
+                <li class="photo-folder__item">
+                    <a href="img/corp-slide-img1.webp" data-fancybox="corp" data-caption="Корпоративные награды">
+                        <div class="photo-folder__item-img-box">
+                            <img src="img/corp-slide-img1.webp" alt="">
+                        </div>
+                        <p class="photo-folder__item-title">
+                            Корпоративные награды Корпоративные награды
+                        </p>
+                    </a>
                 </li>
             </ul>
-            <button class="history__btn button">
-                <span>Показать еще</span>
+            <button class="photo-folder__btn button">
+                <span>показать еще</span>
             </button>
         </div>
     </section>
@@ -432,6 +416,7 @@
         </div>
     </div>
 </footer>
+
 
 
 <script src="js/jquery-3.6.0.min.js"></script>

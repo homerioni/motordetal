@@ -1,0 +1,130 @@
+.photo-folder {
+  &__title {
+    font-family: $mont;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 6.5rem;
+  }
+
+  &__separator {
+    width: 100%;
+    height: 1px;
+    margin: 3.6rem 0 5.2rem 0;
+    background-color: #D4D4D8;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 3.5rem;
+    row-gap: 3rem;
+  }
+
+  &__item {
+    position: relative;
+    flex: 30%;
+    min-height: 30rem;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      border: 5.2rem solid transparent;
+      border-right: 5.2rem solid white;
+      border-bottom: 5.2rem solid white;
+      transform: rotate(-8deg) translate(1.5rem, 1.5rem);
+    }
+
+    > a {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover {
+      .photo-folder__item-img-box img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__item-img-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s ease;
+    }
+  }
+
+  &__item-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 8.8rem;
+    padding: 1.5rem 5rem 1.5rem 1.5rem;
+    background-color: rgba(23, 23, 23, 0.5);
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    color: white;
+  }
+
+  &__btn {
+    margin-top: 3.2rem;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 48em) {
+  .photo-folder {
+    &__title {
+      line-height: 6rem;
+    }
+
+    &__separator {
+      margin: 5rem 0 4rem 0;
+    }
+
+    &__content {
+      row-gap: 4rem;
+    }
+
+    &__item {
+      flex: 100%;
+      min-height: 71.4rem;
+
+      &:after {
+        border: 11rem solid transparent;
+        border-right: 11rem solid white;
+        border-bottom: 11rem solid white;
+      }
+    }
+
+    &__item-img-box {
+    }
+
+    &__item-title {
+      min-height: 22.2rem;
+      padding: 4rem 14rem 4rem 4rem;
+      font-size: 4rem;
+      line-height: 4.8rem;
+    }
+
+    &__btn {
+      margin-top: 4rem;
+    }
+  }
+}

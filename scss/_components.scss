@@ -55,7 +55,7 @@
   margin-bottom: 6rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.6rem;
+  column-gap: 1.6rem;
 
   &--absolute {
     position: absolute;
@@ -201,6 +201,36 @@
   }
 }
 
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 6rem;
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  color: $red;
+
+  > svg {
+    width: 2rem;
+    height: 3.5rem;
+    transform: translateY(-1px);
+    transition: transform .4s ease;
+
+    path {
+      fill: $red;
+      stroke: $red;
+    }
+  }
+
+  &:hover {
+    > svg {
+      transform: translate(-1rem, -1px);
+    }
+  }
+}
+
 @media (max-width: 48em) {
   .button {
     gap: 2rem;
@@ -228,7 +258,7 @@
   .breadcrumbs {
     margin-top: 4rem;
     margin-bottom: 4rem;
-    gap: 3.2rem;
+    column-gap: 3.2rem;
 
     &--absolute {
       left: 4rem;
@@ -278,6 +308,17 @@
   .scrollbar {
     &::-webkit-scrollbar {
       width: 0.8rem;
+    }
+  }
+
+  .back-link {
+    margin-bottom: 4rem;
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+
+    > svg {
+      width: 3rem;
+      height: 5.4rem;
     }
   }
 }
