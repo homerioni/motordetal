@@ -81,11 +81,21 @@ const advantages_slider = new Swiper('.advantages__slider', {
 
     on: {
         slideChange: function (slider) {
-            console.log('123');
             let index = slider.activeIndex + 1;
             $('.advantages .slider-nav__number').html(function () {
                 return index < 10 ? '0' + index : index;
             });
         },
+    },
+});
+
+const corp_slider = new Swiper('.corp__slider', {
+    direction: 'horizontal',
+    spaceBetween: rem(3.4),
+    slidesPerView: 1,
+
+    navigation: {
+        nextEl: '.corp .next',
+        prevEl: '.corp .prev',
     },
 });
