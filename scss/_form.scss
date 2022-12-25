@@ -24,14 +24,55 @@
     height: 7rem;
     border: 1px solid #D4D4D8;
 
+    &:hover {
+      background-color: rgba(50, 50, 50, 0.03);
+    }
+
+    &.focus {
+      border: 1px solid $grayDark;
+    }
+
+    .error-icon {
+      display: none;
+      position: absolute;
+      right: 2.5rem;
+      top: 50%;
+      width: 3rem;
+      height: 3rem;
+      transform: translateY(-50%);
+    }
+
+    &.error {
+      border: 1px solid $red;
+
+      input,
+      textarea {
+        padding-right: 6.5rem;
+      }
+
+      .error-icon {
+        display: block;
+      }
+    }
+
     &--textarea {
       width: fit-content;
       height: auto;
       border: none;
-    }
 
-    &:hover {
-      background-color: rgba(50, 50, 50, 0.03);
+      .error-icon {
+        top: 2rem;
+        right: 2.4rem;
+        transform: none;
+      }
+
+      &.error {
+        border: none;
+
+        textarea {
+          border: 1px solid $red;
+        }
+      }
     }
   }
 
@@ -44,6 +85,21 @@
 
     &::placeholder {
       color: $grayDark;
+    }
+  }
+
+  &__upload-box {
+    display: flex;
+    align-items: center;
+
+    &.complete {
+      .form__upload {
+        display: none;
+      }
+
+      .form__file {
+        display: flex;
+      }
     }
   }
 
@@ -65,6 +121,58 @@
 
     > input {
       display: none;
+    }
+  }
+
+  &__file {
+    display: none;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__file-img-box {
+    width: 4rem;
+    height: 4.8rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__file-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+
+    > *:last-child {
+      color: $grayDark;
+    }
+  }
+
+  &__file-del {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    > svg {
+      width: 100%;
+      height: 100%;
+
+      path {
+        fill: $black;
+      }
+    }
+
+    &:hover {
+      > svg {
+        path {
+          fill: $red;
+        }
+      }
     }
   }
 
@@ -110,8 +218,27 @@
     &__label {
       height: 11.6rem;
 
+      .error-icon {
+        right: 4rem;
+        width: 5rem;
+        height: 5rem;
+      }
+
+      &.error {
+        input,
+        textarea {
+          padding-right: 10rem;
+        }
+      }
+
       &--textarea {
         height: auto;
+
+        .error-icon {
+          top: 3.2rem;
+          right: 4rem;
+          transform: none;
+        }
       }
     }
 
@@ -120,8 +247,11 @@
       font-size: 3rem;
     }
 
-    &__upload {
+    &__upload-box {
       order: 7;
+    }
+
+    &__upload {
       flex: none;
       gap: 3rem;
       font-size: 3rem;
@@ -131,6 +261,32 @@
         width: 11.2rem;
         height: 7.2rem;
       }
+    }
+
+    &__file {
+      gap: 3rem;
+    }
+
+    &__file-img-box {
+      width: 6.4rem;
+      height: 8rem;
+    }
+
+    &__file-info {
+      gap: 1rem;
+      font-size: 3rem;
+      line-height: 4.5rem;
+
+      > *:last-child {
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 3.4rem;
+      }
+    }
+
+    &__file-del {
+      width: 4rem;
+      height: 4rem;
     }
 
     &__textarea {

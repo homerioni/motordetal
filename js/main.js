@@ -2,6 +2,9 @@
 
 $(document).ready(function () {
 
+    // Masked input
+    $('.mask-phone').length ? $('.mask-phone').mask('+ 7 (999) 999-99-99') : false;
+
     // Header
     if ($(window).width() <= 768) {
         $('.header__content.desktop').css('display', 'flex').hide();
@@ -54,6 +57,11 @@ $(document).ready(function () {
         $(this).parents('.form-list-item').addClass('active')
             .parents('.select-label').children('input').attr('value', $(this).siblings('span').html());
         $(this).parents('.form-list').slideUp();
+    });
+    $('.validator__label input, .form__label input, .form__label textarea').focusin(function () {
+        $(this).parent().addClass('focus');
+    }).focusout(function () {
+        $(this).parent().removeClass('focus');
     });
 
     // Video
