@@ -62,6 +62,22 @@
       justify-content: space-between;
     }
   }
+
+  &__slider {
+    margin-bottom: 5.2rem;
+
+    .video__item {
+      flex: none;
+      max-width: none;
+
+      &:first-child {
+        flex: none;
+        max-width: none;
+        height: 39.4rem;
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 @media (max-width: 48em) {
@@ -94,6 +110,19 @@
 
     &__slider-nav {
       margin-top: 4rem;
+    }
+
+    &__slider {
+      margin-bottom: 6rem;
+
+      .video__item {
+        flex: none;
+
+        &:first-child {
+          margin-bottom: 0;
+          height: 38rem;
+        }
+      }
     }
   }
 }

@@ -29,6 +29,10 @@
       height: auto;
       border: none;
     }
+
+    &:hover {
+      background-color: rgba(50, 50, 50, 0.03);
+    }
   }
 
   &__input {

@@ -1,0 +1,137 @@
+.tabs {
+  &__title {
+    margin-bottom: 3.6rem;
+    font-family: $mont;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 6.5rem;
+  }
+
+  &__separator {
+    border-bottom: 1px solid #D4D4D8;
+  }
+
+  &__tabs {
+    position: relative;
+    display: flex;
+    column-gap: 10rem;
+    margin-bottom: 5.4rem;
+    border-bottom: 1px solid #D4D4D8;
+  }
+
+  &__tab {
+    flex: none;
+    position: relative;
+    padding: 2rem 0;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 4rem;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      height: 0.5rem;
+      transform: translateY(-50%) scaleX(0);
+      border-radius: 0.6rem;
+      background-color: $blue;
+      transition: transform .4s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    }
+
+    &.active {
+      color: $blue;
+
+      &:before {
+        transform: translateY(-50%);
+      }
+    }
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &__content {
+  }
+
+  &__tab-content {
+    display: none;
+
+    > input {
+      display: none;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .tabs {
+    &__title {
+      margin-bottom: 6rem;
+      line-height: 6rem;
+    }
+
+    &__separator {
+    }
+
+    &__tabs {
+      display: flex;
+      column-gap: 6rem;
+      margin: 0 -4rem 6rem -4rem;
+      padding: 0 4rem;
+      border-bottom: none;
+      overflow: auto;
+    }
+
+    &__tab {
+      padding: 4rem 0;
+      font-size: 3rem;
+      line-height: 5rem;
+
+      &:before {
+        top: auto;
+        bottom: 0;
+        height: 0.6rem;
+        border-radius: 1.2rem;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0.4rem;
+        z-index: -1;
+        width: 100%;
+        height: 1px;
+        background-color: #D4D4D8;
+      }
+
+      &:not(:last-child) {
+        &:after {
+          width: calc(100% + 6rem);
+        }
+      }
+    }
+
+    &__content {
+    }
+
+    &__tab-content {
+      display: none;
+
+      > input {
+        display: none;
+      }
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}

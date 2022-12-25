@@ -76,7 +76,7 @@ $(document).ready(function () {
                 current.width  = rem(33.5);
                 current.height = rem(19);
             } else {
-                current.width  = rem(67);
+                current.width  = rem(142.6);
                 current.height = rem(80.6);
             }
         },
@@ -87,6 +87,18 @@ $(document).ready(function () {
                 '<path d="M7.5 0H0L25.5 33H33L7.5 0Z" fill="#D62214"/>\n' +
                 '</svg>\n');
         },
+    });
+
+    // Tabs
+    $('.tabs__tab').click(function () {
+        if (!$(this).hasClass('active')) {
+            $(this).siblings('.tabs__tab.active').removeClass('active');
+            $(this).addClass('active');
+        }
+    });
+    $('.tabs__tab-input').change(function () {
+        $(this).parent().siblings('.tabs__tab-content.active').removeClass('active');
+        $(this).parent().addClass('active');
     });
 
 

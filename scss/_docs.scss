@@ -1,0 +1,203 @@
+.docs {
+  &__title {
+    font-family: $mont;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 6.5rem;
+  }
+
+  &__separator {
+    margin: 3.6rem 0 5.2rem 0;
+    border-bottom: 1px solid #D4D4D8;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 3.2rem;
+    row-gap: 6rem;
+  }
+
+  &__slider {
+    margin-bottom: 5.2rem;
+
+    .docs__item {
+      flex: none;
+      max-width: none;
+    }
+  }
+
+  &__item {
+    flex: 22%;
+    max-width: 33.4rem;
+  }
+
+  &__img-box {
+    width: 100%;
+    height: 46.9rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #D4D4D8;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__item-title {
+    width: 100%;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #D4D4D8;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+
+  &__links {
+    display: flex;
+    column-gap: 4.5rem;
+  }
+
+  &__item-link {
+    display: flex;
+    column-gap: 1.5rem;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    text-decoration: underline;
+    color: $blue;
+
+    > svg {
+      width: 2.3rem;
+      height: 2.3rem;
+
+      path {
+        stroke: $blue;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__slider-nav {
+    margin-top: 3.6rem;
+
+    .slider-nav__nav-content {
+      justify-content: space-between;
+    }
+  }
+
+  &__logo-download-box {
+    margin-top: 8.8rem;
+  }
+
+  &__logo-download-text {
+    margin-bottom: 1.6rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+
+  &__logo-download {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    > a {
+      display: block;
+      width: fit-content;
+      height: 4.8rem;
+
+      > img {
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .docs {
+    &__title {
+      line-height: 6rem;
+    }
+
+    &__separator {
+      margin: 5rem 0 4rem 0;
+    }
+
+    &__content {
+      row-gap: 7rem;
+    }
+
+    &__slider {
+      margin-bottom: 6rem;
+
+      .docs__item {
+        flex: none;
+        max-width: none;
+      }
+    }
+
+    &__item {
+      flex: 45%;
+      max-width: 32rem;
+    }
+
+    &__img-box {
+      height: 45.2rem;
+      margin-bottom: 2rem;
+    }
+
+    &__item-title {
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+      font-size: 3.4rem;
+      line-height: 4rem;
+    }
+
+    &__links {
+      flex-direction: column;
+      row-gap: 2rem;
+    }
+
+    &__item-link {
+      column-gap: 2rem;
+      font-size: 3rem;
+      line-height: 4.5rem;
+
+      > svg {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    &__slider-nav {
+      margin-top: 4rem;
+    }
+
+    &__logo-download-box {
+      margin-top: 10rem;
+    }
+
+    &__logo-download-text {
+      margin-bottom: 4.8rem;
+      font-weight: 700;
+      font-size: 3rem;
+    }
+
+    &__logo-download {
+      flex-direction: column;
+      align-items: normal;
+      gap: 2rem;
+
+      > a {
+        height: 7.6rem;
+      }
+    }
+  }
+}
