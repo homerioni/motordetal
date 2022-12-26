@@ -5573,7 +5573,7 @@ body {
   .advantages-stat {
     z-index: 1;
     padding: 26rem 0;
-    margin: -16rem 0 -10rem 0;
+    margin: -16rem 0 0 0;
     color: white;
   }
   .advantages-stat__bg-cut > *:nth-child(1):before {
@@ -5622,6 +5622,132 @@ body {
   .advantages-stat__text {
     font-size: 3rem;
     line-height: 3.6rem;
+  }
+}
+.phone-contact__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 50rem;
+  padding-bottom: 10rem;
+}
+.phone-contact__info-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+  width: 69.8rem;
+}
+.phone-contact__sub-title {
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+}
+.phone-contact__title {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 6.5rem;
+}
+.phone-contact__text {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  color: #84878C;
+}
+.phone-contact__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 4.3rem;
+  color: #014A93;
+}
+.phone-contact__link > svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.phone-contact__link > svg path {
+  fill: #014A93;
+}
+.phone-contact__link:hover {
+  text-decoration: underline;
+}
+.phone-contact__img-box {
+  position: absolute;
+  right: 0;
+  top: calc(50% - 5rem);
+  z-index: -1;
+  width: 101.2rem;
+  height: 82.7rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.phone-contact__img-box > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (max-width: 48em) {
+  .phone-contact__container {
+    display: block;
+    min-height: auto;
+    padding-bottom: 0;
+  }
+  .phone-contact__info-block {
+    gap: 6rem;
+    width: 100%;
+  }
+  .phone-contact__sub-title {
+    font-size: 3rem;
+    line-height: 4.2rem;
+  }
+  .phone-contact__title {
+    line-height: 6rem;
+  }
+  .phone-contact__text {
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+  .phone-contact__link {
+    position: relative;
+    z-index: 3;
+    gap: 3rem;
+    font-size: 5rem;
+    line-height: 6rem;
+  }
+  .phone-contact__link > svg {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+  .phone-contact__img-box {
+    position: static;
+    width: 100%;
+    height: 54.7rem;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .phone-contact__img-box > img {
+    -webkit-transform: scale(1.41);
+            transform: scale(1.41);
+    -webkit-transform-origin: right;
+            transform-origin: right;
   }
 }
 .fancybox-container {
