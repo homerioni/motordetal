@@ -2,6 +2,10 @@
   position: relative;
   z-index: 9;
 
+  &.bottom-slide {
+    z-index: 1;
+  }
+
   &__content {
     position: relative;
     display: flex;

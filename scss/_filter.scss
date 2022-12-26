@@ -1,0 +1,252 @@
+.filter {
+  &__title {
+    width: 100%;
+    font-weight: 700;
+    font-size: 3.5rem;
+    padding-bottom: 2.4rem;
+  }
+
+  &__item {
+    width: 100%;
+    padding-top: 2.4rem;
+    border-top: 1px solid #D4D4D8;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #D4D4D8;
+      padding-bottom: 2.4rem;
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__item-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    font-weight: 700;
+    font-size: 2.4rem;
+
+    > svg {
+      width: 2rem;
+      height: 1.2rem;
+      transform: scaleY(-1);
+      transition: transform .3s ease;
+
+      path {
+        fill: $black;
+        stroke: $black;
+      }
+    }
+
+    &.active {
+      > svg {
+        transform: none;
+      }
+    }
+  }
+
+  &__item-content {
+    width: 100%;
+    margin-top: 2.2rem;
+  }
+
+  &__item-search {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2.2rem;
+    padding: 2rem 2.4rem;
+    border: 1px solid #D4D4D8;
+
+    > input {
+      width: 100%;
+      height: 100%;
+      font-weight: 500;
+      font-size: 1.7rem;
+
+      &::placeholder {
+        color: #84878C;
+      }
+    }
+
+    > svg {
+      flex: none;
+      width: 2.8rem;
+      height: 2.8rem;
+
+      path {
+        stroke: #84878C;
+      }
+    }
+
+    &.focus {
+      border: 1px solid $black;
+
+      > svg {
+        path {
+          stroke: $black;
+        }
+      }
+    }
+  }
+
+  &__filters-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-height: 22.4rem;
+    overflow: auto;
+  }
+
+  &__checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-weight: 500;
+    font-size: 1.7rem;
+    cursor: pointer;
+
+    > input {
+      display: none;
+    }
+
+    &:hover {
+      color: $blue;
+    }
+
+    &.active {
+      .filter__checkbox-icon {
+        border: none;
+        background-color: $blue;
+
+        > svg {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__checkbox-icon {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 1px solid #D4D4D8;
+    border-radius: 2px;
+
+    > svg {
+      display: none;
+      width: 1.2rem;
+      height: 1rem;
+
+      path {
+        fill: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .filter {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    padding: 5rem 4rem;
+    background-color: white;
+    overflow: auto;
+    transition: transform .5s ease;
+
+    &.active {
+      transform: none;
+    }
+
+    &__title {
+      font-size: 5rem;
+      padding-bottom: 4rem;
+    }
+
+    &__item {
+      width: 100%;
+      padding-top: 0;
+    }
+
+    .filter__item {
+      padding-bottom: 0;
+      margin-bottom: 4rem;
+      border-bottom: 1px solid #D4D4D8;
+
+      .filter__item-content {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &__item-btn {
+      gap: 4rem;
+      padding: 3rem 0;
+      font-size: 3rem;
+
+      > svg {
+        width: 3rem;
+        height: 1.8rem;
+      }
+    }
+
+    &__item-content {
+      width: 100%;
+      margin-top: 0;
+    }
+
+    &__item-search {
+      gap: 3rem;
+      margin-bottom: 3rem;
+      padding: 3rem;
+
+      > input {
+        font-size: 3rem;
+      }
+
+      > svg {
+        width: 4.4rem;
+        height: 4.4rem;
+      }
+    }
+
+    &__filters-box {
+      gap: 2rem;
+      max-height: none;
+      overflow: visible;
+    }
+
+    &__checkbox-label {
+      gap: 2rem;
+      font-size: 3rem;
+      cursor: pointer;
+    }
+
+    &__checkbox-icon {
+      flex: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.2rem;
+      height: 3.2rem;
+      border: 1px solid #D4D4D8;
+      border-radius: 2px;
+
+      > svg {
+        display: none;
+        width: 1.8rem;
+        height: 1.6rem;
+      }
+    }
+  }
+}

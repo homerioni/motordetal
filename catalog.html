@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="another website">
+    <title>Страница</title>
+
+    <link rel="stylesheet" href="font/stylesheet.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<header class="header">
+    <nav class="header__content mobile">
+        <a href="" class="header__logo">
+            <img src="img/logo.svg" alt="">
+        </a>
+        <a href="" class="header__tel-mob">
+            <img src="img/header-tel.svg" alt="">
+        </a>
+        <button type="button" class="header__burger-btn">
+            <span></span>
+        </button>
+    </nav>
+    <nav class="header__content desktop">
+        <a href="" class="header__logo desktop">
+            <img src="img/logo.svg" alt="">
+        </a>
+        <div class="header__separator"></div>
+        <ul class="header__menu">
+            <li class="header__menu-item">
+                <button type="button" class="header__menu-item-name">
+                    <span>Продукция</span>
+                    <svg class="mobile" width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.3125 1.375L9.5 9.1875L1.6875 1.375" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <ul class="header__menu-list">
+                    <li class="header__list-item">
+                        <a href="">Каталог продукции</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Информационные материалы</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Проверка подлинности</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Видеообзоры</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Техническая документация</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Отзывы</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__menu-item">
+                <button type="button" class="header__menu-item-name">
+                    <span>Производство</span>
+                    <svg class="mobile" width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.3125 1.375L9.5 9.1875L1.6875 1.375" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <ul class="header__menu-list">
+                    <li class="header__list-item">
+                        <a href="">Разработка и инжиринг</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Система управлением качеством</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Роботизация производственных площадок</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Производственная система «Мотордеталь»</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__menu-item">
+                <a href="" class="header__menu-item-name">Интернет-магазин</a>
+            </li>
+            <li class="header__menu-item">
+                <button type="button" class="header__menu-item-name">
+                    <span>Компания</span>
+                    <svg class="mobile" width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.3125 1.375L9.5 9.1875L1.6875 1.375" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <ul class="header__menu-list">
+                    <li class="header__list-item">
+                        <a href="">История ТМ «Мотордеталь»</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Медиацентр</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Экологическая программа</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Экскурсия на «Мотордеталь» </a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Социальная ответственность</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Корпоратиная жизнь</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Компания сегодня «Миссия» </a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">Карьера</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__menu-item">
+                <a href="" class="header__menu-item-name">Новости</a>
+            </li>
+            <li class="header__menu-item">
+                <a href="" class="header__menu-item-name">Контакты</a>
+            </li>
+        </ul>
+        <div class="header__separator"></div>
+        <a href="" class="header__tel">+7 (4942) 62-83-00</a>
+        <div class="header__separator"></div>
+        <div class="header__lang-box">
+            <button type="button" class="header__lang-btn">
+                <span>RU</span>
+                <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7812 1.22462L6.02812 5.78989C5.73645 6.07004 5.26355 6.07004 4.97188 5.78989L0.218756 1.22462C-0.0729188 0.944468 -0.0729188 0.490259 0.218756 0.210111C0.510431 -0.070037 0.98333 -0.070037 1.27501 0.210111L5.5 4.26813L9.72499 0.210111C10.0167 -0.070037 10.4896 -0.070037 10.7812 0.210111C11.0729 0.490259 11.0729 0.944468 10.7812 1.22462Z" fill="white"/>
+                </svg>
+            </button>
+            <ul class="header__lang-list">
+                <li class="active">
+                    <span>RU</span>
+                </li>
+                <li>
+                    <a href="">EN</a>
+                </li>
+            </ul>
+        </div>
+        <p class="header__address mobile">
+            Россия, г. Кострома, ул. Московская, 105.
+        </p>
+        <a href="" class="header__social mobile">
+            <img src="img/vk-icon.svg" alt="">
+            <span>ВКонтакте</span>
+        </a>
+    </nav>
+</header>
+
+<main>
+    <nav class="breadcrumbs container">
+        <a href="" class="breadcrumbs__item">Главная</a>
+        <a href="" class="breadcrumbs__item">Продукция</a>
+        <span class="breadcrumbs__item active">Каталог продукции</span>
+    </nav>
+    <section class="catalog">
+        <div class="container">
+            <p class="catalog__title">Генераторы</p>
+        </div>
+        <div class="catalog__separator"></div>
+        <div class="container">
+            <div class="catalog__desc-box">
+                <p class="catalog__desc">
+                    В режиме движения генератор, или автомобильный генератор, подает электроэнергию на все электрические потребители автомобиля, одновременно заряжая аккумуляторную батарею.
+                </p>
+                <a href="" class="catalog__download-link">
+                    <span>Скачать каталог в PDF</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 19H21V21H3V19ZM13 13.172L19.071 7.1L20.485 8.514L12 17L3.515 8.515L4.929 7.1L11 13.17V2H13V13.172Z" fill="#014A93"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="catalog__categories">
+                <button type="button" class="catalog__category-btn">
+                    <span class="hide">Показать меню категорий</span>
+                    <span class="show">Скрыть меню категорий</span>
+                    <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.17969 0.75C7.17969 0.335786 6.8439 0 6.42969 0C6.01547 0 5.67969 0.335786 5.67969 0.75L5.67969 15.0945L1.28033 10.6953C0.98743 10.4024 0.512556 10.4024 0.219666 10.6953C-0.0732253 10.9882 -0.0732213 11.463 0.219674 11.7559L5.88466 17.4208C5.98761 17.5297 6.12281 17.6077 6.27498 17.6396C6.51474 17.6901 6.77445 17.6223 6.96063 17.4361L12.6408 11.7559C12.9337 11.463 12.9337 10.9881 12.6408 10.6953C12.3479 10.4024 11.8731 10.4024 11.5802 10.6953L7.17969 15.0957L7.17969 0.75Z" fill="white"/>
+                    </svg>
+                </button>
+                <ul class="catalog__category-list">
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Детали цпг</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>фильтры</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>вкладыши</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>прокладки</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>колодки и накладки</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>пневмокомпрессоры</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>втулки (полуфабрикат)</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>камеры-тормозные</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Диски сцепления</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Инструменты</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Сцепление</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Тормозные краны</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Аксессуары</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Клапаны</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Турбокомпрессоры</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Фильтры центробежные</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Насосы масляные</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Насосы водяные</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Стартеры</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item active">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Генераторы</span>
+                        </label>
+                    </li>
+                    <li class="catalog__category-item">
+                        <label>
+                            <input type="radio" name="category">
+                            <span>Корпуса фильтров</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <label class="catalog__search-label">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.8571 23.7143C18.8534 23.7143 23.7143 18.8534 23.7143 12.8571C23.7143 6.86091 18.8534 2 12.8571 2C6.86091 2 2 6.86091 2 12.8571C2 18.8534 6.86091 23.7143 12.8571 23.7143Z" stroke="#84878C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M26.0006 25.9996L23.7148 23.7139" stroke="#84878C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <input placeholder="Поиск по наименованию или кросс-коду" type="text">
+            </label>
+            <div class="catalog__content">
+                <form class="catalog__filter filter">
+                    <p class="filter__title">Фильтр</p>
+                    <div class="filter__item">
+                        <button type="button" class="filter__item-btn active">
+                            <span>Марка техники</span>
+                            <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 10L9.5 4L18 10L18 7.23636L9.5 1L1 7.23636L1 10Z" fill="#171717" stroke="#171717"/>
+                            </svg>
+                        </button>
+                        <div class="filter__item-content">
+                            <label class="filter__item-search">
+                                <input placeholder="Название бренда" type="text">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.8571 23.7143C18.8534 23.7143 23.7143 18.8534 23.7143 12.8571C23.7143 6.86091 18.8534 2 12.8571 2C6.86091 2 2 6.86091 2 12.8571C2 18.8534 6.86091 23.7143 12.8571 23.7143Z" stroke="#D4D4D8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M26.0006 25.9996L23.7148 23.7139" stroke="#D4D4D8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </label>
+                            <div class="filter__filters-box scrollbar">
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>Все</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>БАТЭ</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>ЗАЗ</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>МАЗ</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>ЗИЛ</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>КАМАЗ</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>БАТЭ</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>ЗАЗ</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>МАЗ</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>ЗИЛ</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>КАМАЗ</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter__item">
+                        <button type="button" class="filter__item-btn active">
+                            <span>Модель техники</span>
+                            <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 10L9.5 4L18 10L18 7.23636L9.5 1L1 7.23636L1 10Z" fill="#171717" stroke="#171717"/>
+                            </svg>
+                        </button>
+                        <div class="filter__item-content">
+                            <label class="filter__item-search">
+                                <input placeholder="Номер модели" type="text">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.8571 23.7143C18.8534 23.7143 23.7143 18.8534 23.7143 12.8571C23.7143 6.86091 18.8534 2 12.8571 2C6.86091 2 2 6.86091 2 12.8571C2 18.8534 6.86091 23.7143 12.8571 23.7143Z" stroke="#D4D4D8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M26.0006 25.9996L23.7148 23.7139" stroke="#D4D4D8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </label>
+                            <div class="filter__filters-box scrollbar">
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>Все</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>544942-570-023</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>427942-743-052</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>793083-585-084</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>639073-326-005</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>103234-128-042</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>544942-570-023</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>427942-743-052</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>793083-585-084</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>639073-326-005</span>
+                                </label>
+                                <label class="filter__checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="filter__checkbox-icon">
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.99309 9.17958L4.97326 9.1994L0.0234375 4.24958L1.6352 2.63781L4.99315 5.99577L10.3639 0.625L11.9757 2.23676L5.01297 9.19947L4.99309 9.17958Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                    <span>103234-128-042</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="catalog__list-box">
+                    <div class="catalog__list-header">
+                        <div class="catalog__header-box">
+                            <button type="button" class="catalog__filter-btn mobile">Фильтр</button>
+                            <p class="catalog__qty">Показано товаров: 156</p>
+                        </div>
+                        <div class="catalog__view-buttons">
+                            <button type="button" class="catalog__view-btn catalog-list-btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="2" width="20" height="4" fill="#D4D4D8"/>
+                                    <rect x="2" y="10" width="20" height="4" fill="#D4D4D8"/>
+                                    <rect x="2" y="18" width="20" height="4" fill="#D4D4D8"/>
+                                </svg>
+                            </button>
+                            <button type="button" class="catalog__view-btn catalog-gallery-btn active">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="2" width="9" height="9" fill="#0258AD"/>
+                                    <rect x="2" y="13" width="9" height="9" fill="#0258AD"/>
+                                    <rect x="13" y="13" width="9" height="9" fill="#0258AD"/>
+                                    <rect x="13" y="2" width="9" height="9" fill="#0258AD"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <ul class="catalog__list">
+                        <li class="catalog__item">
+                            <a href="">
+                                <div class="catalog__item-title">
+                                    <p>Генератор</p>
+                                    <p>(АТ 1000.10.1)</p>
+                                    <p>ПРАМО</p>
+                                </div>
+                                <div class="catalog__item-img-box">
+                                    <img src="img/catalog-img1.webp" alt="">
+                                </div>
+                                <div class="catalog__item-btn">
+                                    Подробнее
+                                </div>
+                            </a>
+                        </li>
+                        <li class="catalog__item">
+                            <a href="">
+                                <div class="catalog__item-title">
+                                    <p>Генератор</p>
+                                    <p>(1312.3771)</p>
+                                    <p>ELTRA</p>
+                                </div>
+                                <div class="catalog__item-img-box">
+                                    <img src="img/catalog-img2.webp" alt="">
+                                </div>
+                                <div class="catalog__item-btn">
+                                    Подробнее
+                                </div>
+                            </a>
+                        </li>
+                        <li class="catalog__item">
+                            <a href="">
+                                <div class="catalog__item-title">
+                                    <p>Генератор</p>
+                                    <p>(3252. 3771000-50)</p>
+                                    <p>БАТЭ</p>
+                                </div>
+                                <div class="catalog__item-img-box">
+                                    <img src="img/catalog-img3.webp" alt="">
+                                </div>
+                                <div class="catalog__item-btn">
+                                    Подробнее
+                                </div>
+                            </a>
+                        </li>
+                        <li class="catalog__item">
+                            <a href="">
+                                <div class="catalog__item-title">
+                                    <p>Генератор</p>
+                                    <p>(3112.3771-01)</p>
+                                    <p>АТЭ-1</p>
+                                </div>
+                                <div class="catalog__item-img-box">
+                                    <img src="img/catalog-img3.webp" alt="">
+                                </div>
+                                <div class="catalog__item-btn">
+                                    Подробнее
+                                </div>
+                            </a>
+                        </li>
+                        <li class="catalog__item">
+                            <a href="">
+                                <div class="catalog__item-title">
+                                    <p>Генератор</p>
+                                    <p>(3112.3771-01)</p>
+                                    <p>АТЭ-1</p>
+                                </div>
+                                <div class="catalog__item-img-box">
+                                    <img src="img/catalog-img3.webp" alt="">
+                                </div>
+                                <div class="catalog__item-btn">
+                                    Подробнее
+                                </div>
+                            </a>
+                        </li>
+                        <li class="catalog__item">
+                            <a href="">
+                                <div class="catalog__item-title">
+                                    <p>Генератор</p>
+                                    <p>(3112.3771-01)</p>
+                                    <p>АТЭ-1</p>
+                                </div>
+                                <div class="catalog__item-img-box">
+                                    <img src="img/catalog-img3.webp" alt="">
+                                </div>
+                                <div class="catalog__item-btn">
+                                    Подробнее
+                                </div>
+                            </a>
+                        </li>
+                        <li class="catalog__item">
+                            <a href="">
+                                <div class="catalog__item-title">
+                                    <p>Генератор</p>
+                                    <p>(3112.3771-01)</p>
+                                    <p>АТЭ-1</p>
+                                </div>
+                                <div class="catalog__item-img-box">
+                                    <img src="img/catalog-img3.webp" alt="">
+                                </div>
+                                <div class="catalog__item-btn">
+                                    Подробнее
+                                </div>
+                            </a>
+                        </li>
+                        <li class="catalog__item">
+                            <a href="">
+                                <div class="catalog__item-title">
+                                    <p>Генератор</p>
+                                    <p>(3112.3771-01)</p>
+                                    <p>АТЭ-1</p>
+                                </div>
+                                <div class="catalog__item-img-box">
+                                    <img src="img/catalog-img3.webp" alt="">
+                                </div>
+                                <div class="catalog__item-btn">
+                                    Подробнее
+                                </div>
+                            </a>
+                        </li>
+                        <li class="catalog__item">
+                            <a href="">
+                                <div class="catalog__item-title">
+                                    <p>Генератор</p>
+                                    <p>(3112.3771-01)</p>
+                                    <p>АТЭ-1</p>
+                                </div>
+                                <div class="catalog__item-img-box">
+                                    <img src="img/catalog-img3.webp" alt="">
+                                </div>
+                                <div class="catalog__item-btn">
+                                    Подробнее
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="catalog__page-pagination page-pagination">
+                        <a href="" class="page-pagination__arrow">
+                            <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 18L4 9.5L10 1L7.23636 1L0.999999 9.5L7.23636 18L10 18Z" fill="#014A93" stroke="#014A93"/>
+                            </svg>
+                        </a>
+                        <a href="" class="page-pagination__item">1</a>
+                        <span class="page-pagination__item active">2</span>
+                        <a href="" class="page-pagination__item">3</a>
+                        <a href="" class="page-pagination__item">4</a>
+                        <a href="" class="page-pagination__item">5</a>
+                        <span class="page-pagination__item">...</span>
+                        <a href="" class="page-pagination__item">99</a>
+                        <a href="" class="page-pagination__arrow">
+                            <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L7 9.5L0.999997 18L3.76363 18L10 9.5L3.76364 1L1 1Z" fill="#014A93" stroke="#014A93"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__bg">
+        <svg class="desktop" width="1920" height="500" viewBox="0 0 1920 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 427L1704 292.5L1921 0V885.5H0V427Z" fill="#014A93"/>
+        </svg>
+        <svg class="desktop" width="246" height="334" viewBox="0 0 246 334" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M248 0V334H0L248 0Z" fill="#D62214"/>
+        </svg>
+        <svg class="mobile" width="375" height="200" viewBox="0 0 375 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M418 95V-57L307.289 91.9204L0 127.865V139V916V1443H375V916V139V95H418Z" fill="#014A93"/>
+        </svg>
+        <svg class="mobile" width="70" height="105" viewBox="0 0 70 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M113 0L113 152H0L113 0Z" fill="#D62214"/>
+        </svg>
+    </div>
+    <div class="footer__content-top">
+        <div class="container footer__container">
+            <div class="footer__box">
+                <a href="" class="footer__logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <a href="" class="footer__tel">
+                    8 (4942) 628-300
+                </a>
+                <p class="footer__address">
+                    Россия, г. Кострома,
+                    <br>ул. Московская, 105.
+                </p>
+                <a href="" class="footer__social">
+                    <img src="img/vk-icon.svg" alt="">
+                    <span>ВКонтакте</span>
+                </a>
+            </div>
+            <div class="footer__box">
+                <h3 class="footer__box-title">Продукция</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="">Каталог продукции</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Информационные материалы</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Техническая документация</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Проверка подлинности</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Видеообзоры</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Отзывы</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__box">
+                <h3 class="footer__box-title">Производство</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="">Разработка и инжиниринг</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Производственная система «мотордеталь»</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Роботизация производствееных площадок</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Система управления качеством</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Экологическая программа</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Экскурсия на «мотордеталь»</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__box">
+                <h3 class="footer__box-title">Компания</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="">История</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Компания сегодня (миссия)</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Корпоративная жизнь</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Социальная ответственность</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Медиацентр</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="">Карьера</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__content-bottom">
+        <div class="container footer__container">
+            <p class=" footer__box">© 2022 Мотордеталь</p>
+            <a href="" class="footer__link-bottom footer__box">Политика конфиденциальности</a>
+            <a href="" class="footer__link-bottom footer__box">Обработка персональной информации</a>
+            <a href="" class="footer__request footer__box">
+                <img src="img/request-logo.svg" alt="">
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
