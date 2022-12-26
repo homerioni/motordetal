@@ -5006,6 +5006,288 @@ body {
     line-height: 5rem;
   }
 }
+.contacts-b__title {
+  width: 110rem;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 6.5rem;
+}
+.contacts-b__separator {
+  margin: 3.6rem 0 5.2rem 0;
+  border-bottom: 1px solid #D4D4D8;
+}
+.contacts-b__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  row-gap: 3.2rem;
+}
+.contacts-b__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 4rem;
+     -moz-column-gap: 4rem;
+          column-gap: 4rem;
+  width: 69.8rem;
+}
+.contacts-b__info-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 2rem;
+  max-width: 40rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.contacts-b__logo-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1.5rem;
+}
+.contacts-b__item-title {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+}
+.contacts-b__logo {
+  width: 17.8rem;
+  height: 3.2rem;
+}
+.contacts-b__logo > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.contacts-b__text {
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+}
+.contacts-b__text > a {
+  margin-left: 1rem;
+  text-decoration: underline;
+  color: #014A93;
+}
+.contacts-b__text > a:hover {
+  text-decoration: none;
+}
+.contacts-b__contact-link-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+.contacts-b__contact-link-box > svg {
+  width: 3rem;
+  height: 3rem;
+}
+.contacts-b__contact-link-box > svg path {
+  stroke: #014A93;
+}
+.contacts-b__contact-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 1.7rem;
+  line-height: 2.1rem;
+}
+.contacts-b__contact-link a:hover {
+  text-decoration: underline;
+  color: #014A93;
+}
+.contacts-b__image-block {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1.5rem;
+  width: 13.6rem;
+}
+.contacts-b__img-box {
+  width: 100%;
+  height: 19.2rem;
+  border: 1px solid #93969C;
+}
+.contacts-b__img-box > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.contacts-b__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  text-decoration: underline;
+  color: #014A93;
+}
+.contacts-b__link > svg {
+  width: 2.3rem;
+  height: 2.3rem;
+}
+.contacts-b__link > svg path {
+  fill: #014A93;
+}
+.contacts-b__link:hover {
+  text-decoration: none;
+}
+.contacts-b__slider-box {
+  margin-top: 9rem;
+  padding-bottom: 4.6rem;
+  margin-bottom: 3.8rem;
+  border-bottom: 1px solid #D4D4D8;
+}
+.contacts-b__slider-title {
+  width: 69.8rem;
+  padding-bottom: 2rem;
+  margin-bottom: 3.8rem;
+  border-bottom: 1px solid #D4D4D8;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 4.3rem;
+}
+.contacts-b__slider-nav .slider-nav__nav-content {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 48em) {
+  .contacts-b__title {
+    width: 100%;
+    line-height: 6rem;
+  }
+  .contacts-b__separator {
+    margin: 4rem 0 5rem 0;
+  }
+  .contacts-b__list {
+    row-gap: 4rem;
+  }
+  .contacts-b__item {
+    display: block;
+    width: 100%;
+  }
+  .contacts-b__info-block {
+    row-gap: 3rem;
+    max-width: none;
+  }
+  .contacts-b__logo-box {
+    row-gap: 3rem;
+  }
+  .contacts-b__item-title {
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+  .contacts-b__logo {
+    width: 31rem;
+    height: 5.4rem;
+  }
+  .contacts-b__text {
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+  .contacts-b__text > a {
+    margin-left: 2rem;
+  }
+  .contacts-b__contact-link-box {
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+  }
+  .contacts-b__contact-link-box > svg {
+    width: 5rem;
+    height: 5rem;
+  }
+  .contacts-b__contact-link {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+    -webkit-transform: translateY(0.8rem);
+            transform: translateY(0.8rem);
+    font-size: 3rem;
+    line-height: 3.6rem;
+  }
+  .contacts-b__image-block {
+    row-gap: 2rem;
+    width: 32rem;
+    margin-top: 4rem;
+  }
+  .contacts-b__img-box {
+    height: 45.2rem;
+  }
+  .contacts-b__link {
+    gap: 2rem;
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+  .contacts-b__link > svg {
+    width: 4rem;
+    height: 4rem;
+  }
+  .contacts-b__slider-box {
+    width: calc(100% + 8rem);
+    margin: 12rem -4rem 4rem -4rem;
+    padding: 0 4rem 6rem 4rem;
+  }
+  .contacts-b__slider-title {
+    width: calc(100% + 8rem);
+    padding: 0 4rem 5rem 4rem;
+    margin: 0 -4rem 4rem -4rem;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+}
 .fancybox-container {
   -webkit-backdrop-filter: blur(0.5rem);
           backdrop-filter: blur(0.5rem);

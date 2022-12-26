@@ -232,3 +232,31 @@ const photo_tab_slider = new Swiper('.photo-tab', {
         },
     },
 });
+
+const contacts_b_slider = new Swiper('.contacts-b__slider', {
+    direction: 'horizontal',
+    spaceBetween: rem(3.2),
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        769: {
+            slidesPerView: 2,
+        },
+    },
+
+    navigation: {
+        nextEl: '.contacts-b__slider-nav .next',
+        prevEl: '.contacts-b__slider-nav .prev',
+    },
+
+    on: {
+        slideChange: function (slider) {
+            let index = slider.activeIndex + 1;
+            $('.contacts-b__slider-nav .slider-nav__number').html(function () {
+                return index < 10 ? '0' + index : index;
+            });
+        },
+    },
+});
