@@ -78,7 +78,9 @@
   &__text-block {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1.6rem;
+    min-height: 14.2rem;
     padding: 3rem 10rem 3rem 3rem;
     background-color: rgba(23, 23, 23, 0.6);
   }
@@ -139,10 +141,12 @@
       max-width: none;
       min-height: 71.2rem;
 
-      &:after {
-        border: 10.4rem solid transparent;
-        border-right: 10.4rem solid white;
-        border-bottom: 10.4rem solid white;
+      > a {
+        &:after {
+          border: 11rem solid transparent;
+          border-right: 11rem solid white;
+          border-bottom: 11rem solid white;
+        }
       }
     }
 
@@ -150,7 +154,9 @@
     }
 
     &__text-block {
+      min-height: 22.2rem;
       padding: 5rem 11rem 5rem 5rem;
+
     }
 
     &__item-title {
