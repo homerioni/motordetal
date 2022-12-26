@@ -6738,6 +6738,67 @@ body {
     height: 1.6rem;
   }
 }
+.catalog-slider__title-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.catalog-slider__title {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 6.5rem;
+}
+.catalog-slider__separator {
+  margin: 3.6rem 0 5.2rem 0;
+  border-bottom: 1px solid #D4D4D8;
+}
+.catalog-slider__slider .catalog__item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: none;
+}
+.catalog-slider__slider-nav {
+  padding-top: 4rem;
+  margin-top: 5rem;
+  border-top: 1px solid #D4D4D8;
+}
+.catalog-slider__slider-nav .slider-nav__nav-content {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 48em) {
+  .catalog-slider__title-box {
+    display: block;
+  }
+  .catalog-slider__title {
+    margin-bottom: 4rem;
+    line-height: 6rem;
+  }
+  .catalog-slider__separator {
+    margin: 5rem 0 4rem 0;
+  }
+  .catalog-slider__slider-nav {
+    padding: 4rem 4rem 0 4rem;
+    margin: 6rem -4rem 0 -4rem;
+  }
+}
 .fancybox-container {
   -webkit-backdrop-filter: blur(0.5rem);
           backdrop-filter: blur(0.5rem);

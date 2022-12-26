@@ -260,3 +260,33 @@ const contacts_b_slider = new Swiper('.contacts-b__slider', {
         },
     },
 });
+
+const catalog_slider = new Swiper('.catalog-slider__slider', {
+    direction: 'horizontal',
+    loop: true,
+
+    breakpoints: {
+        0: {
+            slidesPerView: 2,
+            spaceBetween: rem(1.5),
+        },
+        769: {
+            slidesPerView: 4,
+            spaceBetween: rem(3.2),
+        },
+    },
+
+    navigation: {
+        nextEl: '.catalog-slider__slider-nav .next',
+        prevEl: '.catalog-slider__slider-nav .prev',
+    },
+
+    on: {
+        slideChange: function (slider) {
+            let index = slider.realIndex + 1;
+            $('.catalog-slider__slider-nav .slider-nav__number').html(function () {
+                return index < 10 ? '0' + index : index;
+            });
+        },
+    },
+});
