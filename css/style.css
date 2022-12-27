@@ -8378,6 +8378,115 @@ body {
     width: 100%;
   }
 }
+.article-number__title {
+  margin-bottom: 5rem;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 4.3rem;
+}
+.article-number__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 9rem;
+}
+.article-number__item {
+  width: 30rem;
+}
+.article-number__item-number {
+  margin-bottom: 1rem;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 6rem;
+  color: #D62214;
+}
+.article-number__item-text {
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  color: #494949;
+}
+.article-number__slider {
+  margin: 0 -24.5rem;
+  padding: 0 24.5rem;
+}
+.article-number__slide {
+  width: 57.5rem;
+  height: 38.6rem;
+}
+.article-number__slide > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.article-number__slider-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 5.2rem;
+  padding-top: 3.8rem;
+  border-top: 1px solid #D4D4D8;
+}
+.article-number__date {
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 2.8rem;
+  text-transform: uppercase;
+  color: #494949;
+}
+
+@media (max-width: 48em) {
+  .article-number__title {
+    margin-bottom: 7rem;
+    font-size: 3.4rem;
+    line-height: 4rem;
+  }
+  .article-number__list {
+    gap: 6rem;
+    margin-bottom: 12rem;
+  }
+  .article-number__item {
+    width: 100%;
+  }
+  .article-number__item-number {
+    margin-bottom: 2rem;
+    font-size: 10rem;
+    line-height: 12rem;
+  }
+  .article-number__item-text {
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+  .article-number__slider {
+    margin: 0 -4rem;
+    padding: 0 4rem;
+  }
+  .article-number__slide {
+    width: 100%;
+    height: 42rem;
+  }
+  .article-number__slider-nav {
+    margin-top: 6rem;
+    padding-top: 4rem;
+  }
+  .article-number__date {
+    width: 26.2rem;
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+  }
+}
 .fancybox-container {
   -webkit-backdrop-filter: blur(0.5rem);
           backdrop-filter: blur(0.5rem);

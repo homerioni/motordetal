@@ -324,3 +324,22 @@ const product_image_slider = new Swiper('.product__image-slider', {
 $('.product__image-slide-thumb').click(function () {
     product_image_slider.slideToLoop($(this).data('swiper-slide-main'));
 });
+
+const article_number_slider = new Swiper('.article-number__slider', {
+    direction: 'horizontal',
+    spaceBetween: rem(3.2),
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        769: {
+            slidesPerView: 2.408,
+        },
+    },
+
+    navigation: {
+        nextEl: '.article-number .next',
+        prevEl: '.article-number .prev',
+    },
+});
