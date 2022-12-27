@@ -1,0 +1,94 @@
+.modal {
+  position: relative;
+  display: none;
+  width: 94rem;
+  padding: 6rem;
+  margin-bottom: 0;
+  cursor: default;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: calc(100% - 15rem);
+    background-color: white;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: -5.2rem;
+    bottom: 2px;
+    z-index: -1;
+    width: 100%;
+    height: 15rem;
+    transform: skew(-35deg);
+    background-color: white;
+  }
+
+  &__close {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    width: 3.3rem;
+    height: 3.3rem;
+
+    > svg {
+      width: 100%;
+      height: 100%;
+
+      path {
+        fill: $red;
+      }
+    }
+  }
+
+  &__stage {
+    .fancybox-content {
+      padding: 0;
+      background-color: transparent;
+      overflow: hidden;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .modal {
+    width: 67rem;
+    padding: 7rem 7rem 8rem 7rem;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      width: 100%;
+      height: calc(100% - 13rem);
+      background-color: white;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: -4.4rem;
+      bottom: 2px;
+      z-index: -1;
+      width: 100%;
+      height: 13rem;
+      transform: skew(-35deg);
+      background-color: white;
+    }
+
+    &__close {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    &__stage {
+    }
+  }
+}

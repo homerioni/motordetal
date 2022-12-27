@@ -167,19 +167,16 @@ $(document).ready(function () {
     });
 
     // Modal buy
-    $('[href="#modal-buy"]').fancybox({
+    $('.modal-open').fancybox({
         smallBtn: false,
         arrows: false,
         infobar: false,
+        touch: false,
         toolbar: false,
             baseTpl:
                 '<div class="fancybox-container" role="dialog" tabindex=" -1">' +
                 '<div class="fancybox-bg"></div>' +
-                '<div class="fancybox-inner">'+
-                '<div class="fancybox-infobar"><span data-fancybox-index></span> / <span data-fancybox-count></span></div>' +
-                '<div class="fancybox-toolbar">{{кнопки}}</div>' +
-                '<div class="fancybox-navigation">{{стрелки}}</div>' +
-                '<div class="fancybox-stage modal-buy__stage"></div>' +
+                '<div class="fancybox-stage modal__stage"></div>' +
                 '<div class="fancybox-caption"><div class="fancybox-caption__body"></div></div>' +
                 '</div>',
     });
@@ -198,6 +195,27 @@ $(document).ready(function () {
         x = ($(e.currentTarget).width() * -1 / 2 + x) / 2 * -1;
         y = ($(e.currentTarget).height() * -1 / 2 + y) / 2 * -1;
         $(this).css('--mouseY', y + 'px').css('--mouseX', x + 'px');
+    });
+
+    // Reviews
+    $('.reviews__item').each(function () {
+        let rating = $(this).find('.reviews__rating').data('rating');
+        $(this).find('.reviews__rating svg').each(function () {
+            rating > 0 ? $(this).addClass('active') : false;
+            rating--;
+        });
+    });
+
+    // Modal reviews
+    $('[href="#modal-reviews"]').click(function () {
+        let rating = $(this).parent().find('.reviews__rating').data('rating');
+        $('.modal-reviews__rating svg').removeClass('active').each(function () {
+            rating > 0 ? $(this).addClass('active') : false;
+            rating--;
+        });
+        $('.modal-reviews__date').html($(this).parent().find('.reviews__date').html());
+        $('.modal-reviews__name').html($(this).parent().find('.reviews__name').html());
+        $('.modal-reviews__text').html($(this).parent().find('.reviews__text').html());
     });
 
 });

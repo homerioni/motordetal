@@ -1,0 +1,49 @@
+.modal-reviews {
+  &__title {
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 4.1rem;
+  }
+
+  &__rating-box {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+
+    .reviews__date {
+      transform: translateY(0.2rem);
+    }
+  }
+
+  &__name {
+    margin-bottom: 1.5rem;
+  }
+
+  &__text {
+    display: block;
+  }
+}
+
+@media (max-width: 48em) {
+  .modal-reviews {
+    &__title {
+      margin-bottom: 3rem;
+      font-size: 5rem;
+      line-height: 6rem;
+    }
+
+    &__rating-box {
+      gap: 4rem;
+      margin-bottom: 5rem;
+    }
+
+    &__name {
+      margin-bottom: 3rem;
+    }
+
+    &__text {
+    }
+  }
+}

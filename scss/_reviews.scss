@@ -1,0 +1,170 @@
+.reviews {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.2rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex: 30%;
+    max-width: 45.5rem;
+    padding: 3rem;
+    border: 1px solid #D4D4D8;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  &__date {
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    color: $grayDark;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    > svg {
+      width: 2.6rem;
+      height: 2.6rem;
+
+      path {
+        fill: transparent;
+        stroke: $red;
+      }
+    }
+
+    .active {
+      width: 3rem;
+      height: 3rem;
+
+      path {
+        fill: $red;
+        stroke: transparent;
+      }
+    }
+  }
+
+  &__name {
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+
+  &__text {
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    color: $grayDark;
+    overflow: hidden;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
+    font-weight: 300;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    text-decoration: underline;
+    color: $blue;
+
+    > svg {
+      width: 1.2rem;
+      height: 0.6rem;
+
+      path {
+        fill: $blue;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__page-pagination {
+    margin-top: 12rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .reviews {
+    &__list {
+      gap: 4rem;
+    }
+
+    &__item {
+      flex: 100%;
+      max-width: none;
+      padding: 4rem;
+    }
+
+    &__header {
+      margin-bottom: 4rem;
+    }
+
+    &__date {
+      font-weight: 500;
+      font-size: 2.6rem;
+      line-height: 4rem;
+      color: $grayDark;
+    }
+
+    &__rating {
+      gap: 1rem;
+
+      > svg {
+        width: 4.4rem;
+        height: 4.4rem;
+      }
+
+      .active {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+
+    &__name {
+      margin-bottom: 3rem;
+      font-size: 3.4rem;
+      line-height: 4rem;
+    }
+
+    &__text {
+      margin-bottom: 3rem;
+      font-weight: 400;
+      font-size: 3rem;
+      line-height: 3.8rem;
+    }
+
+    &__link {
+      font-weight: 400;
+      font-size: 3rem;
+      line-height: 4.5rem;
+
+      > svg {
+        width: 2.4rem;
+        height: 1.2rem;
+      }
+    }
+
+    &__page-pagination {
+    }
+  }
+}
