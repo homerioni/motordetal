@@ -8,6 +8,11 @@
       padding-right: 4rem;
     }
 
+    &--30 {
+      flex: 30%;
+      max-width: 45.5rem;
+    }
+
     &--50 {
       flex: 45%;
       max-width: 69.9rem;
@@ -201,9 +206,18 @@
   .form {
     gap: 4rem;
 
+    .button {
+      order: 10;
+    }
+
     &__item {
       &.select-label {
         padding-right: 8rem;
+      }
+
+      &--30 {
+        flex: 100%;
+        max-width: none;
       }
 
       &--50 {

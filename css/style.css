@@ -3918,6 +3918,12 @@ body {
 .form__item.select-label {
   padding-right: 4rem;
 }
+.form__item--30 {
+  -webkit-box-flex: 30%;
+      -ms-flex: 30%;
+          flex: 30%;
+  max-width: 45.5rem;
+}
 .form__item--50 {
   -webkit-box-flex: 45%;
       -ms-flex: 45%;
@@ -4131,8 +4137,19 @@ body {
   .form {
     gap: 4rem;
   }
+  .form .button {
+    -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+            order: 10;
+  }
   .form__item.select-label {
     padding-right: 8rem;
+  }
+  .form__item--30 {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    max-width: none;
   }
   .form__item--50 {
     -webkit-box-flex: 100%;
