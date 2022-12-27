@@ -452,6 +452,27 @@
       }
     }
 
+    &__category-close {
+      position: fixed;
+      right: 4rem;
+      top: 4rem;
+      z-index: 11;
+      width: 4rem;
+      height: 4rem;
+      cursor: pointer;
+
+      > svg {
+        width: 100%;
+        height: 100%;
+
+        path {
+          fill: $red;
+          stroke: $red;
+        }
+      }
+
+    }
+
     &__category-item {
       flex: 100%;
       max-width: none;

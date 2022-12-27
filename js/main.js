@@ -113,9 +113,9 @@ $(document).ready(function () {
     $('.catalog__category-list').length ? $('.catalog__category-list').css('display', 'flex').hide() : false;
     $('.catalog__category-btn').click(function () {
         if ($(window).width() <= 768) {
-            $('.header, .breadcrumbs').toggleClass('bottom-slide');
-            $('body').toggleClass('lock');
-            $(this).toggleClass('active').siblings('.catalog__category-list').toggleClass('active');
+            $('.header, .breadcrumbs').addClass('bottom-slide');
+            $('body').addClass('lock');
+            $(this).addClass('active').siblings('.catalog__category-list').addClass('active');
         } else {
             $(this).toggleClass('active').siblings('.catalog__category-list').slideToggle();
         }
@@ -143,12 +143,26 @@ $(document).ready(function () {
         $('.catalog__list').removeClass('catalog__list--lists');
     });
     $('.catalog__filter-btn').click(function () {
-        $('.header, .breadcrumbs').toggleClass('bottom-slide');
-        $('body').toggleClass('lock');
-        $('.filter').toggleClass('active');
+        $('.header, .breadcrumbs').addClass('bottom-slide');
+        $('body').addClass('lock');
+        $('.filter').addClass('active');
     });
     $('.filter__item-btn').click(function () {
         $(this).toggleClass('active').siblings('.filter__item-content').slideToggle();
+    });
+    $('.filter__close').click(function () {
+        setTimeout(function () {
+            $('.header, .breadcrumbs').removeClass('bottom-slide');
+        }, 500);
+        $('body').removeClass('lock');
+        $('.filter').removeClass('active');
+    });
+    $('.catalog__category-close').click(function () {
+        setTimeout(function () {
+            $('.header, .breadcrumbs').removeClass('bottom-slide');
+        }, 500);
+        $('body').removeClass('lock');
+        $(this).parent().removeClass('active').siblings('.catalog__category-btn').removeClass('active');
     });
 
     // Modal buy
