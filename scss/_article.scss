@@ -1,4 +1,6 @@
 .article {
+  margin-bottom: 9rem;
+
   &__title {
     font-family: $mont;
     font-weight: 700;
@@ -67,6 +69,8 @@
 
 @media (max-width: 48em) {
   .article {
+    margin-bottom: 12rem;
+
     &__title {
       line-height: 6rem;
     }
