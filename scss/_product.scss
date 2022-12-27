@@ -1,0 +1,165 @@
+.product {
+  &__title {
+    font-family: $mont;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 6.5rem;
+  }
+
+  &__separator {
+    margin: 3.8rem 0;
+    border-bottom: 1px solid #D4D4D8;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+  }
+
+  &__image-block {
+    width: 69.8rem;
+  }
+
+  &__info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 68rem;
+    height: auto;
+  }
+
+  &__info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__info-item {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.2rem;
+    font-size: 2.4rem;
+    color: $grayDark;
+
+    > p {
+      flex: none;
+
+      &:last-child {
+        color: $black;
+      }
+    }
+  }
+
+  &__info-separator {
+    flex: auto;
+    transform: translateY(-0.6rem);
+    border-bottom: 1px dashed $grayDark;
+  }
+
+  &__description {
+    margin-bottom: 3rem;
+    font-size: 2.4rem;
+    line-height: 4rem;
+    color: $grayDark;
+  }
+
+  &__tab-content {
+  }
+
+  &__spec-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__spec {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 68rem;
+  }
+
+  &__spec-item {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.2rem;
+    font-size: 2.4rem;
+    color: $grayDark;
+
+    > p {
+      flex: none;
+
+      &:last-child {
+        color: $black;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .product {
+    &__title {
+      line-height: 6rem;
+    }
+
+    &__separator {
+      margin: 5rem 0 4rem 0;
+    }
+
+    &__header {
+      display: block;
+      margin-bottom: 8rem;
+    }
+
+    &__image-block {
+      width: 100%;
+      margin-bottom: 7rem;
+    }
+
+    &__info-block {
+      gap: 6rem;
+      width: 100%;
+    }
+
+    &__info-list {
+      gap: 3rem;
+    }
+
+    &__info-item {
+      gap: 1.6rem;
+      font-size: 3rem;
+    }
+
+    &__info-separator {
+      transform: translateY(-0.8rem);
+    }
+
+    &__description {
+      margin-bottom: 2rem;
+      font-size: 3rem;
+      line-height: 5rem;
+    }
+
+    &__tab-content {
+    }
+
+    &__spec-box {
+      flex-direction: column;
+      gap: 3rem;
+      justify-content: normal;
+    }
+
+    &__spec {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      width: 100%;
+    }
+
+    &__spec-item {
+      gap: 1.6rem;
+      font-size: 3rem;
+    }
+  }
+}

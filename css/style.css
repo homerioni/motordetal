@@ -6804,6 +6804,186 @@ body {
     margin: 6rem -4rem 0 -4rem;
   }
 }
+.product__title {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 6.5rem;
+}
+.product__separator {
+  margin: 3.8rem 0;
+  border-bottom: 1px solid #D4D4D8;
+}
+.product__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5rem;
+}
+.product__image-block {
+  width: 69.8rem;
+}
+.product__info-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 3rem;
+  width: 68rem;
+  height: auto;
+}
+.product__info-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+.product__info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 1.2rem;
+  font-size: 2.4rem;
+  color: #494949;
+}
+.product__info-item > p {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+.product__info-item > p:last-child {
+  color: #171717;
+}
+.product__info-separator {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  -webkit-transform: translateY(-0.6rem);
+          transform: translateY(-0.6rem);
+  border-bottom: 1px dashed #494949;
+}
+.product__description {
+  margin-bottom: 3rem;
+  font-size: 2.4rem;
+  line-height: 4rem;
+  color: #494949;
+}
+.product__spec-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.product__spec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  width: 68rem;
+}
+.product__spec-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 1.2rem;
+  font-size: 2.4rem;
+  color: #494949;
+}
+.product__spec-item > p {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+.product__spec-item > p:last-child {
+  color: #171717;
+}
+
+@media (max-width: 48em) {
+  .product__title {
+    line-height: 6rem;
+  }
+  .product__separator {
+    margin: 5rem 0 4rem 0;
+  }
+  .product__header {
+    display: block;
+    margin-bottom: 8rem;
+  }
+  .product__image-block {
+    width: 100%;
+    margin-bottom: 7rem;
+  }
+  .product__info-block {
+    gap: 6rem;
+    width: 100%;
+  }
+  .product__info-list {
+    gap: 3rem;
+  }
+  .product__info-item {
+    gap: 1.6rem;
+    font-size: 3rem;
+  }
+  .product__info-separator {
+    -webkit-transform: translateY(-0.8rem);
+            transform: translateY(-0.8rem);
+  }
+  .product__description {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+  .product__spec-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 3rem;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+  }
+  .product__spec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+  }
+  .product__spec-item {
+    gap: 1.6rem;
+    font-size: 3rem;
+  }
+}
 .fancybox-container {
   -webkit-backdrop-filter: blur(0.5rem);
           backdrop-filter: blur(0.5rem);
