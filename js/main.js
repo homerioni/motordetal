@@ -127,7 +127,7 @@ $(document).ready(function () {
     $('.filter__checkbox-label input').change(function () {
         $(this).parent().toggleClass('active');
     });
-    $('.catalog__search-label input, .filter__item-search input').focusin(function () {
+    $('.catalog__search-label input, .filter__item-search input, .docs__search-label input').focusin(function () {
         $(this).parent().addClass('focus');
     }).focusout(function () {
         $(this).parent().removeClass('focus');
@@ -168,5 +168,8 @@ $(document).ready(function () {
                 '<div class="fancybox-caption"><div class="fancybox-caption__body"></div></div>' +
                 '</div>',
     });
+
+
+    // Docs
 
 });
