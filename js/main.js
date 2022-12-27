@@ -151,4 +151,22 @@ $(document).ready(function () {
         $(this).toggleClass('active').siblings('.filter__item-content').slideToggle();
     });
 
+    // Modal buy
+    $('[href="#modal-buy"]').fancybox({
+        smallBtn: false,
+        arrows: false,
+        infobar: false,
+        toolbar: false,
+            baseTpl:
+                '<div class="fancybox-container" role="dialog" tabindex=" -1">' +
+                '<div class="fancybox-bg"></div>' +
+                '<div class="fancybox-inner">'+
+                '<div class="fancybox-infobar"><span data-fancybox-index></span> / <span data-fancybox-count></span></div>' +
+                '<div class="fancybox-toolbar">{{кнопки}}</div>' +
+                '<div class="fancybox-navigation">{{стрелки}}</div>' +
+                '<div class="fancybox-stage modal-buy__stage"></div>' +
+                '<div class="fancybox-caption"><div class="fancybox-caption__body"></div></div>' +
+                '</div>',
+    });
+
 });
