@@ -7301,6 +7301,10 @@ body {
   font-size: 2rem;
   line-height: 2.4rem;
 }
+.career__contacts a:hover {
+  color: #014A93;
+  text-decoration: underline;
+}
 .career__contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7391,25 +7395,22 @@ body {
   padding: 6rem;
 }
 .career__text-content {
-  height: 30rem;
   font-size: 2.4rem;
   line-height: 3.6rem;
   color: #494949;
-  overflow: hidden;
 }
 .career__text-content ul {
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 2rem;
+  overflow: hidden;
 }
 .career__text-content ul > li {
   position: relative;
   padding-left: 3.4rem;
+}
+.career__text-content ul > li:not(:last-child) {
+  margin-bottom: 2rem;
 }
 .career__text-content ul > li:before {
   content: "";
@@ -7422,8 +7423,8 @@ body {
           transform: translateY(-50%);
   background-color: #494949;
 }
-.career__text-content.active {
-  height: auto;
+.career__text-content.active > ul {
+  display: block;
 }
 .career__item-title {
   margin-bottom: 5rem;
@@ -7615,15 +7616,17 @@ body {
     padding: 6rem 4rem;
   }
   .career__text-content {
-    height: 48rem;
     font-size: 3rem;
     line-height: 4.5rem;
   }
   .career__text-content ul {
-    gap: 1rem;
+    -webkit-line-clamp: 6;
   }
   .career__text-content ul > li {
     padding-left: 4rem;
+  }
+  .career__text-content ul > li:not(:last-child) {
+    margin-bottom: 1rem;
   }
   .career__text-content ul > li:before {
     top: 2rem;

@@ -50,6 +50,11 @@
     a {
       font-size: 2rem;
       line-height: 2.4rem;
+
+      &:hover {
+        color: $blue;
+        text-decoration: underline;
+      }
     }
   }
 
@@ -127,20 +132,23 @@
   }
 
   &__text-content {
-    height: 30rem;
     font-size: 2.4rem;
     line-height: 3.6rem;
     color: $grayDark;
-    overflow: hidden;
 
     ul {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
 
       > li {
         position: relative;
         padding-left: 3.4rem;
+
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
 
         &:before {
           content: '';
@@ -156,7 +164,9 @@
     }
 
     &.active {
-      height: auto;
+      > ul {
+        display: block;
+      }
     }
   }
 
@@ -361,15 +371,18 @@
     }
 
     &__text-content {
-      height: 48rem;
       font-size: 3rem;
       line-height: 4.5rem;
 
       ul {
-        gap: 1rem;
+        -webkit-line-clamp: 6;
 
         > li {
           padding-left: 4rem;
+
+          &:not(:last-child) {
+            margin-bottom: 1rem;
+          }
 
           &:before {
             top: 2rem;
