@@ -190,4 +190,14 @@ $(document).ready(function () {
         $(this).toggleClass('active').siblings('.career__text-content').toggleClass('active');
     });
 
+    // Product
+    $('.product__image-slide').mousemove(function(e){
+        let target = this.getBoundingClientRect(),
+            x = (e.clientX - target.left),
+            y = (e.clientY - target.top);
+        x = ($(e.currentTarget).width() * -1 / 2 + x) / 2 * -1;
+        y = ($(e.currentTarget).height() * -1 / 2 + y) / 2 * -1;
+        $(this).css('--mouseY', y + 'px').css('--mouseX', x + 'px');
+    });
+
 });

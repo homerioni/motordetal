@@ -18,7 +18,136 @@
   }
 
   &__image-block {
+    display: flex;
+    justify-content: space-between;
     width: 69.8rem;
+    height: 45.4rem;
+  }
+
+  &__image-slider-thumb {
+    width: 21rem;
+    height: 100%;
+    margin: 0;
+  }
+
+  &__image-slide-thumb {
+    padding: 2rem;
+    cursor: pointer;
+    border: 1px solid #D4D4D8;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__image-slider {
+    width: 45.4rem;
+    height: 100%;
+    border: 1px solid #D4D4D8;
+    margin: 0;
+
+    @media (min-width: 48.01em) {
+      &:hover {
+        .product__image-slider-arrows {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__image-slide {
+    padding: 2.5rem;
+    overflow: hidden;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @media (min-width: 48.01em) {
+      &:hover {
+        > img {
+          transform: scale(1.5) translate(var(--mouseX), var(--mouseY));
+        }
+      }
+    }
+  }
+
+  &__image-slider-arrows {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .6s ease;
+  }
+
+  &__image-slider-prev {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    transform: translateY(-50%) scaleX(-1);
+
+    > svg {
+      width: 2rem;
+      height: 3.5rem;
+
+      path {
+        fill: $red;
+        stroke: $red;
+      }
+    }
+
+    &:hover {
+      > svg {
+        path {
+          fill: $blue;
+          stroke: $blue;
+        }
+      }
+    }
+  }
+
+  &__image-slider-next {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    transform: translateY(-50%);
+
+    > svg {
+      width: 2rem;
+      height: 3.5rem;
+
+      path {
+        fill: $red;
+        stroke: $red;
+      }
+    }
+
+    &:hover {
+      > svg {
+        path {
+          fill: $blue;
+          stroke: $blue;
+        }
+      }
+    }
   }
 
   &__info-block {
@@ -113,8 +242,47 @@
     }
 
     &__image-block {
+      position: relative;
+      display: block;
       width: 100%;
+      height: auto;
       margin-bottom: 7rem;
+    }
+
+    &__image-slider-thumb {
+    }
+
+    &__image-slide-thumb {
+    }
+
+    &__image-slider {
+      width: 100%;
+      height: 67rem;
+      margin-bottom: 5rem;
+    }
+
+    &__image-slide {
+      padding: 4rem;
+    }
+
+    &__image-slider-arrows {
+    }
+
+    &__image-slider-prev {
+    }
+
+    &__image-slider-next {
+    }
+
+    .product__image-slider-pagination {
+      width: fit-content;
+      height: 2rem;
+      margin: 0 auto;
+
+      .swiper-pagination-bullet {
+        border-radius: 0;
+        background-color: $blue;
+      }
     }
 
     &__info-block {

@@ -272,7 +272,7 @@ const catalog_slider = new Swiper('.catalog-slider__slider', {
         },
         769: {
             slidesPerView: 4,
-            spaceBetween: rem(3.2),
+            spaceBetween: rem(3.4),
         },
     },
 
@@ -289,4 +289,38 @@ const catalog_slider = new Swiper('.catalog-slider__slider', {
             });
         },
     },
+});
+
+const product_image_thumb_slider = new Swiper('.product__image-slider-thumb', {
+    direction: 'vertical',
+    slidesPerView: 2,
+    loop: true,
+    spaceBetween: rem(3.2),
+});
+
+const product_image_slider = new Swiper('.product__image-slider', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    loop: true,
+    spaceBetween: rem(3.2),
+
+    navigation: {
+        nextEl: '.product__image-slider-next',
+        prevEl: '.product__image-slider-prev',
+    },
+
+    pagination: {
+        el: '.product__image-slider-pagination',
+        type: 'bullets',
+    },
+
+    on: {
+        slideChange: function (slider) {
+            product_image_thumb_slider.slideToLoop(slider.realIndex + 1);
+        },
+    },
+});
+
+$('.product__image-slide-thumb').click(function () {
+    product_image_slider.slideToLoop($(this).data('swiper-slide-main'));
 });
