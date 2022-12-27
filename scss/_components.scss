@@ -191,17 +191,39 @@
 }
 
 .scrollbar {
+  scrollbar-color: $blue white;
+  scrollbar-width: thin;
+
   &::-webkit-scrollbar {
-    width: 0.4rem;
+    width: 0.5rem;
   }
 
   &::-webkit-scrollbar-track {
-    border-radius: 100rem;
+    border-radius: 10rem;
     background-color: white;
   }
 
   &::-webkit-scrollbar-thumb {
-    border-radius: 100rem;
+    border-radius: 10rem;
+    background-color: $blue;
+  }
+}
+
+.scrollbar-gray {
+  scrollbar-color: $blue #D4D4D8;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10rem;
+    background-color: #D4D4D8;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10rem;
     background-color: $blue;
   }
 }
@@ -216,6 +238,10 @@
   line-height: 2.4rem;
   text-transform: uppercase;
   color: $red;
+
+  &--intro {
+    margin: 6rem 0 4rem 0;
+  }
 
   > svg {
     width: 2rem;
@@ -373,9 +399,10 @@
     }
   }
 
-  .scrollbar {
+  .scrollbar,
+  .scrollbar-gray {
     &::-webkit-scrollbar {
-      width: 0.8rem;
+      width: 1rem;
     }
   }
 
