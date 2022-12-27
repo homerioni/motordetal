@@ -127,10 +127,11 @@ $(document).ready(function () {
     $('.filter__checkbox-label input').change(function () {
         $(this).parent().toggleClass('active');
     });
-    $('.catalog__search-label input, .filter__item-search input, .docs__search-label input').focusin(function () {
-        $(this).parent().addClass('focus');
-    }).focusout(function () {
-        $(this).parent().removeClass('focus');
+    $('.catalog__search-label input, .filter__item-search input, .docs__search-label input, .career__search-label input')
+        .focusin(function () {
+            $(this).parent().addClass('focus');
+        }).focusout(function () {
+            $(this).parent().removeClass('focus');
     });
     $('.catalog-list-btn').click(function () {
         $('.catalog__view-btn').removeClass('active');
@@ -184,6 +185,9 @@ $(document).ready(function () {
     });
 
 
-    // Docs
+    // Career
+    $('.career__text-btn').click(function () {
+        $(this).toggleClass('active').siblings('.career__text-content').toggleClass('active');
+    });
 
 });
