@@ -50,12 +50,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: -2rem;
+    padding-top: 2rem;
     overflow: hidden;
     transition: width .5s ease;
 
     &.swiper-slide-active {
       ~ .category-slider__slide {
         width: 21rem !important;
+
+        .category-slider__slide-title {
+          opacity: 0;
+        }
+
+        .category-slider__slide-title-hide {
+          opacity: 1;
+        }
+
+        .category-slider__qty-box {
+          opacity: 0;
+        }
+
+        .category-slider__slide-text {
+          opacity: 0;
+        }
       }
     }
   }
@@ -68,6 +86,7 @@
     width: 57.5rem;
     height: 100%;
     padding: 4.2rem 3.8rem;
+    transition: transform .4s ease;
 
     &:hover {
       transform: translateY(-2rem);
@@ -117,10 +136,28 @@
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 1.65;
+    transition: opacity .25s ease;
+  }
+
+  &__slide-title-hide {
+    position: absolute;
+    left: 50%;
+    top: 4.2rem;
+    z-index: -1;
+    width: 15rem;
+    transform: translateX(-50%);
+    opacity: 0;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    text-align: center;
+    isolation: isolate;
+    transition: opacity .25s ease;
   }
 
   &__qty-box {
     text-align: right;
+    transition: opacity .25s ease;
   }
 
   &__qty {
@@ -139,15 +176,14 @@
   }
 
   &__slide-img-box {
-    width: 100%;
+    width: calc(100% + 7.6rem);
     height: 40rem;
-    margin-top: auto;
+    margin: auto -3.8rem 0 -3.8rem;
 
     > img {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      object-position: right bottom;
     }
   }
 
@@ -155,11 +191,138 @@
     font-size: 2.4rem;
     line-height: 1.5;
     color: white;
+    transition: opacity .25s ease;
   }
 }
 
 @media (max-width: 48em) {
   .category-slider {
-    display: none;
+    &__container {
+      display: block;
+      width: 100%;
+    }
+
+    &__text-block {
+      width: 100%;
+      margin-bottom: 6rem;
+    }
+
+    &__title {
+      margin-bottom: 4rem;
+      line-height: 6rem;
+    }
+
+    &__slider-nav {
+    }
+
+    &__desc {
+      margin-bottom: 4rem;
+      font-size: 2.6rem;
+      line-height: 3.6rem;
+    }
+
+    &__separator {
+    }
+
+    &__slider {
+      width: 75rem;
+      padding: 0 20.2rem 0 4rem;
+      margin: 0 -20.2rem 0 -4rem;
+    }
+
+    &__slide {
+     &.swiper-slide-active {
+        ~ .category-slider__slide {
+          width: 25.4rem !important;
+        }
+      }
+    }
+
+    &__slide-content {
+      width: 50.8rem;
+      padding: 4rem;
+
+      &:hover {
+        transform: none;
+      }
+    }
+
+    &__slide-bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: calc(100% - 18rem);
+        background-color: $grayLight;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 100%;
+        height: 18rem;
+        transform: skew(-30deg) translateX(-5.2rem);
+        background-color: $blue;
+      }
+    }
+
+    &__slide-title-box {
+      flex-direction: column;
+      justify-content: normal;
+      gap: 2rem;
+      margin-bottom: 0;
+    }
+
+    &__slide-title {
+      width: 32rem;
+      font-size: 3rem;
+      line-height: 4.2rem;
+    }
+
+    &__slide-title-hide {
+      width: 17rem;
+      font-size: 3rem;
+      line-height: 4.2rem;
+    }
+
+    &__qty-box {
+      text-align: left;
+    }
+
+    &__qty {
+      margin-bottom: 0;
+      font-size: 4rem;
+      line-height: 4.8rem;
+    }
+
+    &__qty-text {
+      font-weight: 700;
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+
+    &__slide-img-box {
+      width: calc(100% + 8rem);
+      height: 34rem;
+      margin: auto -4rem 0 -4rem;
+    }
+
+    &__slide-text {
+      font-size: 2.6rem;
+      line-height: 3.6rem;
+    }
   }
 }

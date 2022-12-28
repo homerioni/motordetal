@@ -36,6 +36,7 @@ const main_intro_slider = new Swiper('.intro__slider', {
 const category_slider = new Swiper('.category-slider__slider', {
     direction: 'horizontal',
     slidesPerView: 1,
+    // slideToClickedSlide: true,
 
     breakpoints: {
         0: {
@@ -334,7 +335,7 @@ const article_number_slider = new Swiper('.article-number__slider', {
             slidesPerView: 1,
         },
         769: {
-            slidesPerView: 2.408,
+            slidesPerView: 2.3,
         },
     },
 

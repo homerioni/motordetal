@@ -97,6 +97,30 @@ $(document).ready(function () {
         },
     });
 
+    // Intro
+    $('.intro__btn').fancybox({
+        arrows: false,
+        infobar: false,
+        toolbar: false,
+        smallBtn: true,
+        afterLoad: function(instance, current) {
+            if ($(window).width() <= 768) {
+                current.width  = rem(33.5);
+                current.height = rem(19);
+            } else {
+                current.width  = rem(142.6);
+                current.height = rem(80.6);
+            }
+        },
+        afterShow: function (inst, current) {
+            current.$smallBtn.addClass('video-close')
+                .html('<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                    '<path d="M25.5 0H33L7.5 33H0L25.5 0Z" fill="#D62214"/>\n' +
+                    '<path d="M7.5 0H0L25.5 33H33L7.5 0Z" fill="#D62214"/>\n' +
+                    '</svg>\n');
+        },
+    });
+
     // Tabs
     $('.tabs__tab').click(function () {
         if (!$(this).hasClass('active')) {
