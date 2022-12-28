@@ -339,7 +339,7 @@ const article_number_slider = new Swiper('.article-number__slider', {
     },
 
     navigation: {
-        nextEl: '.article-number .next',
-        prevEl: '.article-number .prev',
+        nextEl: '.article-number__slider-nav .next',
+        prevEl: '.article-number__slider-nav .prev',
     },
 });

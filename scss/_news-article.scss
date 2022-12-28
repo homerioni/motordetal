@@ -1,0 +1,361 @@
+.news-article {
+  &__title {
+    font-family: $mont;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 6.5rem;
+  }
+
+  &__separator {
+    margin: 3.8rem 0 5.2rem 0;
+    border-bottom: 1px solid #D4D4D8;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    a:not(.button) {
+      text-decoration: underline;
+      color: $blue;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__img-box {
+    width: 100%;
+    height: 68.2rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__sub-title {
+    font-family: $mont;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 4.3rem;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-weight: 300;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    color: $grayDark;
+
+    b {
+      font-weight: 400;
+      color: $black;
+    }
+  }
+
+  &__text-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 3.2rem;
+  }
+
+  &__text-img-box {
+    flex: none;
+    position: relative;
+    width: 69.5rem;
+    height: 38.8rem;
+    overflow: hidden;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      width: 30rem;
+      height: 200%;
+      transform: rotate(25deg) translate(-28.6rem, -5rem);
+      background-color: white;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30rem;
+      height: 200%;
+      opacity: .3;
+      transform: rotate(25deg) translate(-22.6rem, -5rem);
+      background-color: white;
+    }
+  }
+
+  &__border-box {
+    padding: 2.4rem 2rem;
+    border-top: 1px solid #D4D4D8;
+    border-bottom: 1px solid #D4D4D8;
+    font-weight: 300;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+
+  &__list-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list-box {
+    width: 69rem;
+  }
+
+  &__list-title {
+    margin-bottom: 3rem;
+    font-family: $mont;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 4.3rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__list-item {
+    display: flex;
+    gap: 1.6rem;
+    font-weight: 300;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    color: $grayDark;
+  }
+
+  &__list-number {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 100%;
+    background-color: $blue;
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    color: white;
+  }
+
+  &__list-image-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2rem;
+    width: 69.5rem;
+  }
+
+  &__list-image-title {
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    color: $grayDark;
+  }
+
+  &__list-image-item {
+    position: relative;
+    width: 69.5rem;
+    height: 38.8rem;
+    padding: 3rem 3rem 3rem 25rem;
+    background-color: $grayLight;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      width: 30rem;
+      height: 200%;
+      transform: rotate(25deg) translate(-28.6rem, -5rem);
+      background-color: white;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30rem;
+      height: 200%;
+      opacity: .3;
+      transform: rotate(25deg) translate(-22.6rem, -5rem);
+      background-color: white;
+    }
+  }
+
+  &__list-image-text {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+
+  &__list-img-box {
+    width: 36rem;
+    height: 21rem;
+    margin-bottom: 1.5rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__list-image-btn {
+    background-color: $blue;
+
+    &:before {
+      background-color: $blue;
+    }
+  }
+
+  &__slider {
+    margin-top: 8.8rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .news-article {
+    &__title {
+      line-height: 6rem;
+    }
+
+    &__separator {
+      margin: 5rem 0 4rem 0;
+    }
+
+    &__content {
+      gap: 4.4rem;
+    }
+
+    &__img-box {
+      height: 32rem;
+    }
+
+    &__sub-title {
+      font-weight: 700;
+      font-size: 3.4rem;
+      line-height: 4rem;
+    }
+
+    &__text {
+      gap: 2rem;
+      font-weight: 400;
+      font-size: 3rem;
+      line-height: 4.5rem;
+
+      b {
+        font-weight: 500;
+      }
+    }
+
+    &__text-box {
+      flex-direction: column;
+      justify-content: normal;
+      gap: 4.4rem;
+    }
+
+    &__text-img-box {
+      width: 100%;
+      height: 37.4rem;
+    }
+
+    &__border-box {
+      padding: 4rem;
+      font-weight: 400;
+      font-size: 3rem;
+      line-height: 4.5rem;
+    }
+
+    &__list-block {
+      display: block;
+    }
+
+    &__list-box {
+      width: 100%;
+    }
+
+    &__list-title {
+      margin-bottom: 4rem;
+      font-weight: 700;
+      font-size: 3.4rem;
+      line-height: 4rem;
+    }
+
+    &__list {
+    }
+
+    &__list-item {
+      gap: 2rem;
+      font-weight: 400;
+      font-size: 3rem;
+      line-height: 4.5rem;
+    }
+
+    &__list-number {
+      width: 4.2rem;
+      height: 4.2rem;
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+
+    &__list-image-block {
+      gap: 4rem;
+      width: 100%;
+    }
+
+    &__list-image-title {
+      font-size: 3rem;
+      line-height: 4.2rem;
+    }
+
+    &__list-image-item {
+      position: relative;
+      width: 100%;
+      height: 37.4rem;
+      padding: 3rem 3rem 3rem 24rem;
+    }
+
+    &__list-image-text {
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+
+    &__list-img-box {
+      width: 30rem;
+      height: 20rem;
+    }
+
+    &__list-image-btn {
+    }
+
+    &__slider {
+      margin-top: 12rem;
+    }
+  }
+}

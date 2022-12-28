@@ -6,6 +6,14 @@
     line-height: 1.07;
   }
 
+  &__sub-title {
+    margin-bottom: 3.2rem;
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    color: $grayDark;
+  }
+
   &__separator {
     width: 100%;
     height: 1px;
@@ -91,6 +99,12 @@
   .news-page {
     &__title {
       line-height: 1.2;
+    }
+
+    &__sub-title {
+      margin-bottom: 6rem;
+      font-size: 3rem;
+      line-height: 4.2rem;
     }
 
     &__separator {
