@@ -9,6 +9,15 @@
     flex-direction: column;
     gap: 4rem;
     width: 94rem;
+
+    a:not(.button) {
+      text-decoration: underline;
+      color: $blue;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 
   &__content-box {

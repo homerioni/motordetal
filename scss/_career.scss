@@ -123,12 +123,13 @@
   &__item {
     position: relative;
     display: flex;
-    border: 1px solid #D4D4D8;
+    overflow: hidden;
   }
 
   &__text-block {
     width: 96rem;
     padding: 6rem;
+    border: 1px solid #D4D4D8;
   }
 
   &__text-content {
@@ -236,19 +237,22 @@
     width: 47rem;
     height: auto;
     padding: 6rem 4rem;
-    border-left: 1px solid #D4D4D8;
+    border: 1px solid #D4D4D8;
+    border-left: none;
     background-color: $grayLight;
+    overflow: hidden;
 
     &:after {
       content: '';
       position: absolute;
-      right: 0;
-      bottom: 0;
+      right: -2.8rem;
+      bottom: -3.6rem;
       z-index: 1;
-      border: 6rem solid transparent;
-      border-right: 6rem solid white;
-      border-bottom: 6rem solid white;
-      transform: rotate(-8deg) translate(1.5rem, 1.5rem);
+      width: 7rem;
+      height: 14rem;
+      border-left: 1px solid #D4D4D8;
+      background-color: white;
+      transform: rotate(35deg);
     }
   }
 
@@ -275,7 +279,6 @@
 
   &__btn {
     margin-top: auto;
-    background-color: $blue;
 
     &:before {
       background-color: $blue;

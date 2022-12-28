@@ -107,7 +107,7 @@
     padding: 2.4rem 2rem;
     border-top: 1px solid #D4D4D8;
     border-bottom: 1px solid #D4D4D8;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 2.4rem;
     line-height: 3.6rem;
   }
@@ -227,14 +227,18 @@
   }
 
   &__list-image-btn {
-    background-color: $blue;
-
     &:before {
       background-color: $blue;
     }
   }
 
   &__slider {
+    @media (min-width: 48.01em) {
+      margin: 0 -24.5rem;
+      padding: 0 24.5rem;
+      width: calc(100% + 49rem);
+    }
+
     margin-top: 8.8rem;
   }
 }
