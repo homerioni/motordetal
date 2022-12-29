@@ -122,10 +122,32 @@
     > svg {
       width: 8.4rem;
       height: 5.4rem;
+
+      path {
+        transition: fill .25s ease;
+
+        &:first-child {
+          fill: $blue;
+        }
+
+        &:last-child {
+          fill: white;
+        }
+      }
     }
 
     > input {
       display: none;
+    }
+
+    &:hover {
+      > svg {
+        path {
+          &:first-child {
+            fill: $red;
+          }
+        }
+      }
     }
   }
 

@@ -36,6 +36,8 @@ const main_intro_slider = new Swiper('.intro__slider', {
 const category_slider = new Swiper('.category-slider__slider', {
     direction: 'horizontal',
     slidesPerView: 1,
+    loop: true,
+    loopAdditionalSlides: 10,
     // slideToClickedSlide: true,
 
     breakpoints: {

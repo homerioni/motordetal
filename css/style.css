@@ -1222,10 +1222,10 @@ body {
   font-size: 1.7rem;
   line-height: 1.5;
   color: white;
+  opacity: 0.6;
 }
 .footer__tel:hover {
-  -webkit-filter: brightness(0.75);
-          filter: brightness(0.75);
+  opacity: 1;
 }
 .footer__address {
   display: block;
@@ -2087,6 +2087,10 @@ body {
   -webkit-transform: rotate(-8deg) translate(1.5rem, 1.5rem);
           transform: rotate(-8deg) translate(1.5rem, 1.5rem);
 }
+.advantages__slide:hover .advantages__slide-bg img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 .advantages__slide-bg {
   position: absolute;
   left: 0;
@@ -2094,12 +2098,17 @@ body {
   z-index: -1;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 .advantages__slide-bg > img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform 0.7s ease;
+  transition: -webkit-transform 0.7s ease;
+  transition: transform 0.7s ease;
+  transition: transform 0.7s ease, -webkit-transform 0.7s ease;
 }
 .advantages__slide-text-block {
   display: -webkit-box;
@@ -4231,8 +4240,21 @@ body {
   width: 8.4rem;
   height: 5.4rem;
 }
+.form__upload > svg path {
+  -webkit-transition: fill 0.25s ease;
+  transition: fill 0.25s ease;
+}
+.form__upload > svg path:first-child {
+  fill: #014A93;
+}
+.form__upload > svg path:last-child {
+  fill: white;
+}
 .form__upload > input {
   display: none;
+}
+.form__upload:hover > svg path:first-child {
+  fill: #D62214;
 }
 .form__file {
   display: none;
@@ -5216,9 +5238,9 @@ body {
   }
 }
 .contacts .tabs__tabs {
-  -webkit-column-gap: 8rem;
-     -moz-column-gap: 8rem;
-          column-gap: 8rem;
+  -webkit-column-gap: 7.7rem;
+     -moz-column-gap: 7.7rem;
+          column-gap: 7.7rem;
   border-top: 1px solid #D4D4D8;
 }
 .contacts .tabs__tab:not(:last-child):after {
@@ -7186,12 +7208,6 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
 }
-@media (min-width: 48.01em) {
-  .product__image-slide:hover > img {
-    -webkit-transform: scale(1.5) translate(var(--mouseX), var(--mouseY));
-            transform: scale(1.5) translate(var(--mouseX), var(--mouseY));
-  }
-}
 .product__image-slider-arrows {
   position: absolute;
   left: 0;
@@ -7547,9 +7563,6 @@ body {
 }
 .modal-buy__btn {
   isolation: isolate;
-}
-.modal-buy__btn:last-child {
-  background-color: #014A93;
 }
 .modal-buy__btn:last-child:before {
   background-color: #014A93;

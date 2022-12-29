@@ -88,9 +88,10 @@ body {
     font-size: 1.7rem;
     line-height: 1.5;
     color: white;
+    opacity: .6;
 
     &:hover {
-      filter: brightness(.75);
+      opacity: 1;
     }
   }
 

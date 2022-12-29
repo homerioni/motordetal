@@ -67,13 +67,13 @@
       object-fit: contain;
     }
 
-    @media (min-width: 48.01em) {
-      &:hover {
-        > img {
-          transform: scale(1.5) translate(var(--mouseX), var(--mouseY));
-        }
-      }
-    }
+    //@media (min-width: 48.01em) {
+    //  &:hover {
+    //    > img {
+    //      transform: scale(1.5) translate(var(--mouseX), var(--mouseY));
+    //    }
+    //  }
+    //}
   }
 
   &__image-slider-arrows {
