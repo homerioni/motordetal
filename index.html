@@ -7,120 +7,178 @@
     <title>Страницы</title>
 
     <link rel="stylesheet" href="font/stylesheet.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
 
     <!--Стили для этой странички-->
     <style>
+        html,
         body {
-            padding: 10rem 0;
-            background: rgba(20, 20, 20, 1);
+            padding-bottom: 0;
+            --color: rgba(0, 187, 255, 1);
+            --color-transparent: rgba(0, 187, 255, 0.7);
+        }
+
+        .index {
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-        }
-
-        a {
-            position: relative;
-            padding: 4rem 5rem;
-            display: block;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-            width: 80rem;
-            overflow: hidden;
-            border-radius: 10rem 10rem 50% 50%;
-        }
-
-        a:nth-child(even) {
-            transform: translateX(10%);
-        }
-
-        a:nth-child(odd) {
-            transform: translateX(-10%);
-        }
-
-        a span {
-            position: relative;
-            display: block;
-            text-align: center;
-            color: #fff;
-            font-size: 3.4rem;
-            z-index: 1;
-            text-shadow: 0 0 1rem rgba(0, 0, 0, 1),
-            0 0 2rem rgba(0, 0, 0, 1),
-            0 0 3rem rgba(0, 0, 0, 1);
-        }
-
-        a div {
-            position: absolute;
-            top: -35rem;
-            left: 0;
+            gap: 4.4rem;
             width: 100%;
-            height: 80rem;
-            background: #4973ff;
-            box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
-            transition: 0.5s;
-        }
-        a:nth-child(3n) div {
-            background: #a100ff;
-        }
-        a:nth-child(3n - 1) div {
-            background: #ff35ee;
+            min-height: 100vh;
+            padding: 10rem;
         }
 
-        a div::after,
-        a div::before {
+        .index:before {
             content: '';
-            width: 200%;
-            height: 200%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-100%);
+            background: linear-gradient(rgb(20, 20, 20) 20%, var(--color-transparent) 50%, rgb(20, 20, 20) 80%);
+            animation: bg 4.8s linear 2.5s infinite;
+        }
+
+        @keyframes bg {
+            from {
+                transform: translateY(-200%);
+            }
+
+            to {
+                transform: translateY(200%);
+            }
+        }
+
+        .index:after {
+            content: '';
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: -2;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(20, 20, 20);
+        }
+
+        .index__bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .index__item {
+            position: relative;
+            z-index: 5;
+            display: block;
+            min-width: 80rem;
+            padding: 2.5rem 6rem;
+            border-radius: 3rem;
+            border: 1px solid var(--color-transparent);
+            font-size: 4.4rem;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            transition: transform .5s ease;
+        }
+
+        .index__item:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: -2;
+            width: 105%;
+            height: 120%;
+            transform: translate(-50%, -50%) scale(0.95, 0.83);
+            border-radius: inherit;
+            filter: blur(1rem);
+            background-color: var(--color);
+            transition: transform .5s ease, filter .5s ease;
+        }
+        .index__item:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            background-color: #363636;
+        }
+
+        .index__item:hover:before {
+            transform: translate(-50%, -50%) scale(1);
+            filter: blur(1.5rem);
+        }
+
+        .animation-wrapper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .stagger-visualizer {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-origin: left top;
+        }
+
+        .stagger-visualizer .dots-wrapper {
+            transform: translateZ(0);
             position: absolute;
             top: 0;
-            left: 50%;
-            transform: translate(-50%, -75%);
-            background: #000;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
         }
 
-        a div::before {
-            border-radius: 45%;
-            background: rgba(20, 20, 20, 1);
-            animation: animate 5s linear infinite;
+        .stagger-visualizer .dot {
+            position: relative;
+            z-index: 1;
+            width: 14.9rem;
+            height: 14.9rem;
+            margin: 0.5rem;
+            background-color: #363636;
+            transition: background-color 1.5s ease;
         }
 
-        a div::after {
-            border-radius: 40%;
-            background: rgba(20, 20, 20, 0.5);
-            animation: animate 10s linear infinite;
-        }
-
-        a:hover div {
-            transform: translateY(-15rem);
+        .stagger-visualizer .dot:hover {
+            background-color: var(--color);
+            transition: background-color .1s ease;
         }
 
         @media (max-width: 48em) {
-            a {
+            .stagger-visualizer .dot {
+                width: 18.6%;
+                height: 13.8rem;
+            }
+
+            .index {
+                gap: 4.4rem;
+                padding: 10rem 4rem;
+            }
+
+            .index__item {
+                min-width: auto;
                 width: 100%;
-                margin-bottom: 4rem;
+                padding: 2.5rem 4rem;
+                border-radius: 100rem;
             }
 
-            a:nth-child(n) {
-                transform: translateX(0);
-            }
-
-            a div {
-                top: -32rem;
-                height: 75rem;
-            }
-        }
-
-        @keyframes animate {
-            0% {
-                transform: translate(-50%, -75%) rotate(0deg);
-            }
-
-            100% {
-                transform: translate(-50%, -75%) rotate(360deg);
+            .index__item:before {
+                transform: translate(-50%, -50%) scale(0.97, 0.88);
             }
         }
     </style>
@@ -128,110 +186,130 @@
 </head>
 <body>
 
-<a href="./main.html" target="_blank">
-    <span>Главная</span>
-    <div></div>
-</a>
-<a href="./news.html" target="_blank">
-    <span>Новости</span>
-    <div></div>
-</a>
-<a href="./history.html" target="_blank">
-    <span>История компании</span>
-    <div></div>
-</a>
-<a href="./online-store.html" target="_blank">
-    <span>Интернет магазин</span>
-    <div></div>
-</a>
-<a href="./validator.html" target="_blank">
-    <span>Проверка подлиности</span>
-    <div></div>
-</a>
-<a href="./corp.html" target="_blank">
-    <span>Корпоративная жизнь</span>
-    <div></div>
-</a>
-<a href="./corp-photo.html" target="_blank">
-    <span>Корпоративная жизнь, фото</span>
-    <div></div>
-</a>
-<a href="./video.html" target="_blank">
-    <span>Видеообзоры</span>
-    <div></div>
-</a>
-<a href="./media-center.html" target="_blank">
-    <span>Медиацентр</span>
-    <div></div>
-</a>
-<a href="./media-photo.html" target="_blank">
-    <span>Медиацентр, фото</span>
-    <div></div>
-</a>
-<a href="./contacts.html" target="_blank">
-    <span>Контакты</span>
-    <div></div>
-</a>
-<a href="./products.html" target="_blank">
-    <span>Продукция</span>
-    <div></div>
-</a>
-<a href="./production.html" target="_blank">
-    <span>Производство</span>
-    <div></div>
-</a>
-<a href="./company.html" target="_blank">
-    <span>Компания</span>
-    <div></div>
-</a>
-<a href="./catalog-category.html" target="_blank">
-    <span>Каталог категории</span>
-    <div></div>
-</a>
-<a href="./catalog.html" target="_blank">
-    <span>Каталог</span>
-    <div></div>
-</a>
-<a href="./product.html" target="_blank">
-    <span>Карточка товара</span>
-    <div></div>
-</a>
-<a href="./information.html" target="_blank">
-    <span>Информационные материалы</span>
-    <div></div>
-</a>
-<a href="./docs.html" target="_blank">
-    <span>Техническая документация</span>
-    <div></div>
-</a>
-<a href="./career.html" target="_blank">
-    <span>Карьера</span>
-    <div></div>
-</a>
-<a href="./reviews.html" target="_blank">
-    <span>Отзывы</span>
-    <div></div>
-</a>
-<a href="./404.html" target="_blank">
-    <span>404</span>
-    <div></div>
-</a>
-<a href="./article.html" target="_blank">
-    <span>Статья</span>
-    <div></div>
-</a>
-<a href="./news-page.html" target="_blank">
-    <span>Страница новости</span>
-    <div></div>
-</a>
-
+<div class="index">
+    <div class="index__bg">
+        <div class="animation-wrapper">
+            <div class="stagger-visualizer">
+                <div class="dots-wrapper"></div>
+            </div>
+        </div>
+    </div>
+    <a href="./main.html" target="_blank" class="index__item">Главная</a>
+    <a href="./news.html" target="_blank" class="index__item">Новости</a>
+    <a href="./history.html" target="_blank" class="index__item">История компании</a>
+    <a href="./online-store.html" target="_blank" class="index__item">Интернет магазин</a>
+    <a href="./validator.html" target="_blank" class="index__item">Проверка подлиности</a>
+    <a href="./corp.html" target="_blank" class="index__item">Корпоративная жизнь</a>
+    <a href="./corp-photo.html" target="_blank" class="index__item">Корпоративная жизнь, фото</a>
+    <a href="./video.html" target="_blank" class="index__item">Видеообзоры</a>
+    <a href="./media-center.html" target="_blank" class="index__item">Медиацентр</a>
+    <a href="./media-photo.html" target="_blank" class="index__item">Медиацентр, фото</a>
+    <a href="./contacts.html" target="_blank" class="index__item">Контакты</a>
+    <a href="./products.html" target="_blank" class="index__item">Продукция</a>
+    <a href="./production.html" target="_blank" class="index__item">Производство</a>
+    <a href="./company.html" target="_blank" class="index__item">Компания</a>
+    <a href="./catalog-category.html" target="_blank" class="index__item">Каталог категории</a>
+    <a href="./catalog.html" target="_blank" class="index__item">Каталог</a>
+    <a href="./product.html" target="_blank" class="index__item">Карточка товара</a>
+    <a href="./information.html" target="_blank" class="index__item">Информационные материалы</a>
+    <a href="./docs.html" target="_blank" class="index__item">Техническая документация</a>
+    <a href="./career.html" target="_blank" class="index__item">Карьера</a>
+    <a href="./reviews.html" target="_blank" class="index__item">Отзывы</a>
+    <a href="./404.html" target="_blank" class="index__item">404</a>
+    <a href="./article.html" target="_blank" class="index__item">Статья</a>
+    <a href="./news-page.html" target="_blank" class="index__item">Страница новости</a>
+</div>
 
 
 <script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/swiper-bundle.min.js"></script>
-<script src="js/jquery.fancybox.min.js"></script>
-<script src="js/jquery.maskedinput.min.js"></script>
-<script src="js/swiper.js"></script>
-<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    function fitElementToParent(el, padding) {
+        var timeout = null;
+        function resize() {
+            if (timeout) clearTimeout(timeout);
+            anime.set(el, {scale: 1});
+            var pad = padding || 0;
+            var parentEl = el.parentNode;
+            var elOffsetWidth = el.offsetWidth - pad;
+            var parentOffsetWidth = parentEl.offsetWidth;
+            var ratio = parentOffsetWidth / elOffsetWidth;
+            timeout = setTimeout(anime.set(el, {scale: ratio}), 10);
+        }
+        resize();
+        window.addEventListener('resize', resize);
+    }
+
+    var advancedStaggeringAnimation = (function() {
+
+        var staggerVisualizerEl = document.querySelector('.stagger-visualizer');
+        var dotsWrapperEl = staggerVisualizerEl.querySelector('.dots-wrapper');
+        var dotsFragment = document.createDocumentFragment();
+        var row = Math.ceil($(document).height() / $(document).width() * 12.5);
+        var rowMob = Math.ceil($(document).height() / $(document).width() * 5);
+        var grid;
+        if ($(window).width() > 768) {
+            grid = [12, row];
+        } else {
+            grid = [5, rowMob];
+        }
+        var numberOfElements = grid[0] * grid[1];
+        var animation;
+        var paused = true;
+
+        fitElementToParent(staggerVisualizerEl, 0);
+
+        for (var i = 0; i < numberOfElements; i++) {
+            var dotEl = document.createElement('div');
+            dotEl.classList.add('dot');
+            dotsFragment.appendChild(dotEl);
+        }
+
+        dotsWrapperEl.appendChild(dotsFragment);
+
+        var index = anime.random(0, numberOfElements-1);
+        var nextIndex = 0;
+
+        function play() {
+
+            paused = false;
+            if (animation) animation.pause();
+
+            nextIndex = anime.random(0, numberOfElements-1);
+
+            animation = anime.timeline({
+                easing: 'easeInOutQuad',
+                complete: play
+            })
+                .add({
+                    targets: '.stagger-visualizer .dot',
+                    keyframes: [
+                        {
+                            translateX: anime.stagger('-1px', {grid: grid, from: index, axis: 'x'}),
+                            translateY: anime.stagger('-1px', {grid: grid, from: index, axis: 'y'}),
+                            duration: 100
+                        }, {
+                            translateX: anime.stagger('2px', {grid: grid, from: index, axis: 'x'}),
+                            translateY: anime.stagger('2px', {grid: grid, from: index, axis: 'y'}),
+                            scale: anime.stagger([1, 0.8], {grid: grid, from: index}),
+                            duration: 225
+                        }, {
+                            translateX: 0,
+                            translateY: 0,
+                            scale: 1,
+                            duration: 1200,
+                        }
+                    ],
+                    delay: anime.stagger(80, {grid: grid, from: index})
+                }, 2500)
+
+            index = nextIndex;
+
+        }
+
+        play();
+
+    })();
+</script>
 </body>
 </html>
