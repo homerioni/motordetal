@@ -236,6 +236,7 @@
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script>
+    $('.')
     function fitElementToParent(el, padding) {
         var timeout = null;
         function resize() {
@@ -299,19 +300,16 @@
                         {
                             translateX: anime.stagger('-2px', {grid: grid, from: index, axis: 'x'}),
                             translateY: anime.stagger('-2px', {grid: grid, from: index, axis: 'y'}),
-                            // backgroundColor: 'rgba(0, 187, 255, 1)',
                             duration: 100
                         }, {
                             translateX: anime.stagger('2px', {grid: grid, from: index, axis: 'x'}),
                             translateY: anime.stagger('2px', {grid: grid, from: index, axis: 'y'}),
                             scale: anime.stagger([1, 0.8], {grid: grid, from: index}),
-                            // backgroundColor: 'rgba(0, 187, 255, 1)',
                             duration: 225
                         }, {
                             translateX: 0,
                             translateY: 0,
                             scale: 1,
-                            // backgroundColor: '#363636',
                             duration: 1200,
                         }
                     ],
