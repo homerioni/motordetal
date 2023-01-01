@@ -245,60 +245,35 @@
         ['rgba(0, 187, 255, 1)', 'rgba(0, 187, 255, 0.7)'],
         ['rgba(0, 255, 218, 1)', 'rgba(0, 255, 218, 0.7)'],
     ][Math.floor(Math.random() * 5)];
-    console.log(color)
     $('body').css('--color', color[0]).css('--color-transparent', color[1]);
-    function fitElementToParent(el, padding) {
-        var timeout = null;
-        function resize() {
-            if (timeout) clearTimeout(timeout);
-            anime.set(el, {scale: 1});
-            var pad = padding || 0;
-            var parentEl = el.parentNode;
-            var elOffsetWidth = el.offsetWidth - pad;
-            var parentOffsetWidth = parentEl.offsetWidth;
-            var ratio = parentOffsetWidth / elOffsetWidth;
-            timeout = setTimeout(anime.set(el, {scale: ratio}), 10);
-        }
-        resize();
-        window.addEventListener('resize', resize);
-    }
 
-    var advancedStaggeringAnimation = (function() {
+    const indexAnime = (function() {
 
-        var staggerVisualizerEl = document.querySelector('.stagger-visualizer');
-        var dotsWrapperEl = staggerVisualizerEl.querySelector('.dots-wrapper');
-        var dotsFragment = document.createDocumentFragment();
-        var row = Math.ceil($(document).height() / $(document).width() * 12.5);
-        var rowMob = Math.ceil($(document).height() / $(document).width() * 5);
-        var grid;
+        let dotsWrapperEl = $('.dots-wrapper');
+        let dotsFragment = $(document.createDocumentFragment());
+        let row = Math.ceil($(document).height() / $(document).width() * 12.5);
+        let rowMob = Math.ceil($(document).height() / $(document).width() * 5);
+        let grid;
         if ($(window).width() > 768) {
             grid = [12, row];
         } else {
             grid = [5, rowMob];
         }
-        var numberOfElements = grid[0] * grid[1];
-        var animation;
-        var paused = true;
+        let numberOfElements = grid[0] * grid[1];
+        let animation;
 
-        fitElementToParent(staggerVisualizerEl, 0);
-
-        for (var i = 0; i < numberOfElements; i++) {
-            var dotEl = document.createElement('div');
-            dotEl.classList.add('dot');
-            dotsFragment.appendChild(dotEl);
+        for (let i = 0; i < numberOfElements; i++) {
+            dotsFragment.append('<div class="dot"></div>');
         }
 
-        dotsWrapperEl.appendChild(dotsFragment);
+        dotsWrapperEl.append(dotsFragment);
 
-        var index = anime.random(0, numberOfElements-1);
-        var nextIndex = 0;
+        let index = anime.random(0, numberOfElements-1);
 
         function play() {
-
-            paused = false;
             if (animation) animation.pause();
 
-            nextIndex = anime.random(0, numberOfElements-1);
+            index = anime.random(0, numberOfElements-1);
 
             animation = anime.timeline({
                 easing: 'easeInOutQuad',
@@ -327,9 +302,6 @@
                     ],
                     delay: anime.stagger(80, {grid: grid, from: index})
                 }, 30)
-
-            index = nextIndex;
-
         }
 
         play();
