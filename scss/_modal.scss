@@ -20,7 +20,7 @@
   &:after {
     content: '';
     position: absolute;
-    left: -5.2rem;
+    left: -5.1rem;
     bottom: 2px;
     z-index: -1;
     width: 100%;
@@ -32,17 +32,32 @@
   &__close {
     position: absolute;
     right: 0;
-    bottom: 2px;
-    width: 3.3rem;
-    height: 3.3rem;
+    bottom: 0;
+    width: 4rem;
+    height: 4rem;
 
-    > svg {
-      width: 100%;
-      height: 100%;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 80%;
+      height: 0.3rem;
+      border-radius: 10rem;
+      background-color: black;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
 
-      path {
-        fill: $red;
-      }
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 80%;
+      height: 0.3rem;
+      border-radius: 10rem;
+      background-color: black;
+      transform: translate(-50%, -50%) rotate(-45deg);
     }
   }
 
@@ -67,25 +82,33 @@
       top: 0;
       z-index: -1;
       width: 100%;
-      height: calc(100% - 13rem);
+      height: calc(100% - 18rem);
       background-color: white;
     }
 
     &:after {
       content: '';
       position: absolute;
-      left: -4.4rem;
+      left: -6rem;
       bottom: 2px;
       z-index: -1;
       width: 100%;
-      height: 13rem;
+      height: 18rem;
       transform: skew(-35deg);
       background-color: white;
     }
 
     &__close {
-      width: 4rem;
-      height: 4rem;
+      width: 6.4rem;
+      height: 6.4rem;
+
+      &:before {
+        height: 2px;
+      }
+
+      &:after {
+        height: 2px;
+      }
     }
 
     &__stage {

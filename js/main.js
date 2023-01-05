@@ -89,11 +89,7 @@ $(document).ready(function () {
             }
         },
         afterShow: function (inst, current) {
-            current.$smallBtn.addClass('video-close')
-                .html('<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-                '<path d="M25.5 0H33L7.5 33H0L25.5 0Z" fill="#D62214"/>\n' +
-                '<path d="M7.5 0H0L25.5 33H33L7.5 0Z" fill="#D62214"/>\n' +
-                '</svg>\n');
+            current.$smallBtn.addClass('video-close').html('');
         },
     });
 
@@ -113,11 +109,7 @@ $(document).ready(function () {
             }
         },
         afterShow: function (inst, current) {
-            current.$smallBtn.addClass('video-close')
-                .html('<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-                    '<path d="M25.5 0H33L7.5 33H0L25.5 0Z" fill="#D62214"/>\n' +
-                    '<path d="M7.5 0H0L25.5 33H33L7.5 0Z" fill="#D62214"/>\n' +
-                    '</svg>\n');
+            current.$smallBtn.addClass('video-close').html('');
         },
     });
 
@@ -190,7 +182,7 @@ $(document).ready(function () {
         $(this).parent().removeClass('active').siblings('.catalog__category-btn').removeClass('active');
     });
 
-    // Modal buy
+    // Modal
     $('.modal-open').fancybox({
         smallBtn: false,
         arrows: false,
@@ -240,6 +232,34 @@ $(document).ready(function () {
         $('.modal-reviews__date').html($(this).parent().find('.reviews__date').html());
         $('.modal-reviews__name').html($(this).parent().find('.reviews__name').html());
         $('.modal-reviews__text').html($(this).parent().find('.reviews__text').html());
+    });
+
+    // Modal add review
+    $('[href="#modal-add-review"]').fancybox({
+        smallBtn: false,
+        arrows: false,
+        infobar: false,
+        touch: false,
+        toolbar: false,
+        baseTpl:
+            '<div class="fancybox-container" role="dialog" tabindex=" -1">' +
+            '<div class="fancybox-bg"></div>' +
+            '<div class="fancybox-stage modal__stage"></div>' +
+            '<div class="fancybox-caption"><div class="fancybox-caption__body"></div></div>' +
+            '</div>',
+        afterClose: function () {
+            $('.modal-add-review').removeClass('modal-add-review--complete');
+            $('.modal-add-review__rating-label').removeClass('active');
+            $('.modal-add-review__rating-label input').prop('checked', false);
+            $('.modal-add-review .form__label *').val('');
+        },
+    });
+    $('.modal-add-review__rating-label input').change(function () {
+        $('.modal-add-review__rating-label.active').removeClass('active');
+        $(this).parent().addClass('active');
+    });
+    $('.modal-add-review__complete-btn').click(function () {
+        $(this).parents('.modal-add-review').addClass('modal-add-review--complete');
     });
 
     // History

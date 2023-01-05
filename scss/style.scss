@@ -45,6 +45,7 @@
 @import "article-advantages";
 @import "article-number";
 @import "news-article";
+@import "modal-add-review";
 
 
 .fancybox-container {
@@ -56,21 +57,35 @@
 }
 
 .video-close {
-  right: -3rem;
+  right: -2rem;
   top: 0;
-  width: 5rem;
-  height: 5rem;
-  transform: translateX(100%) translateY(-0.8rem);
+  width: 4rem;
+  height: 4rem;
+  transform: translateX(100%);
   opacity: 1;
 
-  > svg {
-    path {
-      fill: $red;
-    }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    height: 0.3rem;
+    border-radius: 10rem;
+    background-color: black;
+    transform: translate(-50%, -50%) rotate(45deg);
   }
 
-  &:hover {
-    opacity: .7;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    height: 0.3rem;
+    border-radius: 10rem;
+    background-color: black;
+    transform: translate(-50%, -50%) rotate(-45deg);
   }
 }
 
@@ -94,10 +109,18 @@ body.lock {
   }
 
   .video-close {
-    right: -1.6rem;
-    top: 0;
-    width: 7.2rem;
-    height: 7.2rem;
+    right: 0;
+    top: -1.6rem;
+    width: 6.4rem;
+    height: 6.4rem;
     transform: translateX(0) translateY(-100%);
+
+    &:before {
+      height: 3px;
+    }
+
+    &:after {
+      height: 3px;
+    }
   }
 }

@@ -168,7 +168,7 @@
         <div class="intro-b__container container">
             <p class="intro-b__title">Отзывы о нас</p>
             <div class="intro-b__buttons">
-                <a href="" class="intro-b__btn button">
+                <a href="#modal-add-review" class="intro-b__btn button modal-open" data-fancybox>
                     <span>Оставить отзыв</span>
                 </a>
             </div>
@@ -518,12 +518,89 @@
     <p class="modal-reviews__text reviews__text">
         Отличный сайт! Оставил заказ на Поршневую ЗМЗ, приятно удивила цена и доставка очень удобная. Сервис на высоком уровне. Планирую в дальнейшем обращаться при необходимости за другими запчастями на автомобиль.
     </p>
-    <button type="button" class="modal__close" data-fancybox-close>
-        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M25.5 0H33L7.5 33H0L25.5 0Z" fill="#D62214"/>
-            <path d="M7.5 0H0L25.5 33H33L7.5 0Z" fill="#D62214"/>
-        </svg>
-    </button>
+    <button type="button" class="modal__close" data-fancybox-close></button>
+</section>
+<section class="modal modal-add-review" id="modal-add-review">
+    <div class="feedback">
+        <p class="feedback__title">
+            Оставьте ваш отзыв
+        </p>
+        <div class="feedback__separator"></div>
+        <form class="feedback__form form">
+            <label class="modal-add-review__item--50 form__label error">
+                <input placeholder="Имя" type="text" class="form__input">
+                <svg class="error-icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 26.25C21.2132 26.25 26.25 21.2132 26.25 15C26.25 8.7868 21.2132 3.75 15 3.75C8.7868 3.75 3.75 8.7868 3.75 15C3.75 21.2132 8.7868 26.25 15 26.25Z" stroke="#D62214" stroke-width="2" stroke-miterlimit="10"/>
+                    <path d="M15 9.375V15.9375" stroke="#D62214" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15 21.5625C15.7767 21.5625 16.4062 20.9329 16.4062 20.1562C16.4062 19.3796 15.7767 18.75 15 18.75C14.2233 18.75 13.5938 19.3796 13.5938 20.1562C13.5938 20.9329 14.2233 21.5625 15 21.5625Z" fill="#D62214"/>
+                </svg>
+            </label>
+            <label class="modal-add-review__item--50 form__label">
+                <input placeholder="Фамилия" type="text" class="form__input">
+                <svg class="error-icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 26.25C21.2132 26.25 26.25 21.2132 26.25 15C26.25 8.7868 21.2132 3.75 15 3.75C8.7868 3.75 3.75 8.7868 3.75 15C3.75 21.2132 8.7868 26.25 15 26.25Z" stroke="#D62214" stroke-width="2" stroke-miterlimit="10"/>
+                    <path d="M15 9.375V15.9375" stroke="#D62214" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15 21.5625C15.7767 21.5625 16.4062 20.9329 16.4062 20.1562C16.4062 19.3796 15.7767 18.75 15 18.75C14.2233 18.75 13.5938 19.3796 13.5938 20.1562C13.5938 20.9329 14.2233 21.5625 15 21.5625Z" fill="#D62214"/>
+                </svg>
+            </label>
+            <label class="modal-add-review__item--100 form__label form__label--textarea">
+                <textarea placeholder="Текст" class="form__textarea"></textarea>
+                <svg class="error-icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 26.25C21.2132 26.25 26.25 21.2132 26.25 15C26.25 8.7868 21.2132 3.75 15 3.75C8.7868 3.75 3.75 8.7868 3.75 15C3.75 21.2132 8.7868 26.25 15 26.25Z" stroke="#D62214" stroke-width="2" stroke-miterlimit="10"/>
+                    <path d="M15 9.375V15.9375" stroke="#D62214" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15 21.5625C15.7767 21.5625 16.4062 20.9329 16.4062 20.1562C16.4062 19.3796 15.7767 18.75 15 18.75C14.2233 18.75 13.5938 19.3796 13.5938 20.1562C13.5938 20.9329 14.2233 21.5625 15 21.5625Z" fill="#D62214"/>
+                </svg>
+            </label>
+            <div class="modal-add-review__item--100 form__footer">
+                <div class="modal-add-review__rating-box">
+                    <p class="modal-add-review__rating-text">Ваша оценка</p>
+                    <div class="modal-add-review__rating">
+                        <label class="modal-add-review__rating-label">
+                            <input type="radio" name="add-review-rating" value="5">
+                            <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 0L18.3677 10.3647H29.2658L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18322 27.1353L9.55093 16.7705L0.734152 10.3647H11.6323L15 0Z" fill="#D62214"/>
+                            </svg>
+                        </label>
+                        <label class="modal-add-review__rating-label">
+                            <input type="radio" name="add-review-rating" value="4">
+                            <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 0L18.3677 10.3647H29.2658L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18322 27.1353L9.55093 16.7705L0.734152 10.3647H11.6323L15 0Z" fill="#D62214"/>
+                            </svg>
+                        </label>
+                        <label class="modal-add-review__rating-label">
+                            <input type="radio" name="add-review-rating" value="3">
+                            <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 0L18.3677 10.3647H29.2658L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18322 27.1353L9.55093 16.7705L0.734152 10.3647H11.6323L15 0Z" fill="#D62214"/>
+                            </svg>
+                        </label>
+                        <label class="modal-add-review__rating-label">
+                            <input type="radio" name="add-review-rating" value="2">
+                            <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 0L18.3677 10.3647H29.2658L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18322 27.1353L9.55093 16.7705L0.734152 10.3647H11.6323L15 0Z" fill="#D62214"/>
+                            </svg>
+                        </label>
+                        <label class="modal-add-review__rating-label">
+                            <input type="radio" name="add-review-rating" value="1">
+                            <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 0L18.3677 10.3647H29.2658L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18322 27.1353L9.55093 16.7705L0.734152 10.3647H11.6323L15 0Z" fill="#D62214"/>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <button type="button" class="modal-add-review__complete-btn button">
+                    <span>Отправить</span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="modal-add-review__complete">
+        <p class="modal-add-review__complete-title">Спасибо за отзыв</p>
+        <p class="modal-add-review__complete-text">Мы опубликуем его после модерации</p>
+        <button type="button" class="button" data-fancybox-close>
+            <span>Готово</span>
+        </button>
+    </div>
+    <button type="button" class="modal__close" data-fancybox-close></button>
 </section>
 
 
