@@ -1,10 +1,28 @@
 .docs {
   &__title {
-    margin-bottom: 3.6rem;
+    margin-bottom: 2rem;
     font-family: $mont;
     font-weight: 700;
     font-size: 5rem;
     line-height: 6.5rem;
+  }
+
+  &__desc {
+    margin-bottom: 3.6rem;
+    width: 106rem;
+    font-weight: 300;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    color: $grayDark;
+
+    a {
+      color: $blue;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 
   &__separator {
@@ -182,6 +200,14 @@
     &__title {
       margin-bottom: 5rem;
       line-height: 6rem;
+    }
+
+    &__desc {
+      margin-bottom: 5rem;
+      width: 100%;
+      font-weight: 400;
+      font-size: 3rem;
+      line-height: 4.5rem;
     }
 
     &__separator {

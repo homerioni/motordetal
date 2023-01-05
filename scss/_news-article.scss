@@ -1,4 +1,8 @@
 .news-article {
+  > *:not(:last-child) {
+    margin-bottom: 8.8rem;
+  }
+
   &__title {
     font-family: $mont;
     font-weight: 700;
@@ -37,6 +41,48 @@
     }
   }
 
+  &__quote {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+    padding: 3.2rem 5rem 3.2rem 2.5rem;
+    border: 1px solid #EBECF0;
+  }
+
+  &__quote-icon {
+    flex: none;
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 2.5rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__quote-text-block {
+    flex: auto;
+    padding-left: 4rem;
+    border-left: 1px solid #D4D4D8;
+  }
+
+  &__quote-title {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    color: $blue;
+  }
+
+  &__quote-name {
+    margin-top: 2rem;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
+
   &__sub-title {
     font-family: $mont;
     font-weight: 600;
@@ -54,7 +100,7 @@
     color: $grayDark;
 
     b {
-      font-weight: 400;
+      font-weight: 500;
       color: $black;
     }
   }
@@ -78,27 +124,15 @@
       object-fit: cover;
     }
 
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      z-index: 1;
-      width: 30rem;
-      height: 200%;
-      transform: rotate(25deg) translate(-28.6rem, -5rem);
-      background-color: white;
-    }
-
     &:after {
       content: '';
       position: absolute;
-      left: 0;
-      top: 0;
-      width: 30rem;
-      height: 200%;
-      opacity: .3;
-      transform: rotate(25deg) translate(-22.6rem, -5rem);
+      right: -3.8rem;
+      bottom: -5.4rem;
+      z-index: 1;
+      width: 10rem;
+      height: 20rem;
+      transform: rotate(35deg);
       background-color: white;
     }
   }
@@ -118,7 +152,7 @@
   }
 
   &__list-box {
-    width: 69rem;
+    width: 94rem;
   }
 
   &__list-title {
@@ -164,7 +198,6 @@
     flex-direction: column;
     align-items: flex-end;
     gap: 2rem;
-    width: 69.5rem;
   }
 
   &__list-image-title {
@@ -176,35 +209,8 @@
 
   &__list-image-item {
     position: relative;
-    width: 69.5rem;
-    height: 38.8rem;
-    padding: 3rem 3rem 3rem 25rem;
-    background-color: $grayLight;
-    overflow: hidden;
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      z-index: 1;
-      width: 30rem;
-      height: 200%;
-      transform: rotate(25deg) translate(-28.6rem, -5rem);
-      background-color: white;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 30rem;
-      height: 200%;
-      opacity: .3;
-      transform: rotate(25deg) translate(-22.6rem, -5rem);
-      background-color: white;
-    }
+    width: 40rem;
+    padding-right: 2rem;
   }
 
   &__list-image-text {
@@ -215,8 +221,9 @@
   }
 
   &__list-img-box {
-    width: 36rem;
-    height: 21rem;
+    width: 35rem;
+    height: 20rem;
+    margin-left: auto;
     margin-bottom: 1.5rem;
 
     > img {
@@ -233,18 +240,35 @@
   }
 
   &__slider {
-    @media (min-width: 48.01em) {
-      margin: 0 -24.5rem;
-      padding: 0 24.5rem;
-      width: calc(100% + 49rem);
-    }
-
     margin-top: 8.8rem;
+  }
+
+  &__video-name {
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 2.9rem;
+    text-transform: uppercase;
+    color: $grayDark;
+  }
+
+  &__video-box {
+    .video__item {
+      &:first-child {
+        flex: 45%;
+        max-width: 69.9rem;
+        height: 39.4rem;
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
 @media (max-width: 48em) {
   .news-article {
+    > *:not(:last-child) {
+      margin-bottom: 12rem;
+    }
+
     &__title {
       line-height: 6rem;
     }
@@ -259,6 +283,38 @@
 
     &__img-box {
       height: 32rem;
+    }
+
+    &__quote {
+      flex-direction: column;
+      width: 100%;
+      padding: 5rem 4rem;
+    }
+
+    &__quote-icon {
+      width: 6.4rem;
+      height: 6.4rem;
+      margin-right: 0;
+      margin-bottom: 4rem;
+    }
+
+    &__quote-text-block {
+      padding-left: 0;
+      padding-top: 4rem;
+      border-left: none;
+      border-top: 1px solid #EBECF0;
+    }
+
+    &__quote-title {
+      font-size: 4rem;
+      line-height: 4.8rem;
+    }
+
+    &__quote-name {
+      margin-top: 4rem;
+      font-weight: 400;
+      font-size: 3rem;
+      line-height: 3.6rem;
     }
 
     &__sub-title {
@@ -329,20 +385,23 @@
     }
 
     &__list-image-block {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
       gap: 4rem;
       width: 100%;
     }
 
     &__list-image-title {
+      flex: 100%;
       font-size: 3rem;
       line-height: 4.2rem;
     }
 
     &__list-image-item {
       position: relative;
-      width: 100%;
+      width: 30rem;
       height: 37.4rem;
-      padding: 3rem 3rem 3rem 24rem;
     }
 
     &__list-image-text {
@@ -356,10 +415,16 @@
     }
 
     &__list-image-btn {
+      min-width: 32rem;
     }
 
     &__slider {
       margin-top: 12rem;
+    }
+
+    &__video-name {
+      font-size: 3rem;
+      line-height: 4.2rem;
     }
   }
 }

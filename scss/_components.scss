@@ -62,12 +62,7 @@
   &--absolute {
     position: absolute;
     left: 24.5rem;
-    color: #84878C;
-
-    .breadcrumbs__item.active,
-    .breadcrumbs__item:hover {
-      color: white;
-    }
+    color: white;
   }
 
   &__item {
@@ -75,8 +70,8 @@
     font-weight: 500;
     font-size: 1.7rem;
     line-height: 1.2;
-    color: $gray;
     cursor: pointer;
+    opacity: 0.6;
 
     &:not(:last-child) {
       &:after {
@@ -90,7 +85,7 @@
 
     &.active,
     &:hover {
-      color: $black;
+      opacity: 1;
     }
   }
 }
@@ -156,6 +151,10 @@
 
     &.swiper-button-disabled {
       opacity: .4;
+    }
+
+    &.swiper-button-lock {
+      display: none;
     }
   }
 

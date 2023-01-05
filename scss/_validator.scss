@@ -206,6 +206,24 @@
       object-fit: contain;
     }
   }
+
+  &__seo {
+    width: 106rem;
+    margin-top: 8.8rem;
+    font-weight: 300;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    color: $grayDark;
+
+    a {
+      color: $blue;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 @media (max-width: 48em) {
@@ -324,6 +342,14 @@
     &__img-box {
       width: 100%;
       height: 44.6rem;
+    }
+
+    &__seo {
+      width: 100%;
+      margin-top: 12rem;
+      font-weight: 400;
+      font-size: 3rem;
+      line-height: 4.5rem;
     }
   }
 }

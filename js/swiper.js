@@ -346,3 +346,18 @@ const article_number_slider = new Swiper('.article-number__slider', {
         prevEl: '.article-number__slider-nav .prev',
     },
 });
+
+$('.history__slider').each(function () {
+    new Swiper({
+        el: $(this)[0],
+        direction: 'horizontal',
+        slidesPerView: 1,
+        spaceBetween: rem(2),
+        autoHeight: true,
+
+        navigation: {
+            nextEl: $(this).find('.next')[0],
+            prevEl: $(this).find('.prev')[0],
+        },
+    });
+});

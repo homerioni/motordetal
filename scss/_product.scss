@@ -224,6 +224,13 @@
       }
     }
   }
+
+  &__tab-text {
+    width: 94rem;
+    font-size: 2.4rem;
+    line-height: 4rem;
+    color: $grayDark;
+  }
 }
 
 @media (max-width: 48em) {
@@ -328,6 +335,12 @@
     &__spec-item {
       gap: 1.6rem;
       font-size: 3rem;
+    }
+
+    &__tab-text {
+      width: 100%;
+      font-size: 3rem;
+      line-height: 5rem;
     }
   }
 }

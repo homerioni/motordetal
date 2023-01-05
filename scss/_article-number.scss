@@ -35,6 +35,9 @@
   }
 
   &__slider {
+    margin: 0 -24.5rem;
+    padding: 0 24.5rem;
+    width: calc(100% + 49rem);
   }
 
   &__slide {
@@ -52,8 +55,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 5.2rem;
-    padding-top: 3.8rem;
+    margin: 5.2rem -24.5rem 0 -24.5rem;
+    padding: 3.8rem 24.5rem 0 24.5rem;
     border-top: 1px solid #D4D4D8;
   }
 
@@ -97,6 +100,7 @@
     }
 
     &__slider {
+      width: calc(100% + 8rem);
       margin: 0 -4rem;
       padding: 0 4rem;
     }
@@ -107,8 +111,9 @@
     }
 
     &__slider-nav {
-      margin-top: 6rem;
-      padding-top: 4rem;
+      width: calc(100% + 8rem);
+      margin: 6rem -4rem 0 -4rem;
+      padding: 4rem 4rem 0 4rem;
     }
 
     &__date {

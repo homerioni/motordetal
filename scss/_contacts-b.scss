@@ -149,9 +149,6 @@
 
   &__slider-box {
     margin-top: 9rem;
-    padding-bottom: 4.6rem;
-    margin-bottom: 3.8rem;
-    border-bottom: 1px solid #D4D4D8;
   }
 
   &__slider-title {
@@ -264,8 +261,8 @@
 
     &__slider-box {
       width: calc(100% + 8rem);
-      margin: 12rem -4rem 4rem -4rem;
-      padding: 0 4rem 6rem 4rem;
+      margin: 12rem -4rem 0 -4rem;
+      padding: 0 4rem;
     }
 
     &__slider-title {

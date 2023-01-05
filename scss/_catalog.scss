@@ -325,17 +325,18 @@
     height: auto;
     padding: 3.5rem 3rem 0 3rem;
     background-color: $grayLight;
+    isolation: isolate;
 
     &:after {
       content: '';
       position: absolute;
-      right: 0;
-      bottom: 0;
+      right: -2.2rem;
+      bottom: -4.4rem;
       z-index: 1;
-      border: 4.4rem solid transparent;
-      border-right: 4.4rem solid white;
-      border-bottom: 4.4rem solid white;
-      transform: rotate(-8deg) translate(1rem, 1rem);
+      width: 6rem;
+      height: 12rem;
+      transform: rotate(35deg);
+      background-color: white;
     }
 
     > a {
@@ -600,9 +601,10 @@
       padding: 3rem 3rem 0 3rem;
 
       &:after {
-        border: 4.4rem solid transparent;
-        border-right: 4.4rem solid white;
-        border-bottom: 4.4rem solid white;
+        right: -3rem;
+        bottom: -6.4rem;
+        width: 8rem;
+        height: 16rem;
       }
     }
 

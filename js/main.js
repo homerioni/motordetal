@@ -242,4 +242,14 @@ $(document).ready(function () {
         $('.modal-reviews__text').html($(this).parent().find('.reviews__text').html());
     });
 
+    // History
+    $('.history__hidden-link').click(function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active').parent().css('height', '').parents('.swiper-wrapper').css('height', 'auto');
+        } else {
+            $(this).addClass('active').parent().height('auto').parents('.swiper-wrapper').css('height', 'auto');
+        }
+
+    });
+
 });
