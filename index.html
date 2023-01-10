@@ -160,8 +160,12 @@
             width: 7.77%;
             height: 14.9rem;
             margin: 0.5rem;
-            background-color: #363636;
             transition: background-color 1.5s ease;
+            border-radius: 1rem;
+            background: #202020;
+            box-shadow: inset 1.2rem 1.2rem 2rem #171717,
+            inset -1.2rem -1.2rem 2rem #292929;
+            will-change: transform;
         }
 
         .stagger-visualizer .dot.active {
@@ -289,7 +293,7 @@
                         }, {
                             translateX: anime.stagger('2px', {grid: grid, from: index, axis: 'x'}),
                             translateY: anime.stagger('2px', {grid: grid, from: index, axis: 'y'}),
-                            scale: anime.stagger([1, 0.8], {grid: grid, from: index}),
+                            scale: anime.stagger([1, 0.9], {grid: grid, from: index}),
                             duration: 225
                         }, {
                             translateX: 0,
