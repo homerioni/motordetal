@@ -186,140 +186,219 @@
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.17969 0.75C7.17969 0.335786 6.8439 0 6.42969 0C6.01547 0 5.67969 0.335786 5.67969 0.75L5.67969 15.0945L1.28033 10.6953C0.98743 10.4024 0.512556 10.4024 0.219666 10.6953C-0.0732253 10.9882 -0.0732213 11.463 0.219674 11.7559L5.88466 17.4208C5.98761 17.5297 6.12281 17.6077 6.27498 17.6396C6.51474 17.6901 6.77445 17.6223 6.96063 17.4361L12.6408 11.7559C12.9337 11.463 12.9337 10.9881 12.6408 10.6953C12.3479 10.4024 11.8731 10.4024 11.5802 10.6953L7.17969 15.0957L7.17969 0.75Z" fill="white"/>
                     </svg>
                 </button>
-                <ul class="catalog__category-list">
-                    <li class="catalog__category-close mobile">
-                        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M25.5 0H33L7.5 33H0L25.5 0Z" fill="#D62214"/>
-                            <path d="M7.5 0H0L25.5 33H33L7.5 0Z" fill="#D62214"/>
-                        </svg>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>Детали цпг</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>фильтры</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>вкладыши</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>прокладки</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>колодки и накладки</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>пневмокомпрессоры</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>втулки (полуфабрикат)</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>камеры-тормозные</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>Диски сцепления</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>Инструменты</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>Сцепление</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>Тормозные краны</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>Аксессуары</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>Клапаны</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>Турбокомпрессоры</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>Фильтры центробежные</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>Насосы масляные</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>Насосы водяные</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>Стартеры</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item active">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>Генераторы</span>
-                        </label>
-                    </li>
-                    <li class="catalog__category-item">
-                        <label>
-                            <input type="radio" name="category">
-                            <span>Корпуса фильтров</span>
-                        </label>
-                    </li>
-                </ul>
+                <div class="catalog__category-list-wrap">
+                    <div class="catalog__category-list-box">
+                        <button type="button" class="catalog__category-close mobile"></button>
+                        <ul class="catalog__category-list">
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>Детали цпг</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>фильтры</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>вкладыши</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>прокладки</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>колодки и накладки</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>пневмокомпрессоры</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>втулки (полуфабрикат)</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>камеры-тормозные</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>Диски сцепления</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>Инструменты</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>Сцепление</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>Тормозные краны</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>Аксессуары</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>Клапаны</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>Турбокомпрессоры</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>Фильтры центробежные</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>Насосы масляные</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>Насосы водяные</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>Стартеры</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item active">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>Генераторы</span>
+                                </label>
+                            </li>
+                            <li class="catalog__category-item">
+                                <label>
+                                    <input type="radio" name="category">
+                                    <span>Двигатель</span>
+                                </label>
+                                <div class="catalog__category-list-box">
+                                    <button type="button" class="catalog__category-back-link back-link">
+                                        <svg width="19" height="35" viewBox="0 0 19 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18 1L6.66667 17.5L18 34H12.7798L1 17.5L12.7798 1H18Z" fill="#D62214" stroke="#D62214"/>
+                                        </svg>
+                                        <span>Двигатель</span>
+                                    </button>
+                                    <ul class="catalog__category-list">
+                                        <li class="catalog__category-item">
+                                            <label>
+                                                <input type="radio" name="category">
+                                                <span>Система охлаждения</span>
+                                            </label>
+                                            <div class="catalog__category-list-box">
+                                                <button type="button" class="catalog__category-back-link back-link">
+                                                    <svg width="19" height="35" viewBox="0 0 19 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M18 1L6.66667 17.5L18 34H12.7798L1 17.5L12.7798 1H18Z" fill="#D62214" stroke="#D62214"/>
+                                                    </svg>
+                                                    <span>Система охлаждения</span>
+                                                </button>
+                                                <ul class="catalog__category-list">
+                                                    <li class="catalog__category-item">
+                                                        <label>
+                                                            <input type="radio" name="category">
+                                                            <span>Насос водяной</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="catalog__category-item">
+                                                        <label>
+                                                            <input type="radio" name="category">
+                                                            <span>Привод вентилятора</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="catalog__category-item">
+                                                        <label>
+                                                            <input type="radio" name="category">
+                                                            <span>Термостат</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <label>
+                                                <input type="radio" name="category">
+                                                <span>Цилиндро-поршневая...</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <label>
+                                                <input type="radio" name="category">
+                                                <span>система смазки</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <label>
+                                                <input type="radio" name="category">
+                                                <span>Кривошипно шатунный...</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <label>
+                                                <input type="radio" name="category">
+                                                <span>Фильтры</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <label>
+                                                <input type="radio" name="category">
+                                                <span>Система впуска</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <label>
+                                                <input type="radio" name="category">
+                                                <span>Прокладки</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <label class="catalog__search-label">
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">

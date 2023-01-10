@@ -93,9 +93,11 @@
     gap: 2rem;
     font-size: 1.7rem;
     line-height: 2rem;
+    color: $grayDark;
 
     b {
       font-weight: 500;
+      color: $black;
     }
   }
 }
@@ -158,7 +160,6 @@
 
     &__req-content {
       gap: 5rem;
-      font-weight: 500;
       font-size: 3rem;
       line-height: 5rem;
     }
