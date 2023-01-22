@@ -140,6 +140,10 @@ $(document).ready(function () {
         $('.catalog__category-item.active').removeClass('active');
         $(this).parents('.catalog__category-item').addClass('active');
     });
+    // Если сразу открыта какая либо вкладка проверяем и выставляем высоту.
+    if ($('.catalog__category-list-box').hasClass('active')) {
+        $('.catalog__category-list-wrap').show().height($('.catalog__category-list-box.active').last().outerHeight()).hide();
+    }
     $('.catalog__category-item label').click(function () {
         let childrenItem = $(this).siblings('.catalog__category-list-box'),
             wrapper = $('.catalog__category-list-wrap');
