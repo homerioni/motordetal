@@ -202,6 +202,14 @@ $(document).ready(function () {
         $('body').removeClass('lock');
         $(this).parents('.catalog__category-list-wrap').removeClass('active').siblings('.catalog__category-btn').removeClass('active');
     });
+    // Catalog search filter
+    $('.filter__item-search input').on('input', function () {
+        let value = $(this).val().toLowerCase();
+
+        $(this).parent().siblings('.filter__filters-box').find('.filter__checkbox-label').filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        })
+    });
 
     // Modal
     $('.modal-open').fancybox({
