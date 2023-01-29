@@ -161,9 +161,6 @@ $(document).ready(function () {
             .siblings('.catalog__category-list-box').removeClass('active');
         wrapper.animate({height: parentItem.outerHeight() + 'px'});
     });
-    $('.filter__checkbox-label input').change(function () {
-        $(this).parent().toggleClass('active');
-    });
     $('.catalog__search-label input, .filter__item-search input, .docs__search-label input, .career__search-label input')
         .focusin(function () {
             $(this).parent().addClass('focus');
