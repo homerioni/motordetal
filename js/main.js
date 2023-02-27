@@ -5,6 +5,19 @@ $(document).ready(function () {
     // Masked input
     $('.mask-phone').length ? $('.mask-phone').mask('+ 7 (999) 999-99-99') : false;
 
+    // Fancybox
+    $.fancybox.defaults.arrows = false;
+    $.fancybox.defaults.smallBtn = false;
+    $.fancybox.defaults.infobar = false;
+    $.fancybox.defaults.touch = false;
+    $.fancybox.defaults.toolbar = false;
+    $.fancybox.defaults.baseTpl =
+        '<div class="fancybox-container" role="dialog" tabindex=" -1">' +
+            '<div class="fancybox-bg"></div>' +
+            '<div class="fancybox-stage modal__stage"></div>' +
+            '<div class="fancybox-caption"><div class="fancybox-caption__body"></div></div>' +
+        '</div>';
+
     // Header
     if ($(window).width() <= 768) {
         $('.header__content.desktop').css('display', 'flex').hide();
@@ -75,9 +88,6 @@ $(document).ready(function () {
         $(this).find('iframe').attr('src', 'https://www.youtube.com/embed/' + getLink);
     });
     $('[data-fancybox="video"]').fancybox({
-        arrows: false,
-        infobar: false,
-        toolbar: false,
         smallBtn: true,
         afterLoad: function(instance, current) {
             if ($(window).width() <= 768) {
@@ -95,9 +105,6 @@ $(document).ready(function () {
 
     // Intro
     $('.intro__btn').fancybox({
-        arrows: false,
-        infobar: false,
-        toolbar: false,
         smallBtn: true,
         afterLoad: function(instance, current) {
             if ($(window).width() <= 768) {
@@ -208,22 +215,6 @@ $(document).ready(function () {
         })
     });
 
-    // Modal
-    $('.modal-open').fancybox({
-        smallBtn: false,
-        arrows: false,
-        infobar: false,
-        touch: false,
-        toolbar: false,
-            baseTpl:
-                '<div class="fancybox-container" role="dialog" tabindex=" -1">' +
-                '<div class="fancybox-bg"></div>' +
-                '<div class="fancybox-stage modal__stage"></div>' +
-                '<div class="fancybox-caption"><div class="fancybox-caption__body"></div></div>' +
-                '</div>',
-    });
-
-
     // Career
     $('.career__text-btn').click(function () {
         $(this).toggleClass('active').siblings('.career__text-content').toggleClass('active');
@@ -252,17 +243,6 @@ $(document).ready(function () {
 
     // Modal add review
     $('[href="#modal-add-review"]').fancybox({
-        smallBtn: false,
-        arrows: false,
-        infobar: false,
-        touch: false,
-        toolbar: false,
-        baseTpl:
-            '<div class="fancybox-container" role="dialog" tabindex=" -1">' +
-            '<div class="fancybox-bg"></div>' +
-            '<div class="fancybox-stage modal__stage"></div>' +
-            '<div class="fancybox-caption"><div class="fancybox-caption__body"></div></div>' +
-            '</div>',
         afterClose: function () {
             $('.modal-add-review').removeClass('modal-add-review--complete');
             $('.modal-add-review__rating-label').removeClass('active');
@@ -285,7 +265,12 @@ $(document).ready(function () {
         } else {
             $(this).addClass('active').parent().height('auto').parents('.swiper-wrapper').css('height', 'auto');
         }
-
     });
+
+    // Modal complete review
+    $('.popup-review-send').fancybox({
+        src: '#modal-review-send',
+    })
+
 
 });

@@ -106,6 +106,12 @@
   }
 }
 
+.modal-review-send {
+  .modal-add-review__complete {
+    display: flex;
+  }
+}
+
 @media (max-width: 48em) {
   .modal-add-review {
     padding: 8rem 4rem;
