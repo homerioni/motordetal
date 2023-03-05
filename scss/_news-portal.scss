@@ -27,6 +27,7 @@
     line-height: 3.6rem;
     text-decoration: underline;
     color: $blue;
+    word-break: break-all;
 
     &:hover {
       text-decoration: none;

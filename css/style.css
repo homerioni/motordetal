@@ -5149,6 +5149,7 @@ body {
   line-height: 3.6rem;
   text-decoration: underline;
   color: #014A93;
+  word-break: break-all;
 }
 .news-portal__link:hover {
   text-decoration: none;

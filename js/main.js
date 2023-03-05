@@ -254,9 +254,6 @@ $(document).ready(function () {
         $('.modal-add-review__rating-label.active').removeClass('active');
         $(this).parent().addClass('active');
     });
-    $('.modal-add-review__complete-btn').click(function () {
-        $(this).parents('.modal-add-review').addClass('modal-add-review--complete');
-    });
 
     // History
     $('.history__hidden-link').click(function () {
@@ -266,11 +263,5 @@ $(document).ready(function () {
             $(this).addClass('active').parent().height('auto').parents('.swiper-wrapper').css('height', 'auto');
         }
     });
-
-    // Modal complete review
-    $('.popup-review-send').fancybox({
-        src: '#modal-review-send',
-    })
-
 
 });
