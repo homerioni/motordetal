@@ -195,6 +195,22 @@
   }
 
   &__tab-content {
+    table {
+      font-size: 2.4rem;
+      line-height: 4rem;
+      color: #494949;
+      border-spacing: 0 1rem;
+    }
+
+    tr > * {
+      &:not(:first-child) {
+        padding-left: 4rem;
+      }
+    }
+
+    th {
+      text-align: left;
+    }
   }
 
   &__spec-box {
@@ -317,6 +333,19 @@
     }
 
     &__tab-content {
+      margin: 0 -4rem;
+      padding: 0 4rem;
+      overflow: auto;
+
+      table {
+        font-size: 3rem;
+        line-height: 5rem;
+      }
+
+      th, td {
+        white-space: nowrap;
+        vertical-align: top;
+      }
     }
 
     &__spec-box {

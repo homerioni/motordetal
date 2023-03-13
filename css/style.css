@@ -7692,6 +7692,18 @@ body {
   line-height: 4rem;
   color: #494949;
 }
+.product__tab-content table {
+  font-size: 2.4rem;
+  line-height: 4rem;
+  color: #494949;
+  border-spacing: 0 1rem;
+}
+.product__tab-content tr > *:not(:first-child) {
+  padding-left: 4rem;
+}
+.product__tab-content th {
+  text-align: left;
+}
 .product__spec-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7793,6 +7805,19 @@ body {
     margin-bottom: 2rem;
     font-size: 3rem;
     line-height: 5rem;
+  }
+  .product__tab-content {
+    margin: 0 -4rem;
+    padding: 0 4rem;
+    overflow: auto;
+  }
+  .product__tab-content table {
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+  .product__tab-content th, .product__tab-content td {
+    white-space: nowrap;
+    vertical-align: top;
   }
   .product__spec-box {
     -webkit-box-orient: vertical;
