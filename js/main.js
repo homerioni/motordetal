@@ -255,6 +255,25 @@ $(document).ready(function () {
         $(this).parent().addClass('active');
     });
 
+    // Modal product
+    $('[data-fancybox="product"]').fancybox({
+        loop: true,
+        arrows: true,
+        infobar: true,
+        touch: true,
+        toolbar: true,
+        baseTpl:
+            '<div class="fancybox-container" role="dialog" tabindex="-1">' +
+            '<div class="fancybox-bg"></div>' +
+            '<div class="fancybox-inner">' +
+            '<div class="fancybox-infobar"><span data-fancybox-index></span>&nbsp;/&nbsp;<span data-fancybox-count></span></div>' +
+            '<div class="fancybox-toolbar">{{buttons}}</div>' +
+            '<div class="fancybox-navigation">{{arrows}}</div>' +
+            '<div class="fancybox-stage"></div>' +
+            '<div class="fancybox-caption"><div class=""fancybox-caption__body"></div></div>' +
+            '</div></div>',
+    });
+
     // History
     $('.history__hidden-link').click(function () {
         if ($(this).hasClass('active')) {
